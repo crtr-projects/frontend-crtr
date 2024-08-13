@@ -30,6 +30,8 @@
   .logo {
     height: 100px; /* Ajuste o tamanho da logo conforme necessário */
     border-radius: 50%; /* Torna a logo arredondada */
+    box-shadow: 0 0 100px rgba(255, 199, 194, 0.8); /* Adiciona a borda brilhante */
+
   }
   
   .menu ul {
@@ -97,9 +99,15 @@
     }
   
     .logo-container {
-      display: none; /* Oculta a logo no menu móvel */
+        display: flex; /* Exibe a logo no modo móvel */
+        justify-content: center; /* Centraliza a logo */
+        position: relative; /* Garante que a logo fique no fluxo normal */
     }
   
+    .logo {
+        height: 150px; /* Ajusta o tamanho da logo conforme necessário */
+    }
+
     .menu ul {
       flex-direction: column; /* Itens dispostos verticalmente */
       align-items: center; /* Alinha os itens ao centro */

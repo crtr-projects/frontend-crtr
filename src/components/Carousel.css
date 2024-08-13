@@ -1,0 +1,49 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Ajuste a altura conforme necessário */
+    z-index: 500; /* Ajuste conforme necessário */
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção */
+    max-height: 100%; /* Garante que a altura máxima da imagem não exceda a altura do slide */
+    object-fit: contain; /* Ajusta a imagem para caber dentro do slide sem distorção */
+  }
+  
+  /* Botões de controle */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000; /* Garante que os botões fiquem acima do carrossel */
+  }
+  
+  .prev {
+    left: 10px; /* Ajuste a distância do botão da borda esquerda */
+  }
+  
+  .next {
+    right: 10px; /* Ajuste a distância do botão da borda direita */
+  }
+  
