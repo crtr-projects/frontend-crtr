@@ -17,7 +17,6 @@
     padding: 30px;
     justify-content: space-between; /* Alinha logo e menu */
     position: relative; /* Para posicionar o botão de fechar corretamente */
-    border-bottom: 5px solid #ffffff; /* Adiciona uma borda dourada */
   }
   
   .logo-container {

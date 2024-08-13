@@ -6,12 +6,12 @@
     max-width: 1000px; /* Define a largura máxima do carrossel */
     max-height: 500px; /* Define a largura máxima do carrossel */
     margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+    z-index: 500;
   }
   
   .carousel-container {
     display: flex; /* Alinha os slides em linha horizontalmente */
     transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
-    transition-timing-function: 2s;
   }
   
   .carousel-slide {
