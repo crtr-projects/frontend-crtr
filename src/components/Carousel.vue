@@ -10,7 +10,6 @@
   </div>
 </template>
 
-
 <script>
 import image1 from '../assets/carousel/image.png';
 import image2 from '../assets/carousel/image.png';
@@ -23,6 +22,7 @@ export default {
     return {
       currentIndex: 0,
       images: [image1, image2, image3],
+      interval: null,
     };
   },
   methods: {
@@ -32,6 +32,22 @@ export default {
     prevSlide() {
       this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
     },
+    startAutoSlide() {
+      this.interval = setInterval(this.nextSlide, 4000); // Muda de slide a cada 3 segundos
+    },
+    stopAutoSlide() {
+      if (this.interval) {
+        clearInterval(this.interval);
+      }
+    },
+  },
+  mounted() {
+    this.startAutoSlide();
+  },
+  beforeDestroy() {
+    this.stopAutoSlide();
   },
 };
 </script>
+
+<style src="./Carousel.css" scoped></style>
