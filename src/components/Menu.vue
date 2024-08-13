@@ -4,6 +4,9 @@
         ☰
       </button>
       <nav :class="{ 'open': isMenuOpen }" class="menu">
+      <div class="logo-container">
+        <img src="../assets/image.png" alt="Logo" class="logo" />
+      </div>
         <ul>
           <li><router-link to="/">Home</router-link></li>
           <li><a href="#about">About</a></li>
@@ -13,23 +16,23 @@
         <button @click="toggleMenu" class="close-button">×</button>
       </nav>
     </div>
-  </template>
+</template>
   
-  <script>
-  export default {
+  
+<script>
+    export default {
     name: 'Menu',
     data() {
-      return {
+        return {
         isMenuOpen: false,
-      };
+        };
     },
     methods: {
-      toggleMenu() {
+        toggleMenu() {
         this.isMenuOpen = !this.isMenuOpen;
-      },
+        },
     },
-  };
-  </script>
-  
-  <style src="./Menu.css" scoped></style>
-  
+    };
+</script>
+
+<style src="./Menu.css" scoped></style>
