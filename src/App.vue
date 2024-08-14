@@ -1,24 +1,17 @@
 <template>
   <div id="app">
     <Menu />
-    <Carousel />
-    <buttons />
     <router-view />
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue';
-import Carousel from './components/Carousel.vue';
-import Buttons from './components/Buttons.vue';
-
 
 export default {
   name: 'App',
   components: {
     Menu,
-    Carousel,
-    Buttons,
   },
 };
 </script>
