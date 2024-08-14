@@ -5,7 +5,7 @@
       </button>
       <nav :class="{ 'open': isMenuOpen }" class="menu">
         <div class="logo-container">
-          <img src="../assets/image.png" alt="Logo" class="logo" />
+          <img src="../assets/logo.png" alt="Logo" class="logo" />
         </div>
         <ul>
           <li><router-link to="/">Home</router-link></li>
