@@ -100,7 +100,6 @@
         justify-content: center; /* Centraliza a logo */
         position: relative; /* Garante que a logo fique no fluxo normal */
         margin-top: 10%; /* Espaçamento acima da logo */
-        margin-bottom: -70%; /* Espaçamento abaixo da logo */
         margin-left: 0; /* Garante que a margem à esquerda não afete a posição */
         margin-right: 0; /* Garante que a margem à direita não afete a posição */
     }

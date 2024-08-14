@@ -1,0 +1,55 @@
+.content {
+    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+    padding-bottom: 60px; /* Adiciona espaçamento inferior para o rodapé */
+  }
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 10px; /* Reduzido para uma altura menor */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+    font-size: 0.5rem; /* Define o tamanho da fonte menor */
+    margin-top: 50px; /* Espaço acima do rodapé */
+  }
+  
+  .footer-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .footer-left, .footer-right {
+    flex: 1;
+  }
+  
+  .footer-left {
+    text-align: left;
+  }
+  
+  .footer-right {
+    text-align: right;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-left, .footer-right {
+      flex: none;
+      margin: 10px 0;
+    }
+  
+    .footer-right {
+      text-align: center;
+    }
+  }

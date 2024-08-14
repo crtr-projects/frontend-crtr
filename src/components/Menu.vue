@@ -9,7 +9,7 @@
         </div>
         <ul>
           <li><router-link to="/">Home</router-link></li>
-          <li><a href="/">Agenda</a></li>
+          <li><a href="/agenda">Agenda CRTR</a></li>
           <li><a href="/">Temporada 2024</a></li>
           <li><a href="/">Ranking</a></li>
           <li><a href="/">Lives</a></li>

@@ -4,7 +4,7 @@
   }
   
 .video-preview iframe {
-    width: 100%;
+    width: 70%;
     height: 500px; /* Aumente a altura do preview */
     border-radius: 8px; /* Borda arredondada */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o vídeo */

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
+import Agenda from '../views/Agenda.vue';
 
 const routes = [
   {
@@ -7,12 +8,16 @@ const routes = [
     name: 'Home',
     component: Home,
   },
-  // Adicione mais rotas aqui conforme necessário
+  {
+    path: '/agenda',
+    name: 'Agenda',
+    component: Agenda,
+  }
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes,
 });
 
 export default router;
