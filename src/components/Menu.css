@@ -1,3 +1,5 @@
+@import '../assets/variaveis.css';
+
 /* Estilo do botão de menu */
 .menu-button {
     display: none;

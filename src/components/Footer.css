@@ -1,3 +1,5 @@
+@import '../assets/variaveis.css';
+
 .content {
     flex: 1; /* Faz o conteúdo ocupar o espaço restante */
     padding-bottom: 60px; /* Adiciona espaçamento inferior para o rodapé */
