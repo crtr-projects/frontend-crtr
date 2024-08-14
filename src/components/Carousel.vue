@@ -14,7 +14,7 @@
 import image1 from '../assets/carousel/image.png';
 import image2 from '../assets/carousel/image.png';
 import image3 from '../assets/carousel/image.png';
-import './Carousel.css'; // Importando o CSS separado
+import '../components/Carousel.css'; // Importando o CSS separado
 
 export default {
   name: 'Carousel',
