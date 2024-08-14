@@ -1,0 +1,33 @@
+@import '../assets/variaveis.css'; /* Importa as variáveis de estilo */
+
+/* Estilo geral da view da galeria */
+.galeria-view {
+  padding: 20px;               /* Padding interno */
+  box-sizing: border-box;      /* Inclui o padding e bordas na largura e altura totais */
+  background-color: #f4f4f4;   /* Cor de fundo para a view */
+}
+
+/* Estilo do título da view */
+.title {
+  font-size: 28px;             /* Tamanho da fonte */
+  color: #333;                 /* Cor do texto */
+  margin-right: 20%;           /* Margem direita para o título */
+}
+
+/* Contêiner da galeria */
+.gallery-container {
+  display: flex;               /* Usa flexbox para centralizar a galeria */
+  justify-content: center;     /* Centraliza o componente Galeria horizontalmente */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;           /* Reduz o tamanho da fonte em telas menores */
+    margin-right: 10%;         /* Ajusta a margem direita em telas menores */
+  }
+
+  .galeria-view {
+    padding: 10px;            /* Reduz o padding em telas menores */
+  }
+}

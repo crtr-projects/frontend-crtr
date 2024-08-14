@@ -1,0 +1,43 @@
+@import '../assets/variaveis.css';
+
+/* Estiliza o container principal do banner */
+.instagram-banner {
+    display: flex; /* Define um layout flexível */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f09433; /* Cor de fundo usando as cores do Instagram */
+    background-image: linear-gradient(315deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white; /* Cor do texto */
+    border-radius: 8px; /* Bordas arredondadas */
+  }
+  
+  /* Estiliza o conteúdo dentro do banner */
+  .banner-content {
+    text-align: center; /* Centraliza o texto e os elementos */
+  }
+  
+  /* Estiliza a imagem do QR Code */
+  .qr-code {
+    margin-top: 10px; /* Espaçamento superior */
+    width: 150px; /* Largura da imagem */
+    height: 150px; /* Altura da imagem */
+  }
+  
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .instagram-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .instagram-banner-text {
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+  
+    .instagram-banner-qr img {
+      width: 80px;
+      height: 80px;
+    }
+  }

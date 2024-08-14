@@ -1,0 +1,98 @@
+@import '../assets/variaveis.css'; /* Importa as variáveis de estilo */
+
+/* Container principal do componente "Espacos" */
+.espacos {
+  display: flex;           /* Utiliza flexbox para organizar o layout */
+  justify-content: space-between; /* Espaça os elementos ao máximo */
+  align-items: center;     /* Alinha verticalmente ao centro */
+  padding: 20px;           /* Adiciona padding ao redor do container */
+  background-size: cover;  /* Prepara para uma imagem de fundo futura */
+  background-position: center; /* Centraliza a imagem de fundo */
+  height: 275px;           /* Define a altura total do componente */
+}
+
+/* Estiliza o texto à esquerda */
+.espacos-text {
+  flex: 0 0 30%;           /* O texto ocupa 30% da largura do container */
+  padding-right: 20px;     /* Adiciona espaço à direita do texto */
+}
+
+/* Estiliza o parágrafo dentro da seção de texto */
+.espacos-text p {
+  color: white;            /* Define a cor do texto como branco */
+  font-size: 20px;         /* Define o tamanho da fonte do texto */
+  margin: 0;               /* Remove as margens padrão do parágrafo */
+  padding: 10px;           /* Adiciona padding ao redor do texto */
+  border: 2px solid white; /* Adiciona uma borda branca ao redor do texto */
+  border-radius: 10px;     /* Arredonda as bordas do parágrafo */
+  background: rgba(0, 0, 0, 0.5); /* Aplica um fundo semitransparente ao texto */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Adiciona uma sombra branca ao texto para um efeito futurista */
+}
+
+/* Estiliza o link "Clique e saiba mais" */
+.saiba-mais-link {
+  display: inline-block;   /* Faz com que o link se comporte como um bloco inline */
+  color: #ff0000;          /* Define a cor do link como vermelho */
+  text-decoration: none;   /* Remove o sublinhado do link */
+  font-weight: bold;       /* Deixa o texto do link em negrito */
+  margin-top: 10px;        /* Adiciona uma margem acima do link */
+}
+
+/* Container das logos dos parceiros */
+.espacos-logos {
+  display: flex;           /* Utiliza flexbox para organizar as logos */
+  flex-direction: column;  /* Organiza as logos em colunas */
+  flex: 0 0 70%;           /* As logos ocupam 70% da largura do container */
+  justify-content: center; /* Centraliza verticalmente as linhas de logos */
+  height: 100%;            /* Ajusta a altura das logos ao tamanho do container */
+}
+
+/* Linha de logos */
+.logo-row {
+  display: flex;           /* Utiliza flexbox para alinhar as logos em linha */
+  justify-content: space-evenly; /* Espaça as logos uniformemente na linha */
+  margin-bottom: 40px;     /* Adiciona espaçamento vertical entre as linhas */
+}
+
+/* Placeholder para cada logo */
+.logo-placeholder {
+  width: 80px;             /* Define a largura de cada logo */
+  height: 80px;            /* Define a altura de cada logo */
+  background-color: #333;  /* Adiciona uma cor de fundo até que a logo seja adicionada */
+  display: flex;           /* Utiliza flexbox para centralizar a logo */
+  align-items: center;     /* Centraliza verticalmente a logo dentro do placeholder */
+  justify-content: center; /* Centraliza horizontalmente a logo dentro do placeholder */
+}
+
+/* Regras de mídia para telas menores */
+@media (max-width: 768px) {
+  .espacos-text {
+    font-size: 18px;       /* Reduz o tamanho da fonte em telas menores */
+    flex: 0 0 40%;         /* O texto ocupa 40% da largura em telas menores */
+  }
+
+  .espacos-logos {
+    flex: 0 0 60%;         /* As logos ocupam 60% da largura em telas menores */
+  }
+
+  .logo-placeholder {
+    width: 60px;           /* Reduz a largura das logos em telas menores */
+    height: 60px;          /* Reduz a altura das logos em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .espacos-text {
+    font-size: 16px;       /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+    flex: 0 0 50%;         /* O texto ocupa 50% da largura em telas muito pequenas */
+  }
+
+  .espacos-logos {
+    flex: 0 0 50%;         /* As logos ocupam 50% da largura em telas muito pequenas */
+  }
+
+  .logo-placeholder {
+    width: 50px;           /* Reduz ainda mais a largura das logos em telas muito pequenas */
+    height: 50px;          /* Reduz ainda mais a altura das logos em telas muito pequenas */
+  }
+}

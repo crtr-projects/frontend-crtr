@@ -1,1 +1,27 @@
 @import '../assets/variaveis.css';
+
+/* Estilos gerais para a página Home */
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsividade geral para a página Home */
+@media (max-width: 768px) {
+  /* Ajustes para telas menores que 768px, como tablets */
+  .carousel-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para telas menores que 480px, como celulares */
+  .carousel-container {
+    width: 100%;
+  }
+
+  .carousel-btn {
+    font-size: 1.5em;
+  }
+}
