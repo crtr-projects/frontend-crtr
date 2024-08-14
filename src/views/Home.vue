@@ -1,20 +1,20 @@
-<template>
-    <div class="home">
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the main content area.</p>
-    </div>
+  <template>
+    <YouTubePreview />
   </template>
   
   <script>
+  import YouTubePreview from '../components/YouTubePreview.vue';
+
   export default {
+
+    components: {
+        YouTubePreview,
+    },
+
     name: 'Home',
   };
   </script>
-  
-  <style scoped>
-  .home {
-    text-align: center;
-    padding: 20px;
-  }
-  </style>
+
+<style src="./Home.css"></style>
+
   

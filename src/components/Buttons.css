@@ -1,0 +1,30 @@
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px; /* Espaçamento entre os botões */
+    margin: 10px 0;
+  }
+  
+  .action-button {
+    background-color: #800D0D; /* Cor de fundo do botão */
+    color: white;
+    border: 2px solid #1A0303; /* Borda do botão */
+    padding: 25px 70px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .action-button:hover {
+    background-color: #1A0303; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumentar ao passar o mouse */
+  }
+  
+  /* Estilo responsivo */
+  @media (max-width: 768px) {
+    .action-button {
+      flex: 1 1 45%; /* Botões ocupam 45% da largura do contêiner em telas menores */
+      padding: 15px;
+      text-align: center;
+    }
+  }
