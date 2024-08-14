@@ -3,21 +3,14 @@ import Home from '../views/Home.vue';
 import Agenda from '../views/Agenda.vue';
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-  },
-  {
-    path: '/agenda',
-    name: 'Agenda',
-    component: Agenda,
-  }
+  { path: '/', component: Home },
+  { path: '/agenda', component: Agenda },
+  // Adicione outras rotas conforme necessário
 ];
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes,
+  history: createWebHistory(),
+  routes,
 });
 
 export default router;
