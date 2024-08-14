@@ -1,0 +1,62 @@
+@import '../assets/variaveis.css'; /* Importa as variáveis de estilo */
+
+/* Estilo geral do componente Galeria */
+.gallery {
+  width: 100%;                 /* Largura total do componente */
+  max-width: 1200px;           /* Largura máxima do componente */
+  margin: 0 auto;              /* Centraliza o componente horizontalmente */
+  padding: 20px;              /* Padding interno */
+  background-color: #fff;     /* Cor de fundo do componente */
+}
+
+/* Estilo do título da galeria */
+.gallery-title {
+  font-size: 28px;             /* Tamanho da fonte */
+  color: #333;                 /* Cor do texto */
+  margin-right: 20%;           /* Margem direita para o título */
+}
+
+/* Destaque da palavra "Fotos" */
+.highlight {
+  color: red;                  /* Cor vermelha para a palavra "Fotos" */
+}
+
+/* Grid da galeria */
+.gallery-grid {
+  display: flex;               /* Usa flexbox para o grid */
+  justify-content: center;     /* Centraliza o conteúdo */
+  gap: 20px;                   /* Espaçamento entre as imagens */
+  margin-top: 20px;            /* Margem superior para espaçar do título */
+}
+
+/* Item da galeria */
+.gallery-photo {
+  width: 40%;                  /* Largura das imagens */
+  max-width: 300px;            /* Largura máxima das imagens */
+  height: auto;                /* Altura automática para manter a proporção */
+}
+
+/* Botão de ver mais */
+.more-button {
+  display: block;              /* Exibe o botão como bloco */
+  margin: 20px auto;           /* Margem superior e inferior para espaçamento */
+  padding: 10px 20px;          /* Padding interno do botão */
+  background-color: red;       /* Cor de fundo vermelha */
+  color: #fff;                 /* Cor do texto do botão */
+  border: none;                /* Remove bordas padrão */
+  border-radius: 4px;          /* Bordas arredondadas */
+  font-size: 16px;             /* Tamanho da fonte do botão */
+  cursor: pointer;             /* Cursor pointer para indicar que é clicável */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 24px;           /* Reduz o tamanho da fonte em telas menores */
+    margin-right: 10%;         /* Ajusta a margem direita em telas menores */
+  }
+
+  .gallery-photo {
+    max-width: 200px;          /* Reduz a largura máxima das imagens em telas menores */
+  }
+}
