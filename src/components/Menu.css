@@ -1,148 +1,142 @@
 @import '../assets/variaveis.css';
 
 .menu-wrapper {
-  background: linear-gradient(to right, #800D0D, #1A0303); /* Exemplo de gradiente */
-  /* padding: 20px; */
-  /* border-radius: 8px; */
+  background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative; /* Para permitir o posicionamento absoluto dos elementos internos */
-  /* Adicione mais estilos conforme necessário */
 }
 
 /* Estilo do botão de menu */
 .menu-button {
-    display: none;
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Estilo do menu horizontal */
+.menu {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo */
+  color: white;
+  padding: 30px;
+  justify-content: space-between; /* Alinha logo e menu */
+  position: relative; /* Para posicionar o botão de fechar corretamente */
+}
+
+.logo-container {
+  flex: 0 0 auto; /* Evita que a logo se expanda */
+  z-index: 1001; /* Garante que a logo fique acima do menu */
+}
+
+.logo {
+  height: 100px; /* Ajuste o tamanho da logo conforme necessário */
+  border-radius: 50%; /* Torna a logo arredondada */
+  box-shadow: 0 0 100px rgba(255, 199, 194, 0.8); /* Adiciona a borda brilhante */
+}
+
+.menu ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Permite que os itens ocupem o espaço restante */
+  justify-content: center; /* Centraliza os itens no menu */
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo do botão de fechar */
+.close-button {
+  display: none;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column; /* Menu na vertical */
+    position: fixed; /* Fixa o menu no topo da página */
+    top: 0;
+    left: 0; /* Posiciona o menu no lado esquerdo */
+    width: 180px; /* Largura reduzida do menu */
+    height: 100vh; /* Altura completa da tela */
+    background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo para a versão móvel */
+    padding: 20px;
+    transform: translateX(-100%); /* Oculta o menu inicialmente */
+    transition: transform 0.5s ease;
+    z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
+  }
+
+  .menu.open {
+    transform: translateX(0); /* Exibe o menu quando aberto */
+  }
+
+  .menu-button {
+    display: block;
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 10px; /* Aumenta o padding para um tamanho maior */
+    font-size: 30px; /* Aumenta o tamanho da fonte do botão */
+    border-radius: 6px; /* Borda arredondada */
+    cursor: pointer; /* Indica que é clicável */
+    max-width: 200px; /* Limita a largura máxima do botão */
+  }
+
+  .close-button {
+    display: block;
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
-  }
-  
-  /* Estilo do menu horizontal */
-  .menu {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo */
     color: white;
-    padding: 30px;
-    justify-content: space-between; /* Alinha logo e menu */
-    position: relative; /* Para posicionar o botão de fechar corretamente */
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
-  
+
   .logo-container {
-    flex: 0 0 auto; /* Evita que a logo se expanda */
-    z-index: 1001; /* Garante que a logo fique acima do menu */
+    display: flex; /* Exibe a logo no modo móvel */
+    justify-content: center; /* Centraliza a logo */
+    position: relative; /* Garante que a logo fique no fluxo normal */
+    margin-top: 10%; /* Espaçamento acima da logo */
+    margin-left: 0; /* Garante que a margem à esquerda não afete a posição */
+    margin-right: 0; /* Garante que a margem à direita não afete a posição */
   }
-  
+
   .logo {
-    height: 100px; /* Ajuste o tamanho da logo conforme necessário */
-    border-radius: 50%; /* Torna a logo arredondada */
-    box-shadow: 0 0 100px rgba(255, 199, 194, 0.8); /* Adiciona a borda brilhante */
-
+    height: 150px; /* Ajusta o tamanho da logo conforme necessário */
   }
-  
+
   .menu ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
+    flex-direction: column; /* Itens dispostos verticalmente */
+    align-items: center; /* Alinha os itens ao centro */
     margin: 0;
-    flex: 1; /* Permite que os itens ocupem o espaço restante */
-    justify-content: center; /* Centraliza os itens no menu */
+    padding: 0;
   }
-  
+
   .menu li {
-    margin: 0 15px;
-  }
-  
-  .menu a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .menu a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Estilo do botão de fechar */
-  .close-button {
-    display: none;
-  }
-  
-  /* Estilo responsivo */
-  @media (max-width: 768px) {
-    .menu {
-      display: flex;
-      flex-direction: column; /* Menu na vertical */
-      position: fixed; /* Fixa o menu no topo da página */
-      top: 0;
-      left: 0; /* Posiciona o menu no lado esquerdo */
-      width: 180px; /* Largura reduzida do menu */
-      height: 100vh; /* Altura completa da tela */
-      background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo para a versão móvel */
-      padding: 20px;
-      transform: translateX(-100%); /* Oculta o menu inicialmente */
-      transition: transform 0.5s ease;
-      z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
-    }
-  
-    .menu.open {
-      transform: translateX(0); /* Exibe o menu quando aberto */
-    }
-
-    .menu-button {
-      display: block;
-      color: #fff; /* Cor do texto do botão */
-      border: none;
-      padding: 10px 10px; /* Aumenta o padding para um tamanho maior */
-      font-size: 30px; /* Aumenta o tamanho da fonte do botão */
-      border-radius: 6px; /* Borda arredondada */
-      cursor: pointer; /* Indica que é clicável */
-      max-width: 200px; /* Limita a largura máxima do botão */
-  }
-  
-  
-    .close-button {
-      display: block;
-      font-size: 24px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: white;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-  
-    .logo-container {
-        display: flex; /* Exibe a logo no modo móvel */
-        justify-content: center; /* Centraliza a logo */
-        position: relative; /* Garante que a logo fique no fluxo normal */
-        margin-top: 10%; /* Espaçamento acima da logo */
-        margin-left: 0; /* Garante que a margem à esquerda não afete a posição */
-        margin-right: 0; /* Garante que a margem à direita não afete a posição */
-    }
-  
-    .logo {
-        height: 150px; /* Ajusta o tamanho da logo conforme necessário */
-    }
-
-    .menu ul {
-      flex-direction: column; /* Itens dispostos verticalmente */
-      align-items: center; /* Alinha os itens ao centro */
-      margin: 0;
-      padding: 0;
-    }
-  
-    .menu li {
-      margin: 25px; /* Ajusta o espaçamento dos itens no menu móvel */
-    }
-  }
-
-  /* Exemplo de estilo para responsividade */
-@media (max-width: 768px) {
-  .menu-wrapper {
-      padding: 10px; /* Ajuste o padding para telas menores */
+    margin: 25px; /* Ajusta o espaçamento dos itens no menu móvel */
   }
 }
-  
+
+/* Exemplo de estilo para responsividade */
+@media (max-width: 768px) {
+  .menu-wrapper {
+    padding: 10px; /* Ajuste o padding para telas menores */
+  }
+}

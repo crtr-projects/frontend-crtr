@@ -13,14 +13,14 @@
       
       <!-- Links do menu -->
       <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/agenda">Agenda CRTR</router-link></li>
-        <li><router-link to="/loja">Loja Oficial</router-link></li>
-        <li><router-link to="/galeria">Galeria de Fotos</router-link></li> <!-- Novo link para a Galeria -->
-        <li><a href="/">Temporada 2024</a></li>
-        <li><a href="/">Ranking</a></li>
-        <li><a href="/">Lives</a></li>
-        <li><a href="/">Informações</a></li>
+        <li><router-link to="/" @click.native="closeMenu">Home</router-link></li>
+        <li><router-link to="/agenda" @click.native="closeMenu">Agenda CRTR</router-link></li>
+        <li><router-link to="/loja" @click.native="closeMenu">Loja Oficial</router-link></li>
+        <li><router-link to="/galeria" @click.native="closeMenu">Galeria de Fotos</router-link></li>
+        <li><router-link to="/2024" @click.native="closeMenu">Temporada 2024</router-link></li>
+        <li><router-link to="/ranking" @click.native="closeMenu">Ranking</router-link></li>
+        <li><router-link to="/lives" @click.native="closeMenu">Lives</router-link></li>
+        <li><router-link to="/informacoes" @click.native="closeMenu">Informações</router-link></li>
       </ul>
       
       <!-- Botão de fechar o menu -->
@@ -41,10 +41,13 @@ export default {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
     },
+    closeMenu() {
+      this.isMenuOpen = false;
+    },
     handleClickOutside(event) {
       const menuWrapper = this.$refs.menuWrapper;
       if (menuWrapper && !menuWrapper.contains(event.target) && this.isMenuOpen) {
-        this.isMenuOpen = false;
+        this.closeMenu();
       }
     },
   },
