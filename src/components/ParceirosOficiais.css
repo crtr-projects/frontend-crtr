@@ -2,22 +2,22 @@
 @import '../assets/variaveis.css';
 
 .parceiros-oficiais {
-    position: relative; /* Permite que o conteúdo interno seja posicionado em relação ao componente */
-    background-color: #f0f0f0; /* Cor de fundo cinza */
-    padding: 20px; /* Espaçamento interno */
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 20px;
     text-align: center;    
 }
   
-  /* Título centralizado */
-  .titulo {
+/* Título centralizado */
+.titulo {
     text-align: center;
     font-size: 24px;
     color: #333;
     margin-bottom: 40px;
   }
   
-  /* Grid de logos dos parceiros */
-  .parceiros-grid {
+/* Grid de logos dos parceiros */
+.parceiros-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -25,8 +25,8 @@
     margin-bottom: 80px; /* Espaço adicional para o ícone do WhatsApp */
   }
   
-  /* Estilo individual dos itens de parceiros */
-  .parceiro-item {
+/* Estilo individual dos itens de parceiros */
+.parceiro-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,16 +34,16 @@
     max-width: 200px; /* Tamanho máximo baseado no maior item */
   }
   
-  /* Estilo das logos dos parceiros */
-  .parceiro-logo {
+/* Estilo das logos dos parceiros */
+.parceiro-logo {
     width: 100px;
     height: 100px;
     border-radius: 10%;
     object-fit: cover;
-  }
+}
   
-  /* Estilo do nome do parceiro */
-  .parceiro-nome {
+/* Estilo do nome do parceiro */
+.parceiro-nome {
     margin-top: 10px;
     font-size: 14px;
     color: #333;
@@ -53,12 +53,12 @@
     max-width: 150px; /* Limita a largura máxima do texto */
   }
   
-  /* Logo do WhatsApp no canto direito inferior */
-  .whatsapp-logo {
-    position: absolute; /* Posiciona a imagem em relação ao componente */
-    right: 20px; /* Distância da borda direita do componente */
-    bottom: 20px; /* Distância da borda inferior do componente */
-  }
+/* Logo do WhatsApp no canto direito inferior */
+.whatsapp-logo {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
 
   .whatsapp-logo img {
     width: 5vw; /* Tamanho responsivo baseado na largura da viewport */
