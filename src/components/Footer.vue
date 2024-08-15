@@ -12,6 +12,9 @@
         </a>
       </div>
       <div class="footer-right">
+        <a href="https://wa.me/27996253020" target="_blank" class="footer-social">
+          <img src="../assets/logos/whatsapp-logo-footer.svg" alt="whatsapp" class="footer-social-icon"/>
+        </a>
         <a href="https://facebook.com" target="_blank" class="footer-social">
           <img src="../assets/logos/facebook-logo.svg" alt="Facebook" class="footer-social-icon"/>
         </a>
@@ -22,7 +25,7 @@
           <img src="../assets/logos/instagram-logo.svg" alt="Instagram" class="footer-social-icon"/>
         </a>
         <a href="https://youtube.com" target="_blank" class="footer-social">
-          <img src="../assets/logos/whatsapp-logo-footer.svg" alt="YouTube" class="footer-social-icon"/>
+          <img src="../assets/logos/youtube-logo.svg" alt="YouTube" class="footer-social-icon"/>
         </a>
         <a href="https://spotify.com" target="_blank" class="footer-social">
           <img src="../assets/logos/spotify-logo.svg" class="footer-social-icon"/>
