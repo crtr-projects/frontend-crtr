@@ -6,7 +6,6 @@ sempre adicionar o caminho deste arquivo nas outras classes css para poder impor
 
 */ 
 
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @font-face
@@ -28,34 +27,23 @@ sempre adicionar o caminho deste arquivo nas outras classes css para poder impor
 }
 
 :root  {
-    --BackgroundPrincipal: #1e365a;
+    --BackgroundPrincipal: linear-gradient(to right, #800D0D, #1A0303);
     --backgroundBody: #FFFAFA;
     --backgroundBranco: #ffffff;
-    --backgroundDeFundoCamposAutomaticos: #d6d6d6;
-    --backgroundDeFundoCamposManuais: #EFEFEF;
-    --backgroundDosBotoesHover: #ffffff;
-    --backgroundDosBotoesStatic: #1e365a;
-    --backgroundLogin: #b8b8c4;
-    --backgroundSecundario: #365175;
-    --backgroundDropdown: #2F4766;
-    --backgroundTerciario: #557fb5ab;
-    --backgroundAbas: #78787826;
-    --borderCorHover: #1E365A;
-    --borderCorPadrao: #1E365A;
-    --borderAbas: #787878;
-    --borderPadrao: 1.5px solid transparent;
+    --backgroundDosBotoesHover: #ff0000;
+    --backgroundDosBotoesStatic: #800D0D;
+    --backgroundSecundario: #7a7a7a;
+    --borderCorHover: var(--backgroundDosBotoesStatic);
+    --borderCorPadrao: var(--backgroundDosBotoesStatic);
+    --borderPadraoFooter: 2px solid #800d0d38;
     --borderRadiusMaior: 20px;
     --borderRadiusMedium: 10px;
     --borderRadiusPadrao: 6px;
     --corDaFontePrincipalEscrita: black;
-    --corFonteTercOpcao: #262525;
-    --corFonteQuarOpcao: #DEDCDC;
-    --corFonteDentroDosBotoesHover: #1e365a;
-    --corFonteDentroDosBotoesStatic: #ffffff;
-    --corFonteLinkHover: #597cb1;
-    --corFonteLogin: #464543;
-    --estrelaFavorito: darkgoldenrod !important;
-    --estrelaFavoritoHover: gold !important;
+    --corFonteSegOpcao: var(--backgroundDosBotoesStatic);
+    --corFonteDentroDosBotoesHover: #ffffff;
+    --corFonteDentroDosBotoesStatic: var(--corFonteDentroDosBotoesHover);
+    --corFonteLinkHover: #darkgoldenrod;
     --fontePrincipal: "Google Sans",Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
     --heightBotoes: 35px;
     --heightPadraoCampos: 42px;
