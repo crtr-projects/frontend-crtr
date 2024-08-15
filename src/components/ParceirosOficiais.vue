@@ -19,19 +19,23 @@
   </template>
 
   <script>
+
+  import sumetalLogo from '../assets/parceiros/sumetal.png';
+  import velhosBoiadeiros from '../assets/parceiros/velhos-boiadeiros.png';
+  import camargo from '../assets/parceiros/camargo.png';
+  import lifeWestern from '../assets/parceiros/life-western.png';
+
   export default {
     name: 'ParceirosOficiais',
     data() {
       return {
-        whatsappLink: 'https://wa.me/yourwhatsappnumber', // Link do WhatsApp
+        whatsappLink: 'https://wa.me/27996253020', // Link do WhatsApp
         parceiros: [
-          { nome: 'BMW', logo: '../' },
-          { nome: 'MERCEDEZ', logo: 'path/to/parceiro2-logo.jpg' },
-          { nome: 'APPLE', logo: 'path/to/parceiro3-logo.jpg' },
-          { nome: 'BEER DAY', logo: 'path/to/parceiro4-logo.jpg' },
-          { nome: 'GOOGLE', logo: 'path/to/parceiro5-logo.jpg' },
-          // Adicione mais parceiros conforme necessário
-        ],
+          { nome: 'SUMETAL', logo: sumetalLogo },
+          { nome: 'VELHOS BOIADEIROS', logo: velhosBoiadeiros },
+          { nome: 'CAMARGO COMUNICACÃO VISUAL', logo: camargo },
+          { nome: 'LIFE WESTERN', logo: lifeWestern },
+        ]
       };
     },
   };
