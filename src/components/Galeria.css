@@ -6,7 +6,7 @@
   max-width: 1200px;           /* Largura máxima do componente */
   margin: 0 auto;              /* Centraliza o componente horizontalmente */
   padding: 20px;              /* Padding interno */
-  background-color: #fff;     /* Cor de fundo do componente */
+  background-color: transparent;     /* Cor de fundo do componente */
 }
 
 /* Estilo do título da galeria */
