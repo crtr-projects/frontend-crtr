@@ -1,0 +1,64 @@
+/* Importação das variáveis de estilo */
+@import '../assets/variaveis.css';
+
+.parceiros-oficiais {
+    position: relative; /* Permite que o conteúdo interno seja posicionado em relação ao componente */
+    background-color: #f0f0f0; /* Cor de fundo cinza */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center;    
+}
+  
+  /* Título centralizado */
+  .titulo {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  /* Grid de logos dos parceiros */
+  .parceiros-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 80px; /* Espaço adicional para o ícone do WhatsApp */
+  }
+  
+  /* Estilo individual dos itens de parceiros */
+  .parceiro-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilo das logos dos parceiros */
+  .parceiro-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Estilo do nome do parceiro */
+  .parceiro-nome {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Logo do WhatsApp no canto direito inferior */
+  .whatsapp-logo {
+    position: absolute; /* Posiciona a imagem em relação ao componente */
+    right: 20px; /* Distância da borda direita do componente */
+    bottom: 20px; /* Distância da borda inferior do componente */
+  }
+
+  .whatsapp-logo img {
+    width: 5vw; /* Tamanho responsivo baseado na largura da viewport */
+    height: 5vw; /* Altura responsiva baseada na largura da viewport */
+    max-width: 70px; /* Limite máximo de largura */
+    max-height: 70px; /* Limite máximo de altura */
+    min-width: 40px; /* Limite mínimo de largura */
+    min-height: 40px; /* Limite mínimo de altura */
+  }
