@@ -1,21 +1,29 @@
 <template>
   <div ref="menuWrapper">
+    <!-- Botão de abrir o menu -->
     <button @click="toggleMenu" class="menu-button">
       ☰
     </button>
+    
+    <!-- Navegação principal -->
     <nav :class="{ 'open': isMenuOpen }" class="menu">
       <div class="logo-container">
         <img src="../assets/logo.png" alt="Logo" class="logo" />
       </div>
+      
+      <!-- Links do menu -->
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><a href="/agenda">Agenda CRTR</a></li>
+        <li><router-link to="/agenda">Agenda CRTR</router-link></li>
+        <li><router-link to="/loja">Loja Oficial</router-link></li>
+        <li><router-link to="/galeria">Galeria de Fotos</router-link></li> <!-- Novo link para a Galeria -->
         <li><a href="/">Temporada 2024</a></li>
         <li><a href="/">Ranking</a></li>
         <li><a href="/">Lives</a></li>
         <li><a href="/">Informações</a></li>
-        <li><router-link to="/galeria">Galeria de Fotos</router-link></li> <!-- Novo link para Galeria de Fotos -->
       </ul>
+      
+      <!-- Botão de fechar o menu -->
       <button @click="toggleMenu" class="close-button">×</button>
     </nav>
   </div>
@@ -49,4 +57,4 @@ export default {
 };
 </script>
 
-<style src="./Menu.css" scoped></style>
+<style src="../components/Menu.css" scoped></style>
