@@ -9,9 +9,10 @@
   background-size: cover;  /* Prepara para uma imagem de fundo futura */
   background-position: center; /* Centraliza a imagem de fundo */
   height: 275px;           /* Define a altura total do componente */
-  max-width: 1000px; /* Define a largura máxima do carrossel */
+  max-width: 100%; /* Define a largura máxima do carrossel */
   max-height: 500px; /* Define a largura máxima do carrossel */
   margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+  background-image: url("../assets/background/background-madeira.jpg");
 }
 
 /* Estiliza o texto à esquerda */
