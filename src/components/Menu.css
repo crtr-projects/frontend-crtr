@@ -1,5 +1,14 @@
 @import '../assets/variaveis.css';
 
+.menu-wrapper {
+  background: linear-gradient(to right, #800D0D, #1A0303); /* Exemplo de gradiente */
+  /* padding: 20px; */
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; /* Para permitir o posicionamento absoluto dos elementos internos */
+  /* Adicione mais estilos conforme necessário */
+}
+
 /* Estilo do botão de menu */
 .menu-button {
     display: none;
@@ -68,7 +77,7 @@
       position: fixed; /* Fixa o menu no topo da página */
       top: 0;
       left: 0; /* Posiciona o menu no lado esquerdo */
-      width: 250px; /* Largura reduzida do menu */
+      width: 180px; /* Largura reduzida do menu */
       height: 100vh; /* Altura completa da tela */
       background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo para a versão móvel */
       padding: 20px;
@@ -121,4 +130,11 @@
       margin: 25px; /* Ajusta o espaçamento dos itens no menu móvel */
     }
   }
+
+  /* Exemplo de estilo para responsividade */
+@media (max-width: 768px) {
+  .menu-wrapper {
+      padding: 10px; /* Ajuste o padding para telas menores */
+  }
+}
   

@@ -1,0 +1,67 @@
+/* Importação das variáveis de estilo */
+@import '../assets/variaveis.css';
+
+/* ProdutosCarrossel.css */
+
+/* Contêiner principal do carrossel */
+.carrossel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px; /* Adiciona padding ao contêiner */
+}
+
+/* Contêiner do carrossel que controla a transição das slides */
+.carrossel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  justify-content: center; /* Centraliza os produtos */
+}
+
+/* Frame de cada produto */
+.produto-frame {
+  flex: 0 0 300px; /* Define o tamanho fixo de cada frame de produto */
+  box-sizing: border-box;
+  margin: 0 10px; /* Espaçamento entre os frames */
+  text-align: center; /* Centraliza o conteúdo dentro do frame */
+}
+
+/* Imagem do produto */
+.produto-imagem {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+/* Informações do produto */
+.produto-info {
+  padding: 10px;
+}
+
+/* Botões de controle do carrossel */
+.carrossel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carrossel-control.prev {
+  left: 10px;
+}
+
+.carrossel-control.next {
+  right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .produto-frame {
+      flex: 0 0 100%;
+  }
+}

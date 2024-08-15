@@ -44,7 +44,7 @@ export default {
   mounted() {
     this.startAutoSlide();
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.stopAutoSlide();
   },
 };
