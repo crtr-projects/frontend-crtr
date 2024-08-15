@@ -1,6 +1,5 @@
 <template>
     <div class="galeria-view">
-      <h1 class="title">Galeria de Fotos</h1>
       <div class="gallery-container">
         <Galeria /> <!-- Inclui o componente Galeria na view -->
       </div>

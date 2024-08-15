@@ -5,7 +5,7 @@
         <!-- Texto incentivando os usuários a seguir no Instagram -->
         <p>Siga-nos no Instagram!</p>
         <!-- Imagem do QR Code -->
-        <img :src="qrCodeSrc" alt="QR Code para seguir no Instagram" class="qr-code" />
+        <img src="../assets/logos/instagram-logo.svg" alt="QR Code para seguir no Instagram" class="qr-code" />
       </div>
     </div>
   </template>
@@ -16,16 +16,6 @@
   
   export default {
     name: "InstagramBanner", // Nome do componente
-    props: {
-      /* 
-      Define uma prop chamada `qrCodeSrc`, que espera uma string.
-      Essa prop é utilizada para definir o caminho da imagem do QR Code.
-      */
-      qrCodeSrc: {
-        type: String,
-        required: true // Indica que a prop é obrigatória
-      }
-    }
   };
   </script>
   

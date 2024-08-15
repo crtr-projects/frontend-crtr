@@ -3,7 +3,7 @@
     <Carousel />
     <Buttons />
     <YouTubePreview />
-    <InstagramBanner qrCodeSrc="path/para/seu/qrcode.png" />
+    <InstagramBanner />
     <UltimasNovidades />
     <Espacos /> <!-- Coloca o componente Espaços acima da Galeria -->
     <Galeria /> <!-- Coloca o componente Galeria abaixo do Espaços -->

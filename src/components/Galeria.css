@@ -5,15 +5,18 @@
   width: 100%;                 /* Largura total do componente */
   max-width: 1200px;           /* Largura máxima do componente */
   margin: 0 auto;              /* Centraliza o componente horizontalmente */
-  padding: 20px;              /* Padding interno */
-  background-color: transparent;     /* Cor de fundo do componente */
+  padding: 20px;               /* Padding interno */
+  background-color: transparent; /* Cor de fundo do componente */
+  text-align: center;
+  max-width: 1000px; 
+  max-height: 500px; 
 }
 
 /* Estilo do título da galeria */
 .gallery-title {
   font-size: 28px;             /* Tamanho da fonte */
   color: #333;                 /* Cor do texto */
-  margin-right: 20%;           /* Margem direita para o título */
+  text-align: center;
 }
 
 /* Destaque da palavra "Fotos" */
@@ -27,6 +30,7 @@
   justify-content: center;     /* Centraliza o conteúdo */
   gap: 20px;                   /* Espaçamento entre as imagens */
   margin-top: 20px;            /* Margem superior para espaçar do título */
+  flex-wrap: wrap;             /* Permite que os itens do grid quebrem para novas linhas em telas menores */
 }
 
 /* Item da galeria */
@@ -58,5 +62,17 @@
 
   .gallery-photo {
     max-width: 200px;          /* Reduz a largura máxima das imagens em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-photo {
+    width: 100%;               /* Aumenta a largura das imagens para 100% em telas muito pequenas */
+    max-width: 100%;           /* Remove o limite máximo da largura para telas muito pequenas */
+  }
+
+  .more-button {
+    font-size: 14px;           /* Reduz o tamanho da fonte do botão em telas menores */
+    padding: 8px 16px;         /* Ajusta o padding do botão em telas menores */
   }
 }

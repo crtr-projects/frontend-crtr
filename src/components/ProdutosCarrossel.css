@@ -5,10 +5,14 @@
 
 /* Contêiner principal do carrossel */
 .carrossel {
+  overflow: hidden;
   position: relative;
   width: 100%;
   overflow: hidden;
   padding: 20px; /* Adiciona padding ao contêiner */
+  max-width: 1000px; /* Define a largura máxima do carrossel */
+  max-height: 500px; /* Define a largura máxima do carrossel */
+  margin: 0 auto; /* Centraliza o carrossel horizontalmente */
 }
 
 /* Contêiner do carrossel que controla a transição das slides */

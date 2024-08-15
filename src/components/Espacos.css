@@ -9,6 +9,9 @@
   background-size: cover;  /* Prepara para uma imagem de fundo futura */
   background-position: center; /* Centraliza a imagem de fundo */
   height: 275px;           /* Define a altura total do componente */
+  max-width: 1000px; /* Define a largura máxima do carrossel */
+  max-height: 500px; /* Define a largura máxima do carrossel */
+  margin: 0 auto; /* Centraliza o carrossel horizontalmente */
 }
 
 /* Estiliza o texto à esquerda */
@@ -29,13 +32,13 @@
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Adiciona uma sombra branca ao texto para um efeito futurista */
 }
 
-/* Estiliza o link "Clique e saiba mais" */
 .saiba-mais-link {
   display: inline-block;   /* Faz com que o link se comporte como um bloco inline */
   color: #ff0000;          /* Define a cor do link como vermelho */
   text-decoration: none;   /* Remove o sublinhado do link */
   font-weight: bold;       /* Deixa o texto do link em negrito */
   margin-top: 10px;        /* Adiciona uma margem acima do link */
+  font-size: 16px;         /* Tamanho de fonte padrão */
 }
 
 /* Container das logos dos parceiros */
@@ -79,6 +82,11 @@
     width: 60px;           /* Reduz a largura das logos em telas menores */
     height: 60px;          /* Reduz a altura das logos em telas menores */
   }
+
+  .saiba-mais-link {
+    font-size: 14px;       /* Reduz o tamanho da fonte em telas menores */
+    margin-top: 8px;       /* Reduz a margem acima do link */
+  }
 }
 
 @media (max-width: 480px) {
@@ -94,5 +102,10 @@
   .logo-placeholder {
     width: 50px;           /* Reduz ainda mais a largura das logos em telas muito pequenas */
     height: 50px;          /* Reduz ainda mais a altura das logos em telas muito pequenas */
+  }
+
+  .saiba-mais-link {
+    font-size: 12px;       /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+    margin-top: 6px;       /* Reduz a margem acima do link */
   }
 }

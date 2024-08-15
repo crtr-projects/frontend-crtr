@@ -18,6 +18,7 @@
 .gallery-container {
   display: flex;               /* Usa flexbox para centralizar a galeria */
   justify-content: center;     /* Centraliza o componente Galeria horizontalmente */
+  flex-wrap: wrap;             /* Permite que o conteúdo da galeria quebre linha em telas menores */
 }
 
 /* Responsividade para telas menores */
@@ -28,6 +29,17 @@
   }
 
   .galeria-view {
-    padding: 10px;            /* Reduz o padding em telas menores */
+    padding: 10px;             /* Reduz o padding em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;           /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+    margin-right: 5%;          /* Ajusta ainda mais a margem direita */
+  }
+
+  .galeria-view {
+    padding: 8px;              /* Reduz ainda mais o padding em telas muito pequenas */
   }
 }
