@@ -1,45 +1,57 @@
-/* Importação das variáveis de estilo */
-@import '../assets/variaveis.css';
-
-/* ProdutosCarrossel.css */
-
-/* Contêiner principal do carrossel */
+/* Estilo geral do carrossel */
 .carrossel {
-  overflow: hidden;
   position: relative;
-  width: 100%;
   overflow: hidden;
-  padding: 20px; /* Adiciona padding ao contêiner */
-  max-width: 1000px; /* Define a largura máxima do carrossel */
-  max-height: 500px; /* Define a largura máxima do carrossel */
-  margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+  width: 100%;
+  background: rgba(169, 169, 169, 0.5); /* Cinza fosco transparente */
+  border-radius: 8px; /* Borda arredondada, opcional */
 }
 
-/* Contêiner do carrossel que controla a transição das slides */
+/* Contêiner do carrossel */
 .carrossel-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  justify-content: center; /* Centraliza os produtos */
+  width: 100%;
+}
+
+/* Slide do carrossel */
+.carrossel-slide {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 /* Frame de cada produto */
 .produto-frame {
-  flex: 0 0 300px; /* Define o tamanho fixo de cada frame de produto */
+  flex: 0 0 33.33%; /* Cada item ocupa 33.33% da largura do contêiner, três por linha */
   box-sizing: border-box;
-  margin: 0 10px; /* Espaçamento entre os frames */
-  text-align: center; /* Centraliza o conteúdo dentro do frame */
+  padding: 10px;
 }
 
 /* Imagem do produto */
 .produto-imagem {
   width: 100%;
   height: auto;
-  margin-bottom: 10px; /* Espaço abaixo da imagem */
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 /* Informações do produto */
 .produto-info {
+  text-align: center;
+  color: #333; /* Cor do texto */
+}
+
+/* Botão de adicionar à sacola */
+.add-to-cart {
+  background-color: #ff6f61; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  border: none;
   padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Ocupa a largura total do contêiner do produto */
 }
 
 /* Botões de controle do carrossel */
@@ -48,11 +60,11 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #fff;
   border: none;
-  font-size: 20px;
   padding: 10px;
   cursor: pointer;
+  font-size: 24px;
 }
 
 .carrossel-control.prev {
@@ -64,8 +76,18 @@
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .produto-frame {
+    flex: 0 0 50%; /* Dois produtos por linha em telas menores */
+  }
+}
+
 @media (max-width: 768px) {
   .produto-frame {
-      flex: 0 0 100%;
+    flex: 0 0 100%; /* Um produto por linha em telas ainda menores */
+  }
+  
+  .carrossel-control {
+    font-size: 20px; /* Tamanho menor para os botões de controle */
   }
 }
