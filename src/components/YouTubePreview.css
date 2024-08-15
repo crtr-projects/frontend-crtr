@@ -1,26 +1,37 @@
 @import '../assets/variaveis.css';
 
+/* Estilo geral para o contêiner do vídeo */
 .video-preview {
     margin-top: 20px;
-    padding: 0 15px;
-  }
-  
-.video-preview iframe {
-    width: 70%;
-    height: 500px; /* Aumente a altura do preview */
-    border-radius: 8px; /* Borda arredondada */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o vídeo */
+    padding: 0; /* Remove o padding para telas menores */
+    text-align: center; /* Centraliza o conteúdo */
 }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .video-preview iframe {
-      height: 250px; /* Ajuste a altura para telas menores */
+
+/* Estilo para o player do YouTube */
+.video-preview iframe {
+    width: 50%; /* Ocupa 100% da largura do contêiner */
+    height: 500px; /* Altura padrão do preview */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o vídeo */
+    max-width: 100%; /* Garante que o iframe não ultrapasse a largura do contêiner */
+    box-sizing: border-box; /* Inclui o padding e bordas na largura e altura totais */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .video-preview {
+        padding: 0 15px; /* Adiciona padding para telas menores */
+        width: 100%; /* Ocupa 100% da largura do contêiner */
     }
-  }
-  
-  @media (max-width: 480px) {
     .video-preview iframe {
-      height: 200px; /* Ajuste adicional para telas muito pequenas */
+        height: 250px; /* Ajuste a altura para telas menores */
+        width: 100%; /* Ocupa 100% da largura do contêiner */
     }
-  }
+}
+
+@media (max-width: 480px) {
+    .video-preview iframe {
+        height: 200px; /* Ajuste adicional para telas muito pequenas */
+        width: 100%; /* Ocupa 100% da largura do contêiner */
+    }
+}

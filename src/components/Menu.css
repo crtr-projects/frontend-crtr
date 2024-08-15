@@ -89,10 +89,18 @@
     .menu.open {
       transform: translateX(0); /* Exibe o menu quando aberto */
     }
-  
+
     .menu-button {
       display: block;
-    }
+      color: #fff; /* Cor do texto do botão */
+      border: none;
+      padding: 10px 10px; /* Aumenta o padding para um tamanho maior */
+      font-size: 30px; /* Aumenta o tamanho da fonte do botão */
+      border-radius: 6px; /* Borda arredondada */
+      cursor: pointer; /* Indica que é clicável */
+      max-width: 200px; /* Limita a largura máxima do botão */
+  }
+  
   
     .close-button {
       display: block;
