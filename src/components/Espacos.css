@@ -5,7 +5,7 @@
   display: flex;           /* Utiliza flexbox para organizar o layout */
   justify-content: space-between; /* Espaça os elementos ao máximo */
   align-items: center;     /* Alinha verticalmente ao centro */
-  padding: 20px;           /* Adiciona padding ao redor do container */
+  padding: 20px 10%;       /* Adiciona padding ao redor do container com margens laterais de 10% */
   background-size: cover;  /* Prepara para uma imagem de fundo futura */
   background-position: center; /* Centraliza a imagem de fundo */
   height: 275px;           /* Define a altura total do componente */
@@ -17,14 +17,14 @@
 
 /* Estiliza o texto à esquerda */
 .espacos-text {
-  flex: 0 0 30%;           /* O texto ocupa 30% da largura do container */
+  flex: 0 0 20%;           /* O texto ocupa 20% da largura do container */
   padding-right: 20px;     /* Adiciona espaço à direita do texto */
+  font-size: 20px;         /* Tamanho de fonte padrão */
 }
 
 /* Estiliza o parágrafo dentro da seção de texto */
 .espacos-text p {
   color: white;            /* Define a cor do texto como branco */
-  font-size: 20px;         /* Define o tamanho da fonte do texto */
   margin: 0;               /* Remove as margens padrão do parágrafo */
   padding: 10px;           /* Adiciona padding ao redor do texto */
   border: 2px solid white; /* Adiciona uma borda branca ao redor do texto */
@@ -68,31 +68,42 @@
   justify-content: center; /* Centraliza horizontalmente a logo dentro do placeholder */
 }
 
-/* Regras de mídia para telas menores */
-@media (max-width: 768px) {
+/* Regras de mídia para diferentes tamanhos de tela */
+@media (max-width: 1024px) {
   .espacos-text {
-    font-size: 18px;       /* Reduz o tamanho da fonte em telas menores */
-    flex: 0 0 40%;         /* O texto ocupa 40% da largura em telas menores */
+    font-size: 18px;       /* Reduz o tamanho da fonte em tablets */
+    flex: 0 0 30%;         /* O texto ocupa 30% da largura em tablets */
   }
 
   .espacos-logos {
-    flex: 0 0 60%;         /* As logos ocupam 60% da largura em telas menores */
+    flex: 0 0 65%;         /* As logos ocupam 65% da largura em tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .espacos-text {
+    font-size: 16px;       /* Reduz o tamanho da fonte em dispositivos menores */
+    flex: 0 0 40%;         /* O texto ocupa 40% da largura em dispositivos menores */
+  }
+
+  .espacos-logos {
+    flex: 0 0 60%;         /* As logos ocupam 60% da largura em dispositivos menores */
   }
 
   .logo-placeholder {
-    width: 60px;           /* Reduz a largura das logos em telas menores */
-    height: 60px;          /* Reduz a altura das logos em telas menores */
+    width: 60px;           /* Reduz a largura das logos em dispositivos menores */
+    height: 60px;          /* Reduz a altura das logos em dispositivos menores */
   }
 
   .saiba-mais-link {
-    font-size: 14px;       /* Reduz o tamanho da fonte em telas menores */
+    font-size: 14px;       /* Reduz o tamanho da fonte em dispositivos menores */
     margin-top: 8px;       /* Reduz a margem acima do link */
   }
 }
 
 @media (max-width: 480px) {
   .espacos-text {
-    font-size: 16px;       /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+    font-size: 14px;       /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
     flex: 0 0 50%;         /* O texto ocupa 50% da largura em telas muito pequenas */
   }
 

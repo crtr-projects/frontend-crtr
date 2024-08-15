@@ -14,7 +14,6 @@
     font-size: 24px;
     color: #333;
     margin-bottom: 40px;
-    text-align: center;
   }
   
   /* Grid de logos dos parceiros */
@@ -22,7 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 20px; /* Espaçamento entre os itens */
     margin-bottom: 80px; /* Espaço adicional para o ícone do WhatsApp */
   }
   
@@ -31,6 +30,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 1 150px; /* Permite que o item cresça e encolha com uma base mínima */
+    max-width: 200px; /* Tamanho máximo baseado no maior item */
   }
   
   /* Estilo das logos dos parceiros */
@@ -46,6 +47,10 @@
     margin-top: 10px;
     font-size: 14px;
     color: #333;
+    text-align: center; /* Centraliza o texto no item */
+    word-wrap: break-word; /* Quebra a palavra para evitar transbordamento */
+    width: 100%; /* Faz o texto ocupar toda a largura do item */
+    max-width: 150px; /* Limita a largura máxima do texto */
   }
   
   /* Logo do WhatsApp no canto direito inferior */
@@ -63,3 +68,16 @@
     min-width: 40px; /* Limite mínimo de largura */
     min-height: 40px; /* Limite mínimo de altura */
   }
+
+/* Responsividade do nome dos parceiros */
+.parceiro-nome {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  width: 80%; /* Define a largura como 80% do campo */
+  text-align: center; /* Centraliza o texto */
+  word-break: break-word; /* Quebra a palavra quando necessário para ajustar ao espaço disponível */
+  overflow-wrap: break-word; /* Garante que palavras longas sejam quebradas corretamente */
+  hyphens: auto; /* Permite hifenização automática para palavras longas */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
