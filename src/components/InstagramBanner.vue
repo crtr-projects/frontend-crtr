@@ -13,3 +13,12 @@
     </div>
   </div>
 </template>
+
+<script>
+/* Importa o arquivo CSS que contém os estilos do banner */
+import '../components/InstagramBanner.css';
+
+export default {
+  name: "InstagramBanner", // Nome do componente
+};
+</script>

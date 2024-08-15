@@ -19,14 +19,22 @@
 .siga-nos {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     animation: fadeInUp 2s ease-out; /* Animação de entrada */
 }
 
 /* Destaque no texto */
 .highlight {
-    color: #000000; /* Cor amarela para o destaque */
+    color: #040402; /* Cor amarela para o destaque */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para o texto */
+}
+
+/* Descrição adicional */
+.description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Melhora a legibilidade */
+    animation: fadeInUp 2s ease-out 0.5s; /* Animação com atraso */
 }
 
 /* Animação para o QR Code */
@@ -72,6 +80,10 @@
         font-size: 24px;
     }
     
+    .description {
+        font-size: 16px;
+    }
+    
     .qr-code {
         width: 100px;
         height: 100px;
@@ -81,6 +93,10 @@
 @media (max-width: 480px) {
     .siga-nos {
         font-size: 20px;
+    }
+    
+    .description {
+        font-size: 14px;
     }
     
     .qr-code {
