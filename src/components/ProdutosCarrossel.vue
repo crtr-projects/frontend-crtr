@@ -29,6 +29,8 @@
           { nome: 'Produto 3', descricao: 'Descrição do Produto 3', preco: 'R$ 89,90', imagem: 'path/to/imagem3.jpg' },
           { nome: 'Produto 4', descricao: 'Descrição do Produto 4', preco: 'R$ 69,90', imagem: 'path/to/imagem4.jpg' },
           { nome: 'Produto 5', descricao: 'Descrição do Produto 5', preco: 'R$ 59,90', imagem: 'path/to/imagem5.jpg' },
+          { nome: 'Produto 6', descricao: 'Descrição do Produto 6', preco: 'R$ 59,90', imagem: 'path/to/imagem6.jpg' },
+          { nome: 'Produto 7', descricao: 'Descrição do Produto 7', preco: 'R$ 59,90', imagem: 'path/to/imagem7.jpg' },
         ],
       };
     },

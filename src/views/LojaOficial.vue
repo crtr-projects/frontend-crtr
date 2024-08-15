@@ -47,6 +47,8 @@ export default {
         { name: 'Produto 3', description: 'Descrição do Produto 3', price: 'R$ 200,00', image: 'path/to/product3.jpg' },
         { name: 'Produto 4', description: 'Descrição do Produto 4', price: 'R$ 250,00', image: 'path/to/product4.jpg' },
         { name: 'Produto 5', description: 'Descrição do Produto 5', price: 'R$ 300,00', image: 'path/to/product5.jpg' },
+        { nome: 'Produto 6', description: 'Descrição do Produto 6', preco: 'R$ 590,90', image: 'path/to/imagem6.jpg' },
+        { nome: 'Produto 7', description: 'Descrição do Produto 7', preco: 'R$ 509,90', image: 'path/to/imagem7.jpg' },
       ],
     };
   },
