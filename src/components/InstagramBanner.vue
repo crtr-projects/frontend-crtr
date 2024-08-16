@@ -8,8 +8,10 @@
         Estamos compartilhando as novidades mais quentes, bastidores exclusivos e promoções imperdíveis! 
         Não fique de fora e junte-se à nossa comunidade. Escaneie o QR Code abaixo e siga-nos no Instagram!
       </p>
-      <!-- Imagem do QR Code -->
-      <img src="../assets/logos/instagram-logo.png" alt="QR Code para seguir no Instagram" class="qr-code" />
+      <!-- Link para o Instagram envolvendo a imagem -->
+      <a href="https://www.instagram.com/circuitotrproducoesoficial?utm_source=qr" target="_blank">
+        <img src="../assets/logos/instagram-logo.png" alt="QR Code para seguir no Instagram" class="qr-code" />
+      </a>
     </div>
   </div>
 </template>
