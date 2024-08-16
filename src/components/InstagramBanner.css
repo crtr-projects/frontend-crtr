@@ -10,7 +10,7 @@
     border-radius: 12px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o banner */
     overflow: hidden;
-    width: 100vw; /* Ocupa toda a largura da viewport */
+    width: 100%; /* Ocupa toda a largura da viewport */
     box-sizing: border-box; /* Inclui o padding e borda na largura total */
     margin: 0; /* Remove margens para ocupar toda a largura */
 }
