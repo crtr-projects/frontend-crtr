@@ -45,6 +45,8 @@
   margin: 0;
   flex: 1; /* Permite que os itens ocupem o espaço restante */
   justify-content: center; /* Centraliza os itens no menu */
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .menu li {
@@ -127,6 +129,8 @@
     align-items: center; /* Alinha os itens ao centro */
     margin: 0;
     padding: 0;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   .menu li {
