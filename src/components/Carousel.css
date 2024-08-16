@@ -1,55 +1,89 @@
-@import '../assets/variaveis.css';
+@import '../assets/variaveis.css'; /* Importa variáveis CSS globais para uso no estilo */
 
+/* Estilos gerais do carrossel */
 .carousel {
-    position: relative;
-    overflow: hidden;
-    height: 100%; /* Ajuste a altura conforme necessário */
-    width: 100%; /* Ajusta a largura do carrossel ao contêiner */
-    max-width: 1000px; /* Define a largura máxima do carrossel */
-    max-height: 500px; /* Define a largura máxima do carrossel */
+    position: relative; /* Define a posição como relativa para posicionamento interno */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites do carrossel */
+    height: 100%; /* O carrossel ocupa toda a altura disponível */
+    width: 100%; /* O carrossel ocupa 100% da largura da página */
+    max-width: 100%; /* Remove qualquer limite de largura */
+    max-height: 500px; /* Define a altura máxima do carrossel */
     margin: 0 auto; /* Centraliza o carrossel horizontalmente */
-    margin-top: 10px; /* Centraliza o carrossel horizontalmente */
-    z-index: 500;
-  }
-  
-  .carousel-container {
-    display: flex; /* Alinha os slides em linha horizontalmente */
+    margin-top: 10px; /* Adiciona um espaço no topo do carrossel */
+    z-index: 500; /* Define a profundidade para garantir que o carrossel esteja acima de outros elementos */
+}
+
+/* Contêiner dos slides do carrossel */
+.carousel-container {
+    display: flex; /* Alinha os slides em uma única linha horizontal */
     transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
-  }
-  
-  .carousel-slide {
+}
+
+/* Cada slide do carrossel */
+.carousel-slide {
     min-width: 100%; /* Cada slide ocupa toda a largura do carrossel */
-    box-sizing: border-box;
-    display: flex;
-    align-items: center; /* Centraliza a imagem verticalmente */
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-  }
-  
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura */
+    display: flex; /* Define o layout flexível para o conteúdo do slide */
+    align-items: center; /* Centraliza verticalmente o conteúdo do slide */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do slide */
+}
+
+/* Imagem dentro de cada slide */
+.carousel-slide img {
+    width: 50%; /* Define a largura das imagens como 50% da largura do slide */
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: contain; /* Ajusta a imagem para caber no slide sem distorção */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente dentro do slide */
+}
+
+/* Estilos dos botões de controle do carrossel */
+.carousel-control {
+    position: absolute; /* Posiciona os botões dentro do carrossel, sem afetar o fluxo do layout */
+    top: 50%; /* Alinha os botões verticalmente ao centro */
+    transform: translateY(-50%); /* Ajusta o botão para centralizá-lo exatamente no meio vertical */
+    background: rgba(0, 0, 0, 0.5); /* Define um fundo semi-transparente para os botões */
+    color: white; /* Define a cor do texto (ou ícone) do botão */
+    border: none; /* Remove bordas padrão do botão */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão, indicando interatividade */
+    padding: 10px; /* Adiciona espaço interno ao botão */
+    z-index: 1000; /* Garante que os botões fiquem acima de todos os outros elementos do carrossel */
+}
+
+.prev {
+    left: 10px; /* Posiciona o botão "anterior" à esquerda */
+}
+
+.next {
+    right: 10px; /* Posiciona o botão "próximo" à direita */
+}
+
+/* Responsividade para diferentes tamanhos de tela */
+@media (max-width: 1200px) {
   .carousel-slide img {
-    max-width: 100%; /* Limita a largura da imagem ao tamanho do slide */
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 100%; /* Limita a altura da imagem ao tamanho do slide */
-    object-fit: contain; /* Ajusta a imagem para caber dentro do slide sem distorção */
+      width: 60%; /* Aumenta a largura da imagem em telas com largura máxima de 1200px */
   }
-  
-  /* Botões de controle */
-  .carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1000; /* Garante que os botões fiquem acima do carrossel */
+}
+
+@media (max-width: 992px) {
+  .carousel-slide img {
+      width: 70%; /* Aumenta a largura da imagem em telas com largura máxima de 992px */
   }
-  
-  .prev {
-    left: 10px; /* Ajuste a distância do botão da borda esquerda */
+}
+
+@media (max-width: 768px) {
+  .carousel-slide img {
+      width: 80%; /* Aumenta a largura da imagem em telas com largura máxima de 768px */
   }
-  
-  .next {
-    right: 10px; /* Ajuste a distância do botão da borda direita */
+}
+
+@media (max-width: 576px) {
+  .carousel-slide img {
+      width: 90%; /* Aumenta a largura da imagem em telas com largura máxima de 576px */
   }
-  
+}
+
+@media (max-width: 360px) {
+  .carousel-slide img {
+      width: 100%; /* As imagens ocupam toda a largura em telas muito pequenas (até 360px) */
+  }
+}
