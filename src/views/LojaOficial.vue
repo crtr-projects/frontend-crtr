@@ -62,18 +62,9 @@ export default {
   created() {
     // Simulação de carregamento de produtos
     this.$store.dispatch('produtos/atualizarProdutos', [
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-      // Adicione mais produtos conforme necessário
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/produtos/copo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/produtos/bone.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/produtos/moletom.png' }
     ]);
   },
 };

@@ -14,7 +14,7 @@
     padding: 20px;
     background-color: #f0f0f0;
     max-width: 1200px; /* Limita a largura máxima */
-    margin: 0 auto; /* Centraliza horizontalmente */
+    margin: 20px; /* Centraliza horizontalmente */
     box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
     text-align: center; /* Centraliza o conteúdo dentro do contêiner */
 }

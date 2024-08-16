@@ -7,13 +7,15 @@ import Agenda from '../views/Agenda.vue';
 import NotFound from '../views/NotFound.vue';
 import GaleriaView from '../views/GaleriaView.vue';
 import LojaOficial from '../views/LojaOficial.vue';
+import LivesView from '../views/LivesView.vue';
 
 // Define as rotas da aplicação
 const routes = [
   { path: '/', component: Home },                // Rota para a página inicial
   { path: '/agenda', component: Agenda },         // Rota para a página de Agenda
   { path: '/galeria', component: GaleriaView },   // Rota para a página de Galeria de Fotos
-  { path: '/loja', component: LojaOficial },      // Rota para a página da Loja Oficial
+  { path: '/loja', component: LojaOficial },  
+  { path: '/lives', component: LivesView },    // Rota para a página da Loja Oficial
   { path: '/:pathMatch(.*)*', component: NotFound }, // Rota para qualquer caminho não encontrado (404)
 ];
 

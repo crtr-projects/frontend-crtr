@@ -3,12 +3,13 @@
     <main class="content">
       <!-- Seu conteúdo principal aqui -->
       <Carousel />
+      <Lives />
       <YouTubePreview />
       <InstagramBanner />
       <UltimasNovidades />
       <Espacos />
       <Galeria />
-      <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
+      <LojaOficial /> <!-- Adicione o carrossel de produtos aqui -->
       <ParceirosOficiais />
     </main>
     <Footer /> <!-- Adiciona o footer ao final do conteúdo -->
@@ -18,25 +19,27 @@
 <script>
 import Carousel from '../components/Carousel.vue';
 import YouTubePreview from '../components/YouTubePreview.vue';
+import Lives from '../components/Lives.vue';
 import InstagramBanner from '../components/InstagramBanner.vue';
 import UltimasNovidades from '../components/UltimasNovidades.vue';
 import Galeria from '../components/Galeria.vue';
 import Espacos from '../components/Espacos.vue';
-import ProdutosCarrossel from '@/components/ProdutosCarrossel.vue'; // Ajuste o caminho conforme necessário
 import ParceirosOficiais from '@/components/ParceirosOficiais.vue';
 import { mapGetters } from 'vuex';
 import Footer from '../components/Footer.vue'; // Certifique-se de que o caminho está correto
+import LojaOficial from './LojaOficial.vue';
 
 export default {
   name: 'Home',
   components: {
     Carousel,
+    Lives,
     YouTubePreview,
     InstagramBanner,
     UltimasNovidades,
     Galeria,
     Espacos,
-    ProdutosCarrossel,
+    LojaOficial,
     ParceirosOficiais,
   },
   computed: {
