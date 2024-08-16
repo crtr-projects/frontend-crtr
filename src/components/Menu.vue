@@ -8,7 +8,9 @@
     <!-- Navegação principal -->
     <nav :class="{ 'open': isMenuOpen }" class="menu">
       <div class="logo-container">
-        <img src="../assets/logo.png" alt="Logo" class="logo" />
+        <router-link to="/">
+          <img src="../assets/logo.png" alt="Logo" class="logo" />
+        </router-link>
       </div>
       
       <!-- Links do menu -->
