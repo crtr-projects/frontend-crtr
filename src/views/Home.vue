@@ -9,7 +9,7 @@
       <UltimasNovidades />
       <Espacos />
       <Galeria />
-      <LojaOficial /> <!-- Adicione o carrossel de produtos aqui -->
+      <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
       <ParceirosOficiais />
     </main>
     <Footer /> <!-- Adiciona o footer ao final do conteúdo -->
@@ -24,10 +24,10 @@ import InstagramBanner from '../components/InstagramBanner.vue';
 import UltimasNovidades from '../components/UltimasNovidades.vue';
 import Galeria from '../components/Galeria.vue';
 import Espacos from '../components/Espacos.vue';
+import ProdutosCarrossel from '@/components/ProdutosCarrossel.vue'; // Ajuste o caminho conforme necessário
 import ParceirosOficiais from '@/components/ParceirosOficiais.vue';
 import { mapGetters } from 'vuex';
 import Footer from '../components/Footer.vue'; // Certifique-se de que o caminho está correto
-import LojaOficial from './LojaOficial.vue';
 
 export default {
   name: 'Home',
@@ -39,7 +39,7 @@ export default {
     UltimasNovidades,
     Galeria,
     Espacos,
-    LojaOficial,
+    ProdutosCarrossel,
     ParceirosOficiais,
   },
   computed: {

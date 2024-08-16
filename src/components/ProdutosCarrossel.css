@@ -1,17 +1,20 @@
 /* Estilo geral do carrossel */
+.carrossel-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%;
+  overflow-x: auto; /* Permite a rolagem horizontal */
+  white-space: nowrap; /* Evita que os itens quebrem linha */
+  padding: 20px 0;
+}
+
+/* Estilo geral do carrossel */
 .carrossel {
   display: flex; /* Exibe os itens em uma única linha */
   gap: 20px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens dentro do contêiner */
 }
-
-/* Contêiner do carrossel */
-.carrossel-container {
-  width: 100%; /* Ocupa toda a largura da página */
-  overflow-x: auto; /* Permite a rolagem horizontal */
-  white-space: nowrap; /* Evita que os itens quebrem linha */
-  padding: 20px 0; /* Adiciona espaço ao redor do carrossel */
-}
-
 /* Slide do carrossel */
 .carrossel-slide {
   display: flex;
