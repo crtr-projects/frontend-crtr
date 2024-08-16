@@ -1,18 +1,22 @@
 @import '../assets/variaveis.css'; /* Importa variáveis CSS globais para uso no estilo */
 
-/* Estilo para o contêiner principal do carrossel */
-.carousel {
-    position: relative; /* Posiciona o carrossel relativamente */
-    width: 100%; /* Garante que o carrossel ocupe 100% da largura disponível */
-    overflow: hidden; /* Oculta o conteúdo que ultrapassa o contêiner */
+
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    height: 100%; /* Ajuste a altura conforme necessário */
+    width: 100%; /* Ajusta a largura do carrossel ao contêiner */
+    max-width: 1000px; /* Define a largura máxima do carrossel */
+    max-height: 500px; /* Define a largura máxima do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+    margin-top: 10px; /* Centraliza o carrossel horizontalmente */
+    z-index: 500;
   }
-  
-  /* Estilo para o contêiner das imagens do carrossel */
+
   .carousel-container {
-    display: flex; /* Alinha os slides horizontalmente */
-    transition: transform 0.5s ease; /* Adiciona uma transição suave para o movimento */
+    display: flex; /* Alinha os slides em linha horizontalmente */
+    transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
   }
-  
   /* Estilo para cada slide do carrossel */
   .carousel-slide {
     min-width: 100%; /* Define a largura mínima de cada slide para preencher o contêiner */
