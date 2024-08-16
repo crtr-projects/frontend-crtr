@@ -1,61 +1,52 @@
 @import '../assets/variaveis.css'; /* Importa variáveis CSS globais para uso no estilo */
 
-/* Estilos gerais do carrossel */
+/* Estilo para o contêiner principal do carrossel */
 .carousel {
-    position: relative; /* Define a posição como relativa para posicionamento interno */
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites do carrossel */
-    height: 100%; /* O carrossel ocupa toda a altura disponível */
-    width: 100%; /* O carrossel ocupa 100% da largura da página */
-    max-width: 100%; /* Remove qualquer limite de largura */
-    max-height: 500px; /* Define a altura máxima do carrossel */
-    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
-    margin-top: 10px; /* Adiciona um espaço no topo do carrossel */
-    z-index: 500; /* Define a profundidade para garantir que o carrossel esteja acima de outros elementos */
-}
-
-/* Contêiner dos slides do carrossel */
-.carousel-container {
-    display: flex; /* Alinha os slides em uma única linha horizontal */
-    transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
-}
-
-/* Cada slide do carrossel */
-.carousel-slide {
-    min-width: 100%; /* Cada slide ocupa toda a largura do carrossel */
-    box-sizing: border-box; /* Inclui padding e border no cálculo de largura */
-    display: flex; /* Define o layout flexível para o conteúdo do slide */
-    align-items: center; /* Centraliza verticalmente o conteúdo do slide */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo do slide */
-}
-
-/* Imagem dentro de cada slide */
-.carousel-slide img {
-    width: 50%; /* Define a largura das imagens como 50% da largura do slide */
-    height: auto; /* Mantém a proporção original da imagem */
-    object-fit: contain; /* Ajusta a imagem para caber no slide sem distorção */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente dentro do slide */
-}
-
-/* Estilos dos botões de controle do carrossel */
-.carousel-control {
-    position: absolute; /* Posiciona os botões dentro do carrossel, sem afetar o fluxo do layout */
-    top: 50%; /* Alinha os botões verticalmente ao centro */
-    transform: translateY(-50%); /* Ajusta o botão para centralizá-lo exatamente no meio vertical */
-    background: rgba(0, 0, 0, 0.5); /* Define um fundo semi-transparente para os botões */
-    color: white; /* Define a cor do texto (ou ícone) do botão */
-    border: none; /* Remove bordas padrão do botão */
-    cursor: pointer; /* Altera o cursor ao passar sobre o botão, indicando interatividade */
-    padding: 10px; /* Adiciona espaço interno ao botão */
-    z-index: 1000; /* Garante que os botões fiquem acima de todos os outros elementos do carrossel */
-}
-
-.prev {
-    left: 10px; /* Posiciona o botão "anterior" à esquerda */
-}
-
-.next {
-    right: 10px; /* Posiciona o botão "próximo" à direita */
-}
+    position: relative; /* Posiciona o carrossel relativamente */
+    width: 100%; /* Garante que o carrossel ocupe 100% da largura disponível */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa o contêiner */
+  }
+  
+  /* Estilo para o contêiner das imagens do carrossel */
+  .carousel-container {
+    display: flex; /* Alinha os slides horizontalmente */
+    transition: transform 0.5s ease; /* Adiciona uma transição suave para o movimento */
+  }
+  
+  /* Estilo para cada slide do carrossel */
+  .carousel-slide {
+    min-width: 100%; /* Define a largura mínima de cada slide para preencher o contêiner */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+  }
+  
+  /* Estilo para as imagens dos slides */
+  .carousel-slide img {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura do slide */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  /* Estilo para os botões de controle do carrossel */
+  .carousel-control {
+    position: absolute; /* Posiciona os botões relativamente ao carrossel */
+    top: 50%; /* Alinha os botões verticalmente no meio do carrossel */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px; /* Adiciona padding aos botões */
+    cursor: pointer; /* Muda o cursor ao passar sobre os botões */
+    z-index: 10; /* Garante que os botões estejam acima dos slides */
+  }
+  
+  /* Estilo para o botão de controle anterior */
+  .carousel-control.prev {
+    left: 10px; /* Alinha o botão à esquerda */
+  }
+  
+  /* Estilo para o botão de controle próximo */
+  .carousel-control.next {
+    right: 10px; /* Alinha o botão à direita */
+  }
+  
 
 /* Responsividade para diferentes tamanhos de tela */
 @media (max-width: 1200px) {

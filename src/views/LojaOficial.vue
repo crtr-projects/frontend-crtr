@@ -9,7 +9,7 @@
     <div :class="['products-container', { 'list-view': isListView }]">
       <!-- Modo de visualização em grade -->
       <div v-if="!isListView" class="products-grid">
-        <div v-for="(product, index) in products" :key="index" class="product-card">
+        <div v-for="(product, index) in produtos" :key="index" class="product-card">
           <img :src="product.image" alt="Produto" class="product-image" />
           <div class="product-info">
             <h3 class="product-name">{{ product.name }}</h3>
@@ -21,7 +21,7 @@
       </div>
       <!-- Modo de visualização em lista -->
       <ul v-if="isListView" class="products-list">
-        <li v-for="(product, index) in products" :key="index" class="product-list-item">
+        <li v-for="(product, index) in produtos" :key="index" class="product-list-item">
           <img :src="product.image" alt="Produto" class="product-image" />
           <div class="product-info">
             <h3 class="product-name">{{ product.name }}</h3>
@@ -36,25 +36,48 @@
 </template>
 
 <script>
-// Remove o import do componente ProdutosCarrossel
+import { mapActions } from 'vuex';
+import ProdutosCarrossel from '../components/ProdutosCarrossel.vue';
+
 export default {
   name: 'LojaOficial',
+  components: {
+    ProdutosCarrossel,
+  },
   data() {
     return {
       isListView: false, // Inicialmente em modo de grade
-      products: [
-        // Lista de produtos (mantida conforme fornecido)
-        { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
-        // Adicione mais produtos conforme necessário
-      ],
     };
+  },
+  computed: {
+    produtos() {
+      return this.$store.getters['produtos/getProdutos'];
+    },
   },
   methods: {
     toggleView() {
       this.isListView = !this.isListView;
     },
   },
+  created() {
+    // Simulação de carregamento de produtos
+    this.$store.dispatch('produtos/atualizarProdutos', [
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+      // Adicione mais produtos conforme necessário
+    ]);
+  },
 };
 </script>
+
 
 <style src="../views/LojaOficial.css" scoped></style>
