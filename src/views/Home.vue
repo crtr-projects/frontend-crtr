@@ -1,43 +1,54 @@
 <template>
-  <div>
-    <Carousel />
-    <YouTubePreview />
-    <InstagramBanner />
-    <UltimasNovidades />
-    <Espacos /> <!-- Coloca o componente Espaços acima da Galeria -->
-    <Galeria /> <!-- Coloca o componente Galeria abaixo do Espaços -->
-    <ProdutosCarrossel /> <!-- Novo carrossel de produtos -->
-    <ParceirosOficiais/> <!-- coloca o componente parceiros-->
+  <div class="page-wrapper">
+    <main class="content">
+      <!-- Seu conteúdo principal aqui -->
+      <Carousel />
+      <YouTubePreview />
+      <InstagramBanner />
+      <UltimasNovidades />
+      <Espacos />
+      <Galeria />
+      <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
+      <ParceirosOficiais />
+    </main>
+    <Footer /> <!-- Adiciona o footer ao final do conteúdo -->
   </div>
 </template>
 
 <script>
 import Carousel from '../components/Carousel.vue';
-import Buttons from '../components/Buttons.vue';
 import YouTubePreview from '../components/YouTubePreview.vue';
 import InstagramBanner from '../components/InstagramBanner.vue';
 import UltimasNovidades from '../components/UltimasNovidades.vue';
-import Galeria from '../components/Galeria.vue'; // Importa o componente Galeria
-import Espacos from '../components/Espacos.vue'; // Importa o componente Espaços
-import ProdutosCarrossel from '../components/ProdutosCarrossel.vue'; // Importa o novo carrossel de produtos
+import Galeria from '../components/Galeria.vue';
+import Espacos from '../components/Espacos.vue';
+import ProdutosCarrossel from '@/components/ProdutosCarrossel.vue'; // Ajuste o caminho conforme necessário
 import ParceirosOficiais from '@/components/ParceirosOficiais.vue';
-
+import { mapGetters } from 'vuex';
+import Footer from '../components/Footer.vue'; // Certifique-se de que o caminho está correto
 
 export default {
   name: 'Home',
   components: {
     Carousel,
-    Buttons,
     YouTubePreview,
     InstagramBanner,
     UltimasNovidades,
-    Galeria,  // Adiciona o componente Galeria
-    Espacos,  // Adiciona o componente Espaços
-    ProdutosCarrossel,  // Adiciona o novo componente de carrossel de produtos
+    Galeria,
+    Espacos,
+    ProdutosCarrossel,
     ParceirosOficiais,
-  }
+  },
+  computed: {
+    ...mapGetters('produtos', ['getProdutos']), // Obtém os produtos do Vuex
+  },
+  created() {
+    this.$store.dispatch('produtos/atualizarProdutos', [
+      { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: 'path/to/product1.jpg' },
+      // Adicione mais produtos conforme necessário
+    ]);
+  },
 };
 </script>
 
-<!-- Importa o arquivo CSS que contém os estilos específicos para a página Home -->
 <style src="../views/Home.css"></style>

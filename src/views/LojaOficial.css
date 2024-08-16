@@ -1,8 +1,16 @@
 /* Importação das variáveis de estilo */
 @import '../assets/variaveis.css';
 
+/* Envolva toda a página */
+.loja-wrapper {
+    min-height: 100vh; /* Garante que a página ocupe pelo menos a altura da tela */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+}
+
 /* Contêiner principal da loja */
 .loja-container {
+    flex: 1; /* Faz com que o contêiner principal ocupe o espaço disponível */
     padding: 20px;
     background-color: #f0f0f0;
     max-width: 1200px; /* Limita a largura máxima */
@@ -32,10 +40,10 @@
 
 /* Modo de visualização horizontal dos produtos */
 .products-grid {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
-    gap: 20px;
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Exibe 8 colunas em monitores grandes */
+    gap: 20px; /* Espaçamento entre os itens */
+    width: 100%; /* Garante que a grade use toda a largura da tela */
 }
 
 /* Cartão do produto */
@@ -45,7 +53,6 @@
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-    flex: 1 1 calc(50% - 20px); /* Flexibilidade com largura base de 50% menos o espaçamento */
 }
 
 .product-card:hover {
@@ -137,20 +144,35 @@
 /* Responsividade */
 
 /* Ajusta o layout para telas menores */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(6, 1fr); /* Exibe 6 colunas em telas menores que 1200px */
+    }
+}
+
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr); /* Exibe 4 colunas em telas menores que 992px */
+    }
+}
+
 @media (max-width: 768px) {
-    .product-card {
-        flex: 1 1 calc(100% - 20px); /* Em telas menores, usa 100% menos o espaçamento */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr); /* Exibe 3 colunas em telas menores que 768px */
     }
 }
 
 @media (max-width: 480px) {
-    .list-view .product-list-item {
-        flex-direction: column;
-        align-items: flex-start;
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* Exibe 2 colunas em telas menores que 480px */
     }
-    
-    .list-view .product-list-item .product-image,
-    .list-view .product-list-item .product-info {
-        width: 100%;
-    }
+}
+
+/* Estilo para o footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
 }

@@ -4,10 +4,10 @@
     <button @click="toggleView" class="toggle-button">
       {{ isListView ? 'Ver em Grade' : 'Ver em Lista' }}
     </button>
-    
+
     <!-- Contêiner de produtos -->
     <div :class="['products-container', { 'list-view': isListView }]">
-      <!-- Lista de produtos -->
+      <!-- Modo de visualização em grade -->
       <div v-if="!isListView" class="products-grid">
         <div v-for="(product, index) in products" :key="index" class="product-card">
           <img :src="product.image" alt="Produto" class="product-image" />
@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <!-- Lista de produtos -->
+      <!-- Modo de visualização em lista -->
       <ul v-if="isListView" class="products-list">
         <li v-for="(product, index) in products" :key="index" class="product-list-item">
           <img :src="product.image" alt="Produto" class="product-image" />
@@ -36,19 +36,16 @@
 </template>
 
 <script>
+// Remove o import do componente ProdutosCarrossel
 export default {
   name: 'LojaOficial',
   data() {
     return {
       isListView: false, // Inicialmente em modo de grade
       products: [
-        { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: 'path/to/product1.jpg' },
-        { name: 'Produto 2', description: 'Descrição do Produto 2', price: 'R$ 150,00', image: 'path/to/product2.jpg' },
-        { name: 'Produto 3', description: 'Descrição do Produto 3', price: 'R$ 200,00', image: 'path/to/product3.jpg' },
-        { name: 'Produto 4', description: 'Descrição do Produto 4', price: 'R$ 250,00', image: 'path/to/product4.jpg' },
-        { name: 'Produto 5', description: 'Descrição do Produto 5', price: 'R$ 300,00', image: 'path/to/product5.jpg' },
-        { nome: 'Produto 6', description: 'Descrição do Produto 6', preco: 'R$ 590,90', image: 'path/to/imagem6.jpg' },
-        { nome: 'Produto 7', description: 'Descrição do Produto 7', preco: 'R$ 509,90', image: 'path/to/imagem7.jpg' },
+        // Lista de produtos (mantida conforme fornecido)
+        { name: 'Produto 1', description: 'Descrição do Produto 1', price: 'R$ 100,00', image: '../src/assets/logos/instagram-logo.png' },
+        // Adicione mais produtos conforme necessário
       ],
     };
   },

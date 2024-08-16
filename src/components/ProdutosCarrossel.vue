@@ -1,14 +1,13 @@
 <template>
   <div class="carrossel">
-    <!-- Carrossel de Produtos -->
     <div class="carrossel-container" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-      <div class="carrossel-slide">
-        <div class="produto-frame" v-for="(produto, index) in produtos" :key="index">
-          <img :src="produto.imagem" alt="Produto" class="produto-imagem" />
+      <div class="carrossel-slide" v-for="(chunk, chunkIndex) in chunkedProducts" :key="chunkIndex">
+        <div class="produto-frame" v-for="(produto, index) in chunk" :key="index">
+          <img :src="produto.image" alt="Produto" class="produto-imagem" />
           <div class="produto-info">
-            <h3>{{ produto.nome }}</h3>
-            <p>{{ produto.descricao }}</p>
-            <p>{{ produto.preco }}</p>
+            <h3>{{ produto.name }}</h3>
+            <p>{{ produto.description }}</p>
+            <p>{{ produto.price }}</p>
             <button class="add-to-cart">Adicionar à Sacola</button>
           </div>
         </div>
@@ -20,28 +19,35 @@
 </template>
 
 <script>
-import produto1 from '../assets/produtos/copo.png';
-import produto2 from '../assets/produtos/bone.png';
-import produto3 from '../assets/produtos/moletom.png';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'ProdutosCarrossel',
+  computed: {
+    ...mapGetters('produtos', ['getProdutos']),
+    produtos() {
+      return this.getProdutos;
+    },
+    chunkedProducts() {
+      const result = [];
+      for (let i = 0; i < this.produtos.length; i += this.itemsPerSlide) {
+        result.push(this.produtos.slice(i, i + this.itemsPerSlide));
+      }
+      return result;
+    },
+  },
   data() {
     return {
       currentIndex: 0,
-      produtos: [
-        { nome: 'Produto 1', descricao: 'Descrição do Produto 1', preco: 'R$ 99,90', imagem: produto1 },
-        { nome: 'Produto 2', descricao: 'Descrição do Produto 2', preco: 'R$ 79,90', imagem: produto2 },
-        { nome: 'Produto 3', descricao: 'Descrição do Produto 3', preco: 'R$ 89,90', imagem: produto3 }
-      ],
+      itemsPerSlide: 6,
     };
   },
   methods: {
     nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % Math.ceil(this.produtos.length / 2);
+      this.currentIndex = (this.currentIndex + 1) % this.chunkedProducts.length;
     },
     prevSlide() {
-      this.currentIndex = (this.currentIndex - 1 + Math.ceil(this.produtos.length / 2)) % Math.ceil(this.produtos.length / 2);
+      this.currentIndex = (this.currentIndex - 1 + this.chunkedProducts.length) % this.chunkedProducts.length;
     },
   },
 };

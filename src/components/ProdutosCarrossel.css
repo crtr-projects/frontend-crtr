@@ -10,20 +10,20 @@
 /* Contêiner do carrossel */
 .carrossel-container {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out; /* Animação suave ao mudar de slide */
   width: 100%;
 }
 
 /* Slide do carrossel */
 .carrossel-slide {
   display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
+  flex-wrap: nowrap; /* Não permite quebra de linha, todos os produtos ficam em uma linha */
+  width: 100%; /* Cada slide ocupa 100% da largura do contêiner do carrossel */
 }
 
 /* Frame de cada produto */
 .produto-frame {
-  flex: 0 0 33.33%; /* Cada item ocupa 33.33% da largura do contêiner, três por linha */
+  flex: 0 0 16%; /* Cada item ocupa 25% da largura do contêiner, quatro por linha */
   box-sizing: border-box;
   padding: 10px;
 }
@@ -33,7 +33,7 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: cover; /* Faz com que a imagem cubra completamente a área do contêiner */
 }
 
 /* Informações do produto */
@@ -59,8 +59,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo dos botões de controle */
+  color: #fff; /* Cor do texto dos botões de controle */
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -78,16 +78,26 @@
 /* Responsividade */
 @media (max-width: 1024px) {
   .produto-frame {
-    flex: 0 0 50%; /* Dois produtos por linha em telas menores */
+    flex: 0 0 33.33%; /* Três produtos por linha em telas menores */
   }
 }
 
 @media (max-width: 768px) {
   .produto-frame {
-    flex: 0 0 100%; /* Um produto por linha em telas ainda menores */
+    flex: 0 0 50%; /* Dois produtos por linha em telas ainda menores */
   }
   
   .carrossel-control {
     font-size: 20px; /* Tamanho menor para os botões de controle */
+  }
+}
+
+@media (max-width: 480px) {
+  .produto-frame {
+    flex: 0 0 100%; /* Um produto por linha em telas muito pequenas */
+  }
+  
+  .carrossel-control {
+    font-size: 18px; /* Tamanho menor para os botões de controle em telas muito pequenas */
   }
 }
