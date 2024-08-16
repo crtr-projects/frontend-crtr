@@ -9,7 +9,7 @@
       <img v-for="(photo, index) in photos" :src="photo" :key="index" class="gallery-photo" alt="Foto da Galeria" />
     </div>
     <!-- Botão "ver mais" -->
-    <button class="more-button">Ver mais</button>
+    <button class="more-button" @click="goToGaleria">Ver mais</button>
   </div>
 </template>
 
@@ -25,6 +25,12 @@ export default {
     return {
       photos: [image1, image2, image3, image4],
     };
+  },
+  methods: {
+    // Método para redirecionar para a view "Galeria de Fotos"
+    goToGaleria() {
+      this.$router.push('/galeria');
+    },
   },
 };
 </script>
