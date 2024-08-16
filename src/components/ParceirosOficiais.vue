@@ -29,7 +29,7 @@
     name: 'ParceirosOficiais',
     data() {
       return {
-        whatsappLink: 'https://wa.me/27996253020', // Link do WhatsApp
+        whatsappLink: 'https://wa.me/5527997725101', // Link do WhatsApp
         parceiros: [
           { nome: 'SUMETAL', logo: sumetalLogo },
           { nome: 'VELHOS BOIADEIROS', logo: velhosBoiadeiros },
