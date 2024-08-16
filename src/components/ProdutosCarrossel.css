@@ -117,7 +117,7 @@
 
 @media (max-width: 480px) {
   .produto-frame {
-    flex: 0 0 100%; /* Um produto por linha em telas muito pequenas */
+    flex: 0 0 50%; /* Um produto por linha em telas muito pequenas */
   }
   
   .carrossel-control {
