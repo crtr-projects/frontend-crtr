@@ -1,93 +1,114 @@
-@import '../assets/variaveis.css'; /* Importa as variáveis de estilo */
-
-/* Container principal do componente "Últimas Novidades" */
+/* UltimasNovidades.css */
 .ultimas-novidades {
-  width: 100%;               /* Define a largura como 100% do container pai */
-  height: 350px;            /* Define a altura fixa do componente */
-  position: relative;       /* Define a posição relativa para posicionar controles */
-  overflow: hidden;         /* Oculta o conteúdo que ultrapassa os limites */
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Container do carrossel */
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
 .carousel {
-  position: relative;       /* Necessário para posicionar os controles */
-  height: 100%;             /* Define a altura do carrossel como 100% do componente */
-  overflow: hidden;         /* Oculta o conteúdo que ultrapassa os limites */
+  position: relative;
+  width: 100%;
 }
 
-/* Contêiner das imagens do carrossel */
 .carousel-container {
-  display: flex;            /* Organiza as imagens em uma linha */
-  transition: transform 0.5s ease; /* Suaviza a transição entre slides */
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-/* Cada slide do carrossel */
 .carousel-slide {
-  min-width: 100%;          /* Cada slide ocupa 100% da largura do container */
-  height: 100%;             /* Define a altura do slide como 100% do container */
-  display: flex;            /* Utiliza flexbox para centralizar o conteúdo */
-  justify-content: center;  /* Centraliza horizontalmente o conteúdo */
-  align-items: center;      /* Centraliza verticalmente o conteúdo */
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
 }
 
-/* Estilo das imagens dentro do slide */
-.carousel-slide img {
-  max-width: 100%;          /* Faz com que a imagem não ultrapasse a largura do slide */
-  height: auto;             /* Mantém a proporção da altura da imagem */
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* Botões de controle do carrossel */
-.carousel-control {
-  position: absolute;       /* Posiciona os controles sobre o carrossel */
-  top: 50%;                 /* Alinha verticalmente ao centro */
-  transform: translateY(-50%); /* Centraliza verticalmente */
-  background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor visibilidade */
-  color: white;             /* Cor do texto dos botões */
-  border: none;             /* Remove bordas padrão dos botões */
-  cursor: pointer;          /* Adiciona o cursor de ponteiro */
-  padding: 10px;           /* Adiciona padding aos botões */
-  font-size: 24px;         /* Tamanho da fonte dos botões */
+.slide-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Botão de controle anterior */
-.carousel-control.prev {
-  left: 10px;              /* Alinha o botão à esquerda do carrossel */
+.slide-text {
+  margin-top: 15px;
 }
 
-/* Botão de controle próximo */
-.carousel-control.next {
-  right: 10px;             /* Alinha o botão à direita do carrossel */
+.slide-text h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-/* Estilo do link "Mais notícias" */
+.slide-text p {
+  font-size: 1rem;
+  color: #666;
+}
+
 .mais-noticias {
-  display: block;          /* Faz o link se comportar como um bloco */
-  text-align: center;      /* Centraliza o texto do link */
-  color: #ff0000;         /* Define a cor do link como vermelho */
-  text-decoration: none;  /* Remove o sublinhado do link */
-  font-weight: bold;      /* Deixa o texto do link em negrito */
-  margin-top: 10px;       /* Adiciona margem acima do link */
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #800D0D; /* Cor de fundo azul */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 2px solid #000000; /* Borda azul escura */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-/* Regras de mídia para telas menores */
+.mais-noticias:hover {
+  background-color: #0056b3; /* Azul escuro ao passar o mouse */
+  color: #ffffff;
+  border-color: #004494; /* Azul ainda mais escuro ao passar o mouse */
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-  .carousel-control {
-    font-size: 1.5em; /* Reduz o tamanho da fonte dos botões em telas menores */
-  }
-  
-  .mais-noticias-btn {
-    font-size: 0.9em; /* Ajusta o tamanho da fonte do botão em telas menores */
-    padding: 8px 16px; /* Ajusta o padding do botão em telas menores */
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel-control {
-    font-size: 1.2em; /* Reduz ainda mais o tamanho da fonte dos botões em telas muito pequenas */
+  .section-header h1 {
+    font-size: 1.5rem;
   }
 
-  .mais-noticias-btn {
-    font-size: 0.8em; /* Ajusta ainda mais o tamanho da fonte do botão em telas muito pequenas */
-    padding: 6px 12px; /* Ajusta o padding do botão em telas muito pequenas */
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .slide-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .slide-text p {
+    font-size: 0.9rem;
+  }
+
+  .mais-noticias {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }
