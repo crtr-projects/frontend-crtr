@@ -35,9 +35,9 @@ export default {
     return {
       currentIndex: 0,
       newsItems: [
-        { image: news1, title: 'Notícia 1', description: 'Descrição breve da notícia 1.' },
-        { image: news2, title: 'Notícia 2', description: 'Descrição breve da notícia 2.' },
-        { image: news3, title: 'Notícia 3', description: 'Descrição breve da notícia 3.' },
+        { image: news1, title: 'Fivela Oficial CRTR MELHOR TOURO DA ETAPA ', description: 'A Cia de Rodeio Felipe Correia levou a Fivela Oficial CRTR MELHOR TOURO DA ETAPA ✔️ a Fivela Oficial CRTR MELHOR TOURO DA FEDERAÇÃO e também a Fivela Oficial CRTR MELHOR BOIADA na noite de ontem 11/08/24, premiação da 7ª Etapa da Temporada 2024 que aconteceu nos dias 09 a 11 de Agosto, na 22ª Festa de Venda Nova do Imigrante/ES.' },
+        { image: news2, title: 'Campeões do Rodeio 🏆', description: 'Campeões do Rodeio 🏆 , na 48ª Expoagro de Alegre/ES, realizado nos dias 16 a 18 de Agosto. Classificação: 🐴 Modalidade em cutiano:' },
+        { image: news3, title: 'Vem aí a 8ª Etapa da temporada 2024. ', description: 'E a @madrinheira_mariana_monthana está confirmada para a 48ª Expoagro de Alegre/ES. Prepare-se para muitas emoções, Alegre/ES e toda a região. 🗓️ 16 a 18 de agosto.📍 Alegre/ES. Mais uma vez, vamos fazer história @expoagro.alegre #CRTR o Circuito de Rodeio que mais cresce no estado do Espírito Santo.' },
         // Adicione mais itens conforme necessário
       ],
       interval: null,

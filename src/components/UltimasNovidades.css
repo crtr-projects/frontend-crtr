@@ -1,4 +1,4 @@
-/* UltimasNovidades.css */
+/* Estilo geral da seção de Últimas Notícias */
 .ultimas-novidades {
   position: relative;
   max-width: 100%;
@@ -24,7 +24,9 @@
 
 .carousel {
   position: relative;
+  margin-top: 10px;
   width: 100%;
+  overflow: hidden; /* Oculta o overflow para não mostrar conteúdo fora dos limites */
 }
 
 .carousel-container {
@@ -33,27 +35,33 @@
 }
 
 .carousel-slide {
-  min-width: 100%;
+  flex: 0 0 100%; /* Garante que cada slide ocupe 100% da largura do contêiner */
   box-sizing: border-box;
   padding: 15px;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo do slide horizontalmente */
 }
 
 .slide-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: flex; /* Exibe a imagem e o texto lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  padding: 15px;
+  flex-direction: row; /* Imagem e texto lado a lado */
+  background-color: #f3f3f3;
 }
 
 .slide-image {
-  width: 100%;
-  height: auto;
+  max-width: 50%; /* Define a largura máxima da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Garante que a imagem não seja cortada */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .slide-text {
-  margin-top: 15px;
+  max-width: 50%; /* Define a largura máxima do texto */
+  overflow-wrap: break-word; /* Garante que o texto não quebre o layout */
 }
 
 .slide-text h2 {
@@ -67,29 +75,93 @@
   color: #666;
 }
 
+/* Botões de controle do carrossel */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 2rem;
+}
+
+.carousel-control.prev {
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.carousel-control.next {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+/* Botão "Mais Notícias" */
 .mais-noticias {
   display: block;
   text-align: center;
   margin-top: 20px;
   font-size: 1rem;
   color: #ffffff;
-  background-color: #800D0D; /* Cor de fundo azul */
+  background-color: #800D0D; /* Cor de fundo vermelha */
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  border: 2px solid #000000; /* Borda azul escura */
+  border: 2px solid #000000; /* Borda preta */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .mais-noticias:hover {
-  background-color: #0056b3; /* Azul escuro ao passar o mouse */
+  background-color: #000000; /* Azul escuro ao passar o mouse */
   color: #ffffff;
-  border-color: #004494; /* Azul ainda mais escuro ao passar o mouse */
+  border-color: #000000; /* Azul ainda mais escuro ao passar o mouse */
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+
+/* Telas pequenas, até 576px */
+@media (max-width: 576px) {
+  .section-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .section-header p {
+    font-size: 0.9rem;
+  }
+
+  .slide-content {
+    flex-direction: row; /* Mantém a imagem e o texto lado a lado */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+  }
+
+  .slide-image {
+    max-width: 40%; /* Ajusta a largura da imagem para que o texto não fique comprimido */
+    margin-right: 10px; /* Espaçamento entre imagem e texto */
+  }
+
+  .slide-text {
+    max-width: 60%; /* Ajusta a largura do texto */
+  }
+
+  .slide-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .slide-text p {
+    font-size: 0.9rem;
+  }
+
+  .mais-noticias {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Telas médias, de 577px a 768px */
+@media (min-width: 577px) and (max-width: 768px) {
   .section-header h1 {
     font-size: 1.5rem;
   }
@@ -109,5 +181,53 @@
   .mais-noticias {
     font-size: 0.9rem;
     padding: 8px 16px;
+  }
+}
+
+/* Telas grandes, de 769px a 992px */
+@media (min-width: 769px) and (max-width: 992px) {
+  .section-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+  }
+
+  .slide-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .slide-text p {
+    font-size: 1rem;
+  }
+
+  .mais-noticias {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Telas extra grandes, maiores que 992px */
+@media (min-width: 993px) {
+  .section-header h1 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+  }
+
+  .slide-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .slide-text p {
+    font-size: 1rem;
+  }
+
+  .mais-noticias {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }

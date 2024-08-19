@@ -1,13 +1,34 @@
 /* Estilo geral do carrossel */
 .carrossel-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   height: auto;
   overflow: hidden; /* Oculta a barra de scroll */
   padding: 20px 0;
   position: relative;
+}
+
+/* Cabeçalho do carrossel */
+.carrossel-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.carrossel-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff6f61; /* Cor chamativa */
+  margin-bottom: 10px;
+}
+
+.carrossel-description {
+  font-size: 1.2em;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Estilo do carrossel */
@@ -18,6 +39,10 @@
   align-items: flex-start; /* Alinha os itens no topo */
   position: relative;
   animation: scrollCarrossel 30s linear infinite; /* Scroll automático e infinito */
+}
+
+.carrossel:hover {
+  animation-play-state: paused; /* Pausa a animação ao passar o mouse */
 }
 
 /* Animação para scroll infinito */
@@ -39,6 +64,7 @@
   box-sizing: border-box;
   padding: 10px;
   height: 100%;
+  cursor: pointer; /* Mostra que é clicável */
 }
 
 /* Imagem do produto */
@@ -67,7 +93,62 @@
   width: 100%;
 }
 
-/* Ocultando a barra de rolagem */
-.carrossel-container::-webkit-scrollbar {
-  display: none;
+/* Modal de Detalhes do Produto */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .carrossel-title {
+    font-size: 1.5em;
+  }
+
+  .carrossel-description {
+    font-size: 1em;
+  }
+
+  .produto-imagem {
+    width: 80px;
+    height: 80px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
 }

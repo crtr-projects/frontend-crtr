@@ -3,11 +3,11 @@
     <main class="content">
       <!-- Seu conteúdo principal aqui -->
       <Carousel />
+      <InstagramBanner />
       <Lives />
       <Ranking />
       <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
       <!-- <YouTubePreview /> -->
-      <InstagramBanner />
       <UltimasNovidades />
       <Espacos />
       <Galeria />

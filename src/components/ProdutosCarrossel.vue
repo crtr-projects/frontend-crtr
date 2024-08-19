@@ -1,18 +1,35 @@
 <template>
   <div class="carrossel-container">
-    <div class="carrossel">
-      <div v-for="(product, index) in produtos" :key="index" class="produto-frame">
-        <!-- A imagem agora é renderizada diretamente a partir do atributo `resolvedImage` -->
+    <!-- Título e Texto Chamativo -->
+    <div class="carrossel-header">
+      <h1 class="carrossel-title">Confira Nossos Produtos Imperdíveis!</h1>
+      <p class="carrossel-description">Navegue pela nossa loja e descubra ofertas incríveis e produtos da CRTR que você não pode perder. Clique em qualquer item para ver mais detalhes!</p>
+    </div>
+
+    <div class="carrossel" @mouseover="stopScroll" @mouseleave="startScroll">
+      <div v-for="(product, index) in produtos" :key="index" class="produto-frame" @click="openProductModal(product)">
         <img :src="product.resolvedImage" :alt="product.name" class="produto-imagem" />
         <div class="produto-info">
           <h3 class="produto-nome">{{ product.name }}</h3>
           <p class="produto-preco">{{ product.price }}</p>
         </div>
-        <button class="add-to-cart">Adicionar à sacola</button>
+        <button class="add-to-cart">Comprar Agora</button>
+      </div>
+    </div>
+
+    <!-- Modal de Detalhes do Produto -->
+    <div v-if="isModalOpen" class="modal-overlay" @click="closeProductModal">
+      <div class="modal-content" @click.stop>
+        <button class="close-button" @click="closeProductModal">X</button>
+        <img :src="selectedProduct?.resolvedImage" alt="Produto" class="modal-image" />
+        <h3>{{ selectedProduct?.name }}</h3>
+        <p>{{ selectedProduct?.price }}</p>
+        <button class="add-to-cart-button">Comprar Agora</button>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 import produtosData from '@/mocks/produtosMocks.json';
@@ -21,7 +38,10 @@ export default {
   name: 'ProdutosCarrossel',
   data() {
     return {
-      produtos: this.resolveImages(produtosData)
+      produtos: this.resolveImages(produtosData),
+      isScrolling: true, // Controle do scroll automático
+      isModalOpen: false, // Controle de exibição do modal
+      selectedProduct: null // Produto selecionado para exibir no modal
     };
   },
   methods: {
@@ -31,6 +51,20 @@ export default {
         resolvedImage: new URL(`../assets/produtos/${product.image}`, import.meta.url).href
       }));
       return [...resolvedProducts, ...resolvedProducts]; // Duplica os produtos para um scroll infinito
+    },
+    stopScroll() {
+      this.isScrolling = false; // Para o scroll automático
+    },
+    startScroll() {
+      this.isScrolling = true; // Retoma o scroll automático
+    },
+    openProductModal(product) {
+      this.selectedProduct = product;
+      this.isModalOpen = true;
+    },
+    closeProductModal() {
+      this.isModalOpen = false;
+      this.selectedProduct = null;
     }
   }
 };

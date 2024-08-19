@@ -6,14 +6,13 @@
   padding: 20px;               /* Padding interno */
   box-sizing: border-box;      /* Inclui o padding e bordas na largura e altura totais */
   background-color: #f4f4f4;   /* Cor de fundo para a view */
-  margin-top: 5%;
+  margin-top: 80px;
 }
 
 /* Estilo do título da galeria na view */
 .gallery-title {
   font-size: 28px;             /* Tamanho da fonte */
   color: #333;                 /* Cor do texto */
-  margin-right: 20%;           /* Margem direita para o título */
 }
 
 /* Grid da galeria */

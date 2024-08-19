@@ -2,7 +2,7 @@
 
 .lives-container {
   padding: 20px;
-  background-color: #b87d7d;
+  background-color: #ffffff;
   margin: 20px auto;
   width: 100%;
   max-width: 1000px; /* Define a largura máxima do carrossel */
@@ -17,7 +17,7 @@
 .lives-title {
   text-align: center;
   font-size: 2rem;
-  color: #eeeeee; /* Texto chamativo para AO VIVO */
+  color: #000000; /* Texto chamativo para AO VIVO */
   margin-bottom: 20px;
 }
 
