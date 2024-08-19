@@ -1,0 +1,10 @@
+@import '../assets/variaveis.css';
+
+/* Contêiner da view do ranking */
+.ranking-view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: var(--cor-fundo);
+}

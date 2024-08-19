@@ -2,23 +2,22 @@
 
 .lives-container {
   padding: 20px;
-  background-color: #d9d6d6;
+  background-color: #b87d7d;
   margin: 20px auto;
-  height: 100%; /* Ajuste a altura conforme necessário */
-  width: 100%; /* Ajusta a largura do carrossel ao contêiner */
+  width: 100%;
   max-width: 1000px; /* Define a largura máxima do carrossel */
-  max-height: 500px; /* Define a largura máxima do carrossel */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .lives-title {
   text-align: center;
   font-size: 2rem;
-  color: #d9534f; /* Texto chamativo para AO VIVO */
+  color: #eeeeee; /* Texto chamativo para AO VIVO */
   margin-bottom: 20px;
 }
 
@@ -38,16 +37,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
-  flex: 1 1 300px; /* Permite que o item cresça ou diminua conforme o tamanho da tela */
+  max-width: 100%; /* Permite que o item cresça ou diminua conforme o tamanho da tela */
+  flex: 1 1 300px; /* Ajusta o item conforme o espaço disponível */
+  min-width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .live-thumbnail {
   width: 100%;
   height: auto;
-  display: block;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .live-info {
@@ -114,9 +113,19 @@ iframe {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .lives-title {
+    font-size: 1.8rem;
+  }
+
+  .live-status {
+    font-size: 17px;
+  }
+}
+
 @media (max-width: 768px) {
-  .live-title {
-    font-size: 20px;
+  .lives-title {
+    font-size: 1.5rem;
   }
 
   .live-status {
@@ -125,6 +134,16 @@ iframe {
 
   .live-thumbnail {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .live-item {
+    flex: 1 1 100%; /* Faz o item ocupar toda a largura em telas muito pequenas */
+  }
+
+  .live-status {
+    font-size: 15px;
   }
 }
 
