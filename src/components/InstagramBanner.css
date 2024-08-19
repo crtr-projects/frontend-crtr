@@ -25,7 +25,7 @@
 
 /* Destaque no texto */
 .highlight {
-    color: red; /* Cor amarela para o destaque */
+    color: #040402; /* Cor amarela para o destaque */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para o texto */
 }
 
