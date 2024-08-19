@@ -5,6 +5,7 @@
       <Carousel />
       <Lives />
       <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
+      <!-- <YouTubePreview /> -->
       <InstagramBanner />
       <UltimasNovidades />
       <Espacos />
