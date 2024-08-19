@@ -4,12 +4,11 @@
       <!-- Seu conteúdo principal aqui -->
       <Carousel />
       <Lives />
-      <YouTubePreview />
+      <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
       <InstagramBanner />
       <UltimasNovidades />
       <Espacos />
       <Galeria />
-      <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
       <ParceirosOficiais />
     </main>
     <Footer /> <!-- Adiciona o footer ao final do conteúdo -->
