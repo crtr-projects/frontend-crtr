@@ -18,11 +18,11 @@
   
 /* Grid de logos dos parceiros */
 .parceiros-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Espaçamento entre os itens */
-    margin-bottom: 80px; /* Espaço adicional para o ícone do WhatsApp */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 0px;
   }
   
 /* Estilo individual dos itens de parceiros */
