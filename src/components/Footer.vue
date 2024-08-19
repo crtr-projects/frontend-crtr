@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 Trabach Softwares <br>Todos os direitos reservados.</p>
+      <p class="footer-empresa">© 2024 Trabach Softwares <br>Todos os direitos reservados.</p>
     </div>
   </footer>
 </template>
