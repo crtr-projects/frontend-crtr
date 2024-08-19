@@ -26,10 +26,11 @@ export default {
   },
   methods: {
     resolveImages(produtos) {
-      return produtos.map(product => ({
+      const resolvedProducts = produtos.map(product => ({
         ...product,
         resolvedImage: new URL(`../assets/produtos/${product.image}`, import.meta.url).href
       }));
+      return [...resolvedProducts, ...resolvedProducts]; // Duplica os produtos para um scroll infinito
     }
   }
 };
