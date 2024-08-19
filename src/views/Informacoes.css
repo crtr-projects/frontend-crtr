@@ -7,6 +7,7 @@
   background-color: #f9f9f9; /* Cor de fundo do contêiner */
   border-radius: 15px; /* Arredonda os cantos do contêiner */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao contêiner */
+  margin-top: 5%;
 }
 
 /* Estilo do cabeçalho */

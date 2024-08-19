@@ -6,6 +6,7 @@
     min-height: 100vh; /* Garante que a página ocupe pelo menos a altura da tela */
     display: flex;
     flex-direction: column; /* Organiza o conteúdo verticalmente */
+    
 }
 
 /* Contêiner principal da loja */
@@ -17,6 +18,7 @@
     margin: 0 auto; /* Centraliza horizontalmente */
     box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
     text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+    margin-top: 10%;
 }
 
 /* Botão para alternar visualização */
