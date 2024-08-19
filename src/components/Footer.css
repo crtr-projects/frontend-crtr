@@ -2,7 +2,7 @@
 
 /* Estilos Gerais do Footer */
 .footer {
-  background-color: #7a7a7a;
+  background-color: #000000;
   color: white;
   padding: 20px 0px;
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
@@ -26,11 +26,13 @@
 }
 
 .footer-link {
-  color: white;
+  color: rgb(255, 255, 255);
+  margin: 30px 0px;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 22px;
 }
 
 .footer-icon {
@@ -42,26 +44,34 @@
 
 /* Ícones das Redes Sociais */
 .footer-social {
-  margin-left: 10px;
+  margin: 20px 0px;
 }
 
 .footer-social-icon {
-  width: 35px; /* Tamanho uniforme para os ícones de redes sociais */
-  height: 24px; /* Garantir que os ícones tenham altura uniforme */
+  width: 60px; /* Tamanho uniforme para os ícones de redes sociais */
+  height: 40px; /* Garantir que os ícones tenham altura uniforme */
   object-fit: contain; /* Manter proporção ao ajustar o tamanho */
 }
 
 /* Seção Inferior do Footer */
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  border-top: 2px solid #800d0d38;
+  border-top: 2px solid #ffffff;
   padding-top: 10px;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .footer p {
-  margin: 0;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilos Responsivos */
