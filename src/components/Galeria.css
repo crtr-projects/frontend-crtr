@@ -32,12 +32,21 @@
 }
 
 /* Item da galeria */
+.gallery-photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9; /* Cor de fundo leve para o container de imagem */
+  border-radius: 8px; /* Bordas arredondadas para o container */
+  padding: 10px; /* Espaçamento interno ao redor da imagem */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+}
+
 .gallery-photo {
   width: 200px; /* Largura fixa das imagens */
   height: 200px; /* Altura fixa das imagens */
   object-fit: cover; /* Ajusta a imagem para cobrir o container sem distorção */
   border-radius: 8px; /* Bordas arredondadas para as imagens */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para destaque */
 }
 
 /* Botão de ver mais */
@@ -61,8 +70,8 @@
   }
 
   .gallery-photo {
-    width: 150px; /* Reduz a largura das imagens em telas menores */
-    height: 150px; /* Reduz a altura das imagens em telas menores */
+    width: 260px; /* Ajusta a largura das imagens para ser maior em telas menores */
+    height: 260px; /* Ajusta a altura das imagens para ser maior em telas menores */
   }
 }
 
@@ -72,7 +81,7 @@
   }
 
   .gallery-photo {
-    width: 120px; /* Reduz ainda mais a largura das imagens em telas muito pequenas */
-    height: 120px; /* Reduz ainda mais a altura das imagens em telas muito pequenas */
+    width: 240px; /* Ajusta a largura das imagens para ser maior em telas muito pequenas */
+    height: 240px; /* Ajusta a altura das imagens para ser maior em telas muito pequenas */
   }
 }

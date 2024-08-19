@@ -1,26 +1,25 @@
 <template>
-  <div class="page-wrapper">
+  <div class="galeria-view">
     <main class="content">
-      <div class="gallery-container">
-        <div v-for="(imagem, index) in imagens" :key="index" class="image-card">
-          <img :src="imagem.resolvedImage" :alt="imagem.title" class="image" />
-          <p class="image-title">{{ imagem.title }}</p>
+      <h2 class="gallery-title">
+        Galeria de <span class="highlight">Fotos</span>
+      </h2>
+      <div class="gallery-grid">
+        <div v-for="(imagem, index) in imagens" :key="index" class="gallery-photo-card">
+          <img :src="imagem.resolvedImage" :alt="imagem.title" class="gallery-photo" />
+          <p class="gallery-photo-title">{{ imagem.title }}</p>
+          <p class="gallery-photo-description">{{ imagem.description }}</p>
         </div>
       </div>
     </main>
-    <Footer /> <!-- Adiciona o footer ao final do conteúdo -->
   </div>
 </template>
 
 <script>
-import Footer from '../components/Footer.vue'; // Importa o componente Footer
 import galeriaData from '../mocks/galeriaMocks.json'; // Importa o arquivo JSON com os dados da galeria
 
 export default {
   name: 'GaleriaView',
-  components: {
-    Footer,
-  },
   data() {
     return {
       imagens: this.resolveImages(galeriaData) // Resolve os caminhos das imagens
@@ -30,7 +29,7 @@ export default {
     resolveImages(imagens) {
       return imagens.map(imagem => ({
         ...imagem,
-        resolvedImage: new URL(`../assets/${imagem.image}`, import.meta.url).href
+        resolvedImage: new URL(`../assets/galeria/${imagem.image}`, import.meta.url).href
       }));
     }
   }

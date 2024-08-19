@@ -2,16 +2,21 @@
   {
       "title": "Imagem 1",
       "description": "Descrição da Imagem 1",
-      "image": "galeria/imagem1.png"
+      "image": "image-1.png"
   },
   {
       "title": "Imagem 2",
       "description": "Descrição da Imagem 2",
-      "image": "galeria/imagem2.png"
+      "image": "image-2.png"
   },
   {
       "title": "Imagem 3",
       "description": "Descrição da Imagem 3",
-      "image": "galeria/imagem3.png"
+      "image": "image-3.png"
+  },
+  {
+      "title": "Imagem 4",
+      "description": "Descrição da Imagem 4",
+      "image": "image-4.png"
   }
 ]
