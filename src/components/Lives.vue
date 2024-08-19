@@ -1,7 +1,6 @@
 <template>
   <div class="lives-container">
     <h2 class="lives-title">Transmissões AO VIVO</h2>
-    <h2 class="lives-description">Aqui você Acompanha em tempo real os nossos eventos de cada etapa da CRTR !</h2>
     <div class="live-grid">
       <div v-for="(live, index) in lives" :key="index" class="live-item" @click="openLive(live)">
         <img :src="live.thumbnail" alt="Live thumbnail" class="live-thumbnail" />
