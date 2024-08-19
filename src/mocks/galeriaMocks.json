@@ -1,0 +1,17 @@
+[
+  {
+      "title": "Imagem 1",
+      "description": "Descrição da Imagem 1",
+      "image": "galeria/imagem1.png"
+  },
+  {
+      "title": "Imagem 2",
+      "description": "Descrição da Imagem 2",
+      "image": "galeria/imagem2.png"
+  },
+  {
+      "title": "Imagem 3",
+      "description": "Descrição da Imagem 3",
+      "image": "galeria/imagem3.png"
+  }
+]
