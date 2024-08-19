@@ -41,18 +41,24 @@
 /* Modo de visualização horizontal dos produtos */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(8, 1fr); /* Exibe 8 colunas em monitores grandes */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adapta o número de colunas conforme o tamanho da tela */
     gap: 20px; /* Espaçamento entre os itens */
     width: 100%; /* Garante que a grade use toda a largura da tela */
 }
 
 /* Cartão do produto */
 .product-card {
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha itens no topo */
+    align-items: stretch;
+    min-height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff; /* Adiciona fundo branco para os cartões */
+    border: 1px solid #ddd; /* Adiciona uma borda leve */
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+    transition: transform 0.2s ease; /* Transição suave ao passar o mouse */
 }
 
 .product-card:hover {
@@ -63,32 +69,37 @@
 .product-image {
     width: 100%;
     height: auto;
-}
-
-/* Informações do produto */
-.product-info {
-    padding: 10px;
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
 }
 
 /* Nome do produto */
 .product-name {
-    font-size: 18px;
-    margin: 0 0 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
     color: #333;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
 }
 
 /* Descrição do produto */
 .product-description {
     font-size: 14px;
-    margin: 0 0 10px;
     color: #666;
+    margin-bottom: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-grow: 1; /* Garante que a descrição ocupe o máximo de espaço possível */
 }
 
 /* Preço do produto */
 .product-price {
     font-size: 16px;
     color: #ff6f61;
-    margin: 0 0 10px;
+    margin-top: 10px;
+    align-self: flex-start; /* Garante que o preço fique alinhado ao início do container */
 }
 
 /* Botão de adicionar à sacola */
@@ -99,7 +110,8 @@
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    width: 100%;
+    margin-top: 10px
 }
 
 /* Modo de visualização em lista */
@@ -107,6 +119,7 @@
     list-style: none;
     padding: 0;
     margin: 20px 0;
+    width: 100%; /* Garante que a lista ocupe toda a largura disponível */
 }
 
 .list-view .product-list-item {
@@ -116,6 +129,8 @@
     align-items: center;
     border-bottom: 6px solid #800d0d42;
     padding-bottom: 20px;
+    width: 100%; /* Garante que cada item da lista ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
 }
 
 /* Ajuste no modo de lista para imagem e informações do produto */
@@ -127,9 +142,10 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 60%;
+    width: 59%; /* Ajuste a porcentagem conforme necessário */
 }
 
+/* Nome do produto no modo lista */
 .list-view .product-list-item .product-name {
     margin: 0 0 10px;
 }

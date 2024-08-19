@@ -9,11 +9,6 @@
     { "name": "Produto 2", "description": "Descrição do Produto 2", "price": "R$ 150,00", "image": "bone.png" },
     { "name": "Produto 3", "description": "Descrição do Produto 3", "price": "R$ 200,00", "image": "moletom.png" },
     { "name": "Produto 1", "description": "Descrição do Produto 1", "price": "R$ 100,00", "image": "copo.png" },
-    { "name": "Produto 2", "description": "Descrição do Produto 2", "price": "R$ 150,00", "image": "bone.png" },
-    { "name": "Produto 3", "description": "Descrição do Produto 3", "price": "R$ 200,00", "image": "moletom.png" },    { "name": "Produto 1", "description": "Descrição do Produto 1", "price": "R$ 100,00", "image": "copo.png" },
-    { "name": "Produto 2", "description": "Descrição do Produto 2", "price": "R$ 150,00", "image": "bone.png" },
-    { "name": "Produto 3", "description": "Descrição do Produto 3", "price": "R$ 200,00", "image": "moletom.png" },    { "name": "Produto 1", "description": "Descrição do Produto 1", "price": "R$ 100,00", "image": "copo.png" },
-    { "name": "Produto 2", "description": "Descrição do Produto 2", "price": "R$ 150,00", "image": "bone.png" },
-    { "name": "ULTIMOOOO", "description": "Descrição do Produto 3", "price": "R$ 200,00", "image": "moletom.png" }
-  ]
+    { "name": "Produto 2", "description": "Descrição do Produto 2", "price": "R$ 150,00", "image": "bone.png" }    
+]
   
