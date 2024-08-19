@@ -1,7 +1,7 @@
 <template>
     <div class="informacoes-container">
       <header class="informacoes-header">
-        <h1>Informações sobre a Empresa</h1>
+        <h1>Um Pouco sobre nós</h1>
       </header>
       <section class="informacoes-content">
         <article class="informacoes-article">
@@ -23,7 +23,7 @@
         </article>
       </section>
       <footer class="informacoes-footer">
-        <p>&copy; 2024 Nome da Empresa. Todos os direitos reservados.</p>
+
       </footer>
     </div>
   </template>

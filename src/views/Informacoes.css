@@ -1,65 +1,82 @@
-@import '../assets/variaveis.css'; /* Importação das variáveis de estilo */
-
+/* Estilo geral do contêiner */
 .informacoes-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--background-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo do cabeçalho */
 .informacoes-header {
-  margin-bottom: 30px;
+  background-color: #ff6f61; /* Cor da paleta */
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
   text-align: center;
 }
 
 .informacoes-header h1 {
+  color: #fff;
   font-size: 2.5rem;
-  color: var(--primary-color);
+  margin: 0;
 }
 
+/* Estilo da seção de conteúdo */
 .informacoes-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 800px;
-  width: 100%;
+  padding: 20px;
 }
 
+/* Estilo dos artigos */
 .informacoes-article {
-  background-color: #fff;
+  margin-bottom: 30px;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .informacoes-article h2 {
-  font-size: 1.75rem;
-  color: var(--secondary-color);
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-top: 0;
+  color: #333; /* Cor escura para o título */
+  border-bottom: 2px solid #ff6f61; /* Linha de destaque embaixo do título */
+  padding-bottom: 10px;
 }
 
+/* Estilo dos parágrafos e lista */
 .informacoes-article p,
 .informacoes-article ul {
-  font-size: 1rem;
-  color: var(--text-color);
+  font-size: 1.2rem;
+  color: #666; /* Cor do texto */
 }
 
 .informacoes-article ul {
-  list-style-type: disc;
   padding-left: 20px;
 }
 
+.informacoes-article li {
+  margin-bottom: 10px;
+}
+
+/* Estilo do rodapé */
 .informacoes-footer {
-  margin-top: 30px;
+  background-color: #333; /* Cor de fundo escura para o rodapé */
+  color: #fff;
   text-align: center;
-  color: var(--text-muted);
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.informacoes-footer p {
+  margin: 0;
+  font-size: 1rem;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .informacoes-content {
-    padding: 10px;
+  .informacoes-container {
+    padding: 20px;
   }
 
   .informacoes-header h1 {
@@ -72,6 +89,6 @@
 
   .informacoes-article p,
   .informacoes-article ul {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
