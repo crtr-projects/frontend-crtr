@@ -4,9 +4,10 @@
       <!-- Seu conteúdo principal aqui -->
       <Carousel />
       <Lives />
+      <RankingView />
       <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
       <!-- <YouTubePreview /> -->
-      <RankingView />
+      
       <InstagramBanner />
       <UltimasNovidades />
       <Espacos />
