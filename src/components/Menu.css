@@ -1,9 +1,32 @@
 @import '../assets/variaveis.css';
 
+/* Estilo geral do wrapper do menu */
 .menu-wrapper {
+  position: fixed; /* Fixa o menu no topo da página */
+  top: 0; /* Posiciona o menu no topo */
+  left: 0; /* Alinha o menu ao lado esquerdo da página */
+  width: 100%; /* Faz o menu ocupar a largura total da página */
   background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative; /* Para permitir o posicionamento absoluto dos elementos internos */
+  z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
+  transition: padding 0.3s, box-shadow 0.3s; /* Transição suave para o tamanho do menu */
+}
+
+/* Estilo do menu horizontal */
+.menu {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo */
+  color: white;
+  padding: 10px 30px; /* Padding reduzido por padrão */
+  justify-content: space-between; /* Alinha logo e menu */
+  position: relative; /* Para posicionar o botão de fechar corretamente */
+}
+
+/* Estilo do menu quando o mouse passa por cima */
+.menu-wrapper:hover .menu {
+  padding: 30px; /* Padding maior ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte ao passar o mouse */
 }
 
 /* Estilo do botão de menu */
@@ -16,26 +39,22 @@
   padding: 10px;
 }
 
-/* Estilo do menu horizontal */
-.menu {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo */
-  color: white;
-  padding: 30px;
-  justify-content: space-between; /* Alinha logo e menu */
-  position: relative; /* Para posicionar o botão de fechar corretamente */
-}
-
+/* Estilo da logo */
 .logo-container {
   flex: 0 0 auto; /* Evita que a logo se expanda */
   z-index: 1001; /* Garante que a logo fique acima do menu */
 }
 
 .logo {
-  height: 100px; /* Ajuste o tamanho da logo conforme necessário */
+  height: 60px; /* Tamanho menor da logo por padrão */
   border-radius: 50%; /* Torna a logo arredondada */
   box-shadow: 0 0 100px rgba(255, 199, 194, 0.8); /* Adiciona a borda brilhante */
+  transition: height 0.3s; /* Transição suave para o tamanho da logo */
+}
+
+/* Estilo da logo quando o mouse passa por cima */
+.menu-wrapper:hover .logo {
+  height: 100px; /* Tamanho maior da logo ao passar o mouse */
 }
 
 .menu ul {
