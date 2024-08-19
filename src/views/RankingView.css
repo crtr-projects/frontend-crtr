@@ -1,10 +1,12 @@
+@import '../assets/variaveis.css';
+
 /* Contêiner da view do ranking */
 .ranking-view-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: var(--backgroundBranco);
   margin-top: 5%;
 }
 
@@ -17,20 +19,20 @@
 
 /* Estilo de cada item do acordeão */
 .accordion-item {
-  margin-bottom: 10px;
-  border-radius: 8px;
+  margin-bottom: var(--marginPadrao);
+  border-radius: var(--borderRadiusMedium);
   overflow: hidden;
-  border: 1px solid #ddd;
+  border: 1px solid var(--borderCorPadrao);
 }
 
 /* Estilo do botão do acordeão */
 .accordion-button {
   width: 100%;
   padding: 15px;
-  font-size: 1.1rem;
+  font-size: var(--sizeFontePrincipal);
   text-align: left;
-  background-color: #2762a1;
-  color: #fff;
+  background-color: var(--backgroundDosBotoesStatic);
+  color: var(--corFonteDentroDosBotoesStatic);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -41,12 +43,13 @@
 
 /* Estilo para quando o botão está expandido */
 .accordion-button[aria-expanded="true"] {
-  background-color: #0056b3;
+  background-color: var(--backgroundDosBotoesHover);
+  color: var(--corFonteDentroDosBotoesHover);
 }
 
 /* Ícone de seta do acordeão */
 .accordion-icon {
-  font-size: 1.2rem;
+  font-size: var(--sizeFontePrincipal);
   transition: transform 0.3s;
 }
 
@@ -58,6 +61,8 @@
 .accordion-content {
   overflow: hidden;
   transition: max-height 0.5s ease;
+  background-color: var(--backgroundSecundario);
+  color: var(--corDaFontePrincipalEscrita);
 }
 
 /* Estilo da tabela */
@@ -65,24 +70,24 @@
   width: 100%;
   border-collapse: collapse;
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--sizeFontePrincipal);
 }
 
 .ranking-table th,
 .ranking-table td {
-  padding: 10px;
+  padding: var(--paddingPadrao);
   text-align: center;
 }
 
 .ranking-table thead {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--BackgroundPrincipal);
+  color: var(--corFonteDentroDosBotoesHover);
 }
 
 .black-row {
-  background-color: #f8f9fa;
+  background-color: var(--backgroundBody);
 }
 
 .red-row {
-  background-color: #e9ecef;
+  background-color: var(--backgroundSecundario);
 }

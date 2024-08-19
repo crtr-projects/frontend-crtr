@@ -4,17 +4,17 @@
       <div v-for="year in availableYears" :key="year" class="accordion-item">
         <button 
           class="accordion-button"
-          :aria-expanded="expandedYear === year"
+          :aria-expanded="isYearExpanded(year)"
           @click="toggleAccordion(year)"
         >
           Ranking {{ year }}
-          <span :class="['accordion-icon', expandedYear === year ? 'open' : '']">
+          <span :class="['accordion-icon', isYearExpanded(year) ? 'open' : '']">
             &#9660;
           </span>
         </button>
         <div 
           class="accordion-content"
-          :style="{ maxHeight: expandedYear === year ? '500px' : '0' }"
+          :style="{ maxHeight: isYearExpanded(year) ? '500px' : '0' }"
         >
           <table class="ranking-table">
             <thead>
@@ -42,7 +42,7 @@
 export default {
   data() {
     return {
-      expandedYear: null,
+      expandedYears: [],  // Agora usamos um array para armazenar múltiplos anos expandidos
       availableYears: ['2024', '2023'],
       competidores2024: [
         { nome: 'Competidor 1', pontuacao: '150' },
@@ -56,7 +56,14 @@ export default {
   },
   methods: {
     toggleAccordion(year) {
-      this.expandedYear = this.expandedYear === year ? null : year;
+      if (this.isYearExpanded(year)) {
+        this.expandedYears = this.expandedYears.filter(y => y !== year); // Fecha o acordeão se já estiver aberto
+      } else {
+        this.expandedYears.push(year); // Adiciona o ano ao array para abrir o acordeão
+      }
+    },
+    isYearExpanded(year) {
+      return this.expandedYears.includes(year); // Verifica se o ano está no array de anos expandidos
     },
     getCompetidores(year) {
       return year === '2024' ? this.competidores2024 : this.competidores2023;
