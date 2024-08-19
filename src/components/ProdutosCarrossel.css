@@ -1,11 +1,14 @@
 /* Estilo geral do carrossel */
 .carrossel-container {
+  height: 100%; /* Ajuste a altura conforme necessário */
+  max-width: 1000px; /* Define a largura máxima do carrossel */
+  max-height: 500px; /* Define a largura máxima do carrossel */
+  margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+  margin-top: 80px; /* Centraliza o carrossel horizontalmente */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
   overflow: hidden; /* Oculta a barra de scroll */
   padding: 20px 0;
   position: relative;

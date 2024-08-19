@@ -64,6 +64,10 @@ export default {
       competidores2024: [
         { nome: 'Competidor 1', pontuacao: '150' },
         { nome: 'Competidor 2', pontuacao: '140' },
+        { nome: 'Competidor 3', pontuacao: '130' },
+        { nome: 'Competidor 4', pontuacao: '120' },
+        { nome: 'Competidor 5', pontuacao: '110' },
+        { nome: 'Competidor 6', pontuacao: '100' },
         // Outros competidores...
       ],
       competidores2023: [
