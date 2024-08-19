@@ -1,94 +1,163 @@
+@import '../assets/variaveis.css';
 /* Estilo geral do contêiner */
 .informacoes-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-  background-color: #f9f9f9;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Define a largura máxima do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  padding: 40px; /* Espaçamento interno do contêiner */
+  background-color: #f9f9f9; /* Cor de fundo do contêiner */
+  border-radius: 15px; /* Arredonda os cantos do contêiner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao contêiner */
 }
 
 /* Estilo do cabeçalho */
 .informacoes-header {
-  background-color: #ff6f61; /* Cor da paleta */
-  padding: 20px;
-  border-radius: 10px 10px 0 0;
-  text-align: center;
+  background-color: #ff6f61; /* Cor de fundo do cabeçalho */
+  padding: 20px; /* Espaçamento interno do cabeçalho */
+  border-radius: 10px 10px 0 0; /* Arredonda os cantos superiores do cabeçalho */
+  text-align: center; /* Centraliza o texto dentro do cabeçalho */
 }
 
 .informacoes-header h1 {
-  color: #fff;
-  font-size: 2.5rem;
-  margin: 0;
+  color: #fff; /* Cor do texto do cabeçalho */
+  font-size: 2.5rem; /* Tamanho da fonte do título principal */
+  margin: 0; /* Remove a margem padrão do título */
 }
 
 /* Estilo da seção de conteúdo */
 .informacoes-content {
-  padding: 20px;
+  padding: 20px; /* Espaçamento interno da seção de conteúdo */
 }
 
 /* Estilo dos artigos */
 .informacoes-article {
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Espaçamento abaixo de cada artigo */
+  padding: 30px; /* Espaçamento interno dos artigos */
+  background-color: #fff; /* Cor de fundo dos artigos */
+  border-radius: 10px; /* Arredonda os cantos dos artigos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil aos artigos */
 }
 
 .informacoes-article h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  color: #333; /* Cor escura para o título */
-  border-bottom: 2px solid #ff6f61; /* Linha de destaque embaixo do título */
-  padding-bottom: 10px;
+  font-size: 2rem; /* Tamanho da fonte dos títulos dos artigos */
+  margin-top: 0; /* Remove a margem superior padrão do título */
+  color: #333; /* Cor do texto dos títulos */
+  border-bottom: 2px solid #ff6f61; /* Adiciona uma linha de destaque abaixo do título */
+  padding-bottom: 10px; /* Espaçamento interno abaixo do título */
 }
 
 /* Estilo dos parágrafos e lista */
 .informacoes-article p,
 .informacoes-article ul {
-  font-size: 1.2rem;
-  color: #666; /* Cor do texto */
+  font-size: 1.2rem; /* Tamanho da fonte dos parágrafos e listas */
+  color: #666; /* Cor do texto dos parágrafos e listas */
 }
 
 .informacoes-article ul {
-  padding-left: 20px;
+  padding-left: 0px; /* Remove o recuo padrão da lista */
 }
 
 .informacoes-article li {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Espaçamento abaixo de cada item da lista */
+  list-style-type: none; /* Remove o marcador (bolinha) padrão da lista */
 }
 
 /* Estilo do rodapé */
 .informacoes-footer {
-  background-color: #333; /* Cor de fundo escura para o rodapé */
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  border-radius: 0 0 10px 10px;
+  background-color: #333; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto do rodapé */
+  text-align: center; /* Centraliza o texto dentro do rodapé */
+  padding: 15px; /* Espaçamento interno do rodapé */
+  border-radius: 0 0 10px 10px; /* Arredonda os cantos inferiores do rodapé */
 }
 
 .informacoes-footer p {
-  margin: 0;
-  font-size: 1rem;
+  margin: 0; /* Remove a margem padrão do parágrafo */
+  font-size: 1rem; /* Tamanho da fonte do texto do rodapé */
+}
+
+/* Estilo dos valores (remove o marcador) */
+.valores {
+  list-style-type: none; /* Remove o marcador da lista */
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+
+/* Estilo para telas menores que 1024px */
+@media (max-width: 1024px) {
   .informacoes-container {
-    padding: 20px;
+    padding: 30px; /* Reduz o espaçamento interno */
   }
 
   .informacoes-header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem; /* Reduz o tamanho da fonte do título principal */
   }
 
   .informacoes-article h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Reduz o tamanho da fonte dos títulos dos artigos */
   }
 
   .informacoes-article p,
   .informacoes-article ul {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Reduz o tamanho da fonte dos parágrafos e listas */
+  }
+}
+
+/* Estilo para telas menores que 768px */
+@media (max-width: 768px) {
+  .informacoes-container {
+    padding: 20px; /* Reduz ainda mais o espaçamento interno */
+  }
+
+  .informacoes-header h1 {
+    font-size: 2rem; /* Reduz mais o tamanho da fonte do título principal */
+  }
+
+  .informacoes-article h2 {
+    font-size: 1.5rem; /* Reduz mais o tamanho da fonte dos títulos dos artigos */
+  }
+
+  .informacoes-article p,
+  .informacoes-article ul {
+    font-size: 1rem; /* Reduz mais o tamanho da fonte dos parágrafos e listas */
+  }
+}
+
+/* Estilo para telas menores que 480px */
+@media (max-width: 480px) {
+  .informacoes-container {
+    padding: 15px; /* Reduz ainda mais o espaçamento interno */
+  }
+
+  .informacoes-header h1 {
+    font-size: 1.8rem; /* Reduz mais o tamanho da fonte do título principal */
+  }
+
+  .informacoes-article h2 {
+    font-size: 1.3rem; /* Reduz mais o tamanho da fonte dos títulos dos artigos */
+  }
+
+  .informacoes-article p,
+  .informacoes-article ul {
+    font-size: 0.9rem; /* Reduz mais o tamanho da fonte dos parágrafos e listas */
+  }
+}
+
+/* Estilo para telas menores que 360px */
+@media (max-width: 360px) {
+  .informacoes-container {
+    padding: 10px; /* Reduz ao mínimo o espaçamento interno */
+  }
+
+  .informacoes-header h1 {
+    font-size: 1.5rem; /* Reduz ao mínimo o tamanho da fonte do título principal */
+  }
+
+  .informacoes-article h2 {
+    font-size: 1.2rem; /* Reduz ao mínimo o tamanho da fonte dos títulos dos artigos */
+  }
+
+  .informacoes-article p,
+  .informacoes-article ul {
+    font-size: 0.8rem; /* Reduz ao mínimo o tamanho da fonte dos parágrafos e listas */
   }
 }

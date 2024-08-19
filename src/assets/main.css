@@ -1,3 +1,5 @@
+@import '../assets/variaveis.css';
+
 html, body {
   height: 100%;
   margin: 0;
@@ -12,7 +14,7 @@ html, body {
 
 .content {
   flex: 1;
-  padding-bottom: 20px; /* Ajuste o padding para garantir que o conteúdo não sobreponha o footer */
+  padding-bottom: 0px; /* Ajuste o padding para garantir que o conteúdo não sobreponha o footer */
 }
 
 .footer {
