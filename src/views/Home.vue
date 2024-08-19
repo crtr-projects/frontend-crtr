@@ -6,6 +6,7 @@
       <Lives />
       <ProdutosCarrossel /> <!-- Adicione o carrossel de produtos aqui -->
       <!-- <YouTubePreview /> -->
+      <RankingView />
       <InstagramBanner />
       <UltimasNovidades />
       <Espacos />
@@ -18,7 +19,6 @@
 
 <script>
 import Carousel from '../components/Carousel.vue';
-import YouTubePreview from '../components/YouTubePreview.vue';
 import Lives from '../components/Lives.vue';
 import InstagramBanner from '../components/InstagramBanner.vue';
 import UltimasNovidades from '../components/UltimasNovidades.vue';
@@ -28,13 +28,14 @@ import ProdutosCarrossel from '@/components/ProdutosCarrossel.vue'; // Ajuste o 
 import ParceirosOficiais from '@/components/ParceirosOficiais.vue';
 import { mapGetters } from 'vuex';
 import Footer from '../components/Footer.vue'; // Certifique-se de que o caminho está correto
+import RankingView from './RankingView.vue';
 
 export default {
   name: 'Home',
   components: {
     Carousel,
     Lives,
-    YouTubePreview,
+    RankingView,
     InstagramBanner,
     UltimasNovidades,
     Galeria,

@@ -8,6 +8,8 @@ import NotFound from '../views/NotFound.vue';
 import GaleriaView from '../views/GaleriaView.vue';
 import LojaOficial from '../views/LojaOficial.vue';
 import LivesView from '../views/LivesView.vue';
+import Informacoes from '../views/Informacoes.vue';
+import Ranking from '../views/RankingView.vue';
 
 // Define as rotas da aplicação
 const routes = [
@@ -16,6 +18,9 @@ const routes = [
   { path: '/galeria', component: GaleriaView },   // Rota para a página de Galeria de Fotos
   { path: '/loja', component: LojaOficial },  
   { path: '/lives', component: LivesView },    // Rota para a página da Loja Oficial
+  { path: '/informacoes', component: Informacoes },    
+  { path: '/ranking', component: Ranking },    
+  
   { path: '/:pathMatch(.*)*', component: NotFound }, // Rota para qualquer caminho não encontrado (404)
 ];
 

@@ -2,7 +2,7 @@
 
 .lives-container {
   padding: 20px;
-  background-color: #d9d6d6;
+  background-color: #b87d7d;
   margin: 20px auto;
   height: 100%; /* Ajuste a altura conforme necessário */
   width: 100%; /* Ajusta a largura do carrossel ao contêiner */
@@ -18,7 +18,13 @@
 .lives-title {
   text-align: center;
   font-size: 2rem;
-  color: #d9534f; /* Texto chamativo para AO VIVO */
+  color: #eeeeee; /* Texto chamativo para AO VIVO */
+  margin-bottom: 20px;
+}
+
+.lives-description{
+  text-align: center;
+  color: #020202; /* Texto chamativo para AO VIVO */
   margin-bottom: 20px;
 }
 
