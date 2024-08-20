@@ -6,13 +6,14 @@
   padding: 40px; /* Espaçamento interno do contêiner */
   background-color: #f9f9f9; /* Cor de fundo do contêiner */
   border-radius: 15px; /* Arredonda os cantos do contêiner */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao contêiner */
-  margin-top: 5%;
+  box-shadow: 19px 20px 13px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao contêiner */
+  margin-top: 6%;
+  margin-bottom: 5%;
 }
 
 /* Estilo do cabeçalho */
 .informacoes-header {
-  background-color: #ff6f61; /* Cor de fundo do cabeçalho */
+  background-color: var(--backgroundDosBotoesStatic);; /* Cor de fundo do cabeçalho */
   padding: 20px; /* Espaçamento interno do cabeçalho */
   border-radius: 10px 10px 0 0; /* Arredonda os cantos superiores do cabeçalho */
   text-align: center; /* Centraliza o texto dentro do cabeçalho */
@@ -42,7 +43,7 @@
   font-size: 2rem; /* Tamanho da fonte dos títulos dos artigos */
   margin-top: 0; /* Remove a margem superior padrão do título */
   color: #333; /* Cor do texto dos títulos */
-  border-bottom: 2px solid #ff6f61; /* Adiciona uma linha de destaque abaixo do título */
+  border-bottom: 2px solid var(--backgroundDosBotoesStatic); /* Adiciona uma linha de destaque abaixo do título */
   padding-bottom: 10px; /* Espaçamento interno abaixo do título */
 }
 

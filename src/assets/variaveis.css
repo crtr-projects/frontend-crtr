@@ -15,6 +15,7 @@
     --backgroundDosBotoesStatic: #800D0D; /* Cor de fundo dos botões estáticos */
     --backgroundSecundario: #7a7a7a; /* Cor de fundo secundário */
     --BackgroundPrincipal: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de fundo principal */
+    --corFundoGaleria: var(--backgroundBody);
 
     /* Bordas */
     --borderCorHover: var(--backgroundDosBotoesStatic); /* Cor da borda em hover */
@@ -121,6 +122,8 @@
     --marginLateralWhatsApp: 20px; /* Margem lateral do logo do WhatsApp */
     --marginInferiorWhatsApp: 20px; /* Margem inferior do logo do WhatsApp */
     --marginBottomBotao: 10px;
+    --marginPadrao: 20px;
+    --marginTopGaleria: 5%;
 
     /* Padding */
     --paddingAgenda: 20px; /* Padding da agenda */
@@ -142,6 +145,7 @@
     --paddingCarrossel: 20px 0; /* Padding do carrossel */
     --paddingProduto: 10px; /* Padding dos produtos */
     --paddingBotaoAdicionar: 10px; /* Padding do botão adicionar */
+    --paddingInterno: 20px;
 
     /* Dimensões */
     --gapEventos: 20px; /* Gap entre eventos */

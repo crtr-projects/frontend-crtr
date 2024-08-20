@@ -53,19 +53,31 @@
 
 /* Linha de logos */
 .logo-row {
-  display: flex; /* Utiliza flexbox para alinhar as logos em linha */
-  justify-content: space-evenly; /* Espaça as logos uniformemente na linha */
-  margin-bottom: var(--marginPadrao); /* Espaçamento vertical entre as linhas */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--marginPadrao);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  align-items: center;
 }
 
 /* Placeholder para cada logo */
 .logo-placeholder {
-  width: 80px; /* Define a largura de cada logo */
-  height: 80px; /* Define a altura de cada logo */
+  max-width: 100px;
+  max-height: 100px; /* Define a altura de cada logo */
   background-color: var(--backgroundSecundario); /* Adiciona uma cor de fundo até que a logo seja adicionada */
   display: flex; /* Utiliza flexbox para centralizar a logo */
   align-items: center; /* Centraliza verticalmente a logo dentro do placeholder */
   justify-content: center; /* Centraliza horizontalmente a logo dentro do placeholder */
+  margin-bottom: 10px;
+}
+
+/* Estilo para imagens dentro dos placeholders */
+.logo-placeholder img {
+  width: 150px; /* Largura máxima da imagem */
+  max-width: 300px; /* Altura máxima da imagem */
+  object-fit: contain; /* Ajusta a imagem para se ajustar ao container sem distorção */
 }
 
 /* Regras de mídia para diferentes tamanhos de tela */
@@ -119,5 +131,28 @@
   .saiba-mais-link {
     font-size: var(--sizeFonteLow); /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
     margin-top: var(--marginPadrao); /* Margem padrão */
+  }
+}
+
+/* Adicionando mais tamanhos de tela para a responsividade */
+@media (max-width: 1200px) {
+  .espacos-text {
+    font-size: var(--sizeFonteSecundaria); /* Ajusta o tamanho da fonte em telas de 1200px ou menores */
+    flex: 0 0 25%; /* Ajusta a largura do texto em telas de 1200px ou menores */
+  }
+
+  .espacos-logos {
+    flex: 0 0 65%; /* Ajusta a largura das logos em telas de 1200px ou menores */
+  }
+}
+
+@media (max-width: 1440px) {
+  .espacos-text {
+    font-size: var(--sizeFontePrincipal); /* Ajusta o tamanho da fonte em telas de 1440px ou menores */
+    flex: 0 0 20%; /* Ajusta a largura do texto em telas de 1440px ou menores */
+  }
+
+  .espacos-logos {
+    flex: 0 0 70%; /* Ajusta a largura das logos em telas de 1440px ou menores */
   }
 }

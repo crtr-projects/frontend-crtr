@@ -13,7 +13,6 @@
 .gallery-title {
   font-size: var(--fontSizeH1); /* Tamanho da fonte definido pela variável */
   color: var(--corDaFontePrincipalEscrita); /* Cor da fonte principal */
-  margin-top: 6%;
 }
 
 .highlight {
