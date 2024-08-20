@@ -5,7 +5,7 @@
 .galeria-view {
   padding: 20px;               /* Padding interno */
   box-sizing: border-box;      /* Inclui o padding e bordas na largura e altura totais */
-  background-color: #f4f4f4;   /* Cor de fundo para a view */
+  background-color: #ffffff;   /* Cor de fundo para a view */
   margin-top: 80px;
 }
 
