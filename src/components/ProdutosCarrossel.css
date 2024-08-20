@@ -11,6 +11,7 @@
   overflow: hidden; /* Oculta a barra de scroll */
   padding: var(--paddingCarrossel); /* Atualizado para variável de padding */
   position: relative;
+  margin-top: 0px;
 }
 
 /* Cabeçalho do carrossel */
@@ -133,6 +134,27 @@
   border: none;
   font-size: var(--tamanhoFonteCloseButton); /* Atualizado para variável de fonte */
   cursor: pointer;
+}
+
+/* Botão de ver mais */
+.more-button {
+  display: inline-block; /* Permite a centralização com margin auto */
+  margin: 30px auto 0; /* Margem superior de 30px e centralização horizontal */
+  padding: var(--paddingPadrao) var(--paddingPadrao); /* Padding interno definido pela variável */
+  background-color: var(--backgroundDosBotoesStatic); /* Cor de fundo do botão definida pela variável */
+  color: var(--corFonteDentroDosBotoesHover); /* Cor da fonte dentro do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas definidas pela variável */
+  font-size: var(--sizeFontePrincipal); /* Tamanho da fonte definido pela variável */
+  cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
+  width: 125px;
+  padding: 10px 20px;
+}
+
+.more-button:hover {
+  background-color: #000000; /* Azul escuro ao passar o mouse */
+  color: #ffffff;
+  border-color: #000000; /* Azul ainda mais escuro ao passar o mouse */
 }
 
 /* Ajustes para telas menores */

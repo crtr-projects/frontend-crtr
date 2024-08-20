@@ -24,6 +24,9 @@
         </iframe>
       </div>
     </div>
+
+    <!-- Botão "Assista mais" condicionado pela prop -->
+    <button v-if="showMoreButton" class="more-button" @click="goToLivesView">Assista mais</button>
   </div>
 </template>
 
@@ -33,6 +36,12 @@ import live2 from '../assets/lives/live-LT-domingo.png';
 
 export default {
   name: 'Lives',
+  props: {
+    showMoreButton: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
       lives: [
@@ -52,6 +61,9 @@ export default {
       this.isModalOpen = false;
       this.currentLiveUrl = '';
     },
+    goToLivesView() {
+      this.$router.push('/lives');
+    }
   },
 };
 </script>

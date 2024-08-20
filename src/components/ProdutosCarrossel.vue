@@ -17,6 +17,8 @@
       </div>
     </div>
 
+    <button class="more-button" @click="goToLojaOficial">Ir a loja</button>
+
     <!-- Modal de Detalhes do Produto -->
     <div v-if="isModalOpen" class="modal-overlay" @click="closeProductModal">
       <div class="modal-content" @click.stop>
@@ -29,7 +31,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 import produtosData from '@/mocks/produtosMocks.json';
@@ -65,6 +66,9 @@ export default {
     closeProductModal() {
       this.isModalOpen = false;
       this.selectedProduct = null;
+    },
+    goToLojaOficial() {
+      this.$router.push('/loja'); // Redireciona para a rota da loja
     }
   }
 };

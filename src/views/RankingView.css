@@ -6,7 +6,7 @@
   background-color: var(--backgroundBranco);
   display: flex;
   flex-direction: column;
-  margin-top: var(--marginTopAgenda);
+  margin-top: 3%;
   padding: var(--paddingContainer);
 }
 
@@ -23,6 +23,7 @@
   border-radius: var(--borderRadiusMedium);
   margin-bottom: var(--marginPadrao);
   overflow: hidden;
+  margin-top: 30px;
 }
 
 /* Estilo do botão do acordeão */

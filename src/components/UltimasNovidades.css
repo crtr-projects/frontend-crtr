@@ -99,23 +99,22 @@
   transform: translateY(-50%);
 }
 
-/* Botão "Mais Notícias" */
-.mais-noticias {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #800D0D; /* Cor de fundo vermelha */
+/* Botão de ver mais */
+.more-button {
+  display: inline-block; /* Permite a centralização com margin auto */
+  margin: 30px auto 0; /* Margem superior de 30px e centralização horizontal */
+  padding: var(--paddingPadrao) var(--paddingPadrao); /* Padding interno definido pela variável */
+  background-color: var(--backgroundDosBotoesStatic); /* Cor de fundo do botão definida pela variável */
+  color: var(--corFonteDentroDosBotoesHover); /* Cor da fonte dentro do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas definidas pela variável */
+  font-size: var(--sizeFontePrincipal); /* Tamanho da fonte definido pela variável */
+  cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
+  width: 140px;
   padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  border: 2px solid #000000; /* Borda preta */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.mais-noticias:hover {
+.more-button:hover {
   background-color: #000000; /* Azul escuro ao passar o mouse */
   color: #ffffff;
   border-color: #000000; /* Azul ainda mais escuro ao passar o mouse */

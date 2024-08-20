@@ -19,7 +19,9 @@
       <button @click="prevSlide" class="carousel-control prev">&#10094;</button>
       <button @click="nextSlide" class="carousel-control next">&#10095;</button>
     </div>
-    <a href="/noticias" class="mais-noticias">Mais notícias</a>
+
+    <!-- Botão "Mais notícias" condicionado pela prop -->
+    <button v-if="showMoreButton" class="more-button" @click="goToAgenda">Mais notícias</button>
   </div>
 </template>
 
@@ -31,6 +33,12 @@ import '../components/UltimasNovidades.css'; // Importando o CSS separado
 
 export default {
   name: 'UltimasNovidades',
+  props: {
+    showMoreButton: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
       currentIndex: 0,
@@ -58,6 +66,9 @@ export default {
         clearInterval(this.interval);
       }
     },
+    goToAgenda() {
+      this.$router.push('/agenda');
+    }
   },
   mounted() {
     this.startAutoSlide();
@@ -67,3 +78,5 @@ export default {
   },
 };
 </script>
+
+<style src="../components/UltimasNovidades.css" scoped></style>

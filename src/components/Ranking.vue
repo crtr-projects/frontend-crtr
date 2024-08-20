@@ -1,57 +1,43 @@
 <template>
-  <div class="ranking-container">
-    <h1 class="ranking-title">Ranking dos Competidores CRTR</h1>
-    <p class="ranking-highlight">Confira o nosso ranking de competidores e suas pontuações atualizadas!</p>
-
-    <!-- Menu Suspenso para Selecionar o Ano -->
-    <div class="ranking-year-selector">
-      <select v-model="selectedYear">
-        <option v-for="year in availableYears" :key="year" :value="year">
-          {{ year }}
-        </option>
-      </select>
+  <div class="ranking-view-container-menu">
+    <div class="ranking-accordion">
+      <div v-for="year in availableYears" :key="year" class="accordion-item">
+        <button 
+          class="accordion-button"
+          :aria-expanded="isYearExpanded(year)"
+          @click="toggleAccordion(year)"
+        >
+          Ranking {{ year }}
+          <span :class="['accordion-icon', isYearExpanded(year) ? 'open' : '']">
+            &#9660;
+          </span>
+        </button>
+        <div 
+          class="accordion-content"
+          :style="{ maxHeight: isYearExpanded(year) ? '500px' : '0' }"
+        >
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Posição</th>
+                <th>Nome</th>
+                <th>Pontuação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(competidor, index) in getCompetidores(year)" :key="index" :class="index % 2 === 0 ? 'black-row' : 'red-row'">
+                <td>{{ index + 1 }}</td>
+                <td>{{ competidor.nome }}</td>
+                <td>{{ competidor.pontuacao }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-    <!-- Renderiza a tabela correspondente ao ano selecionado -->
-    <div v-if="selectedYear">
-      <table v-if="selectedYear === '2024'" class="ranking-table">
-        <!-- Tabela para 2024 -->
-        <thead>
-          <tr>
-            <th>Posição</th>
-            <th>Nome</th>
-            <th>Pontuação</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(competidor, index) in competidores2024" :key="index" :class="index % 2 === 0 ? 'black-row' : 'red-row'">
-            <td>{{ index + 1 }}</td>
-            <td>{{ competidor.nome }}</td>
-            <td>{{ competidor.pontuacao }}</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <table v-if="selectedYear === '2023'" class="ranking-table">
-        <!-- Tabela para 2023 -->
-        <thead>
-          <tr>
-            <th>Posição</th>
-            <th>Nome</th>
-            <th>Pontuação</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(competidor, index) in competidores2023" :key="index" :class="index % 2 === 0 ? 'black-row' : 'red-row'">
-            <td>{{ index + 1 }}</td>
-            <td>{{ competidor.nome }}</td>
-            <td>{{ competidor.pontuacao }}</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Adicione outras tabelas para outros anos aqui -->
-    </div>
+    <!-- Botão "Veja mais" -->
+    <button class="more-button" @click="goToRankingView">Veja mais</button>
   </div>
 </template>
 
@@ -59,8 +45,8 @@
 export default {
   data() {
     return {
-      selectedYear: '2024', // Ano inicial selecionado
-      availableYears: ['2024', '2023'], // Anos disponíveis no menu suspenso
+      expandedYears: [],
+      availableYears: ['2024', '2023'],
       competidores2024: [
         { nome: 'Competidor 1', pontuacao: '150' },
         { nome: 'Competidor 2', pontuacao: '140' },
@@ -68,16 +54,32 @@ export default {
         { nome: 'Competidor 4', pontuacao: '120' },
         { nome: 'Competidor 5', pontuacao: '110' },
         { nome: 'Competidor 6', pontuacao: '100' },
-        // Outros competidores...
       ],
       competidores2023: [
         { nome: 'Competidor A', pontuacao: '160' },
         { nome: 'Competidor B', pontuacao: '130' },
-        // Outros competidores...
       ],
     };
+  },
+  methods: {
+    toggleAccordion(year) {
+      if (this.isYearExpanded(year)) {
+        this.expandedYears = this.expandedYears.filter(y => y !== year);
+      } else {
+        this.expandedYears.push(year);
+      }
+    },
+    isYearExpanded(year) {
+      return this.expandedYears.includes(year);
+    },
+    getCompetidores(year) {
+      return year === '2024' ? this.competidores2024 : this.competidores2023;
+    },
+    goToRankingView() {
+      this.$router.push('/ranking');
+    }
   },
 };
 </script>
 
-<style src="../components/Ranking.css" scoped></style>
+<style src="../views/RankingView.css" scoped></style>

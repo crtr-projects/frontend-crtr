@@ -8,6 +8,7 @@
   margin: 0 auto; /* Centraliza o contêiner horizontalmente */
   padding: var(--paddingAgenda); /* Padding padrão definido pela variável */
   background-color: transparent; /* Fundo transparente */
+  text-align: center; /* Centraliza o conteúdo textualmente, incluindo o botão */
 }
 
 /* Estilo do título da galeria */
@@ -50,8 +51,8 @@
 
 /* Botão de ver mais */
 .more-button {
-  display: block; /* Faz com que o botão se comporte como um bloco */
-  margin: var(--marginPadrao) auto; /* Margem padrão vertical e centralização horizontal */
+  display: inline-block; /* Permite a centralização com margin auto */
+  margin: 30px auto 0; /* Margem superior de 30px e centralização horizontal */
   padding: var(--paddingPadrao) var(--paddingPadrao); /* Padding interno definido pela variável */
   background-color: var(--backgroundDosBotoesStatic); /* Cor de fundo do botão definida pela variável */
   color: var(--corFonteDentroDosBotoesHover); /* Cor da fonte dentro do botão */
@@ -59,6 +60,14 @@
   border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas definidas pela variável */
   font-size: var(--sizeFontePrincipal); /* Tamanho da fonte definido pela variável */
   cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
+  width: 125px;
+  padding: 10px 20px;
+}
+
+.more-button:hover {
+  background-color: #000000; /* Azul escuro ao passar o mouse */
+  color: #ffffff;
+  border-color: #000000; /* Azul ainda mais escuro ao passar o mouse */
 }
 
 /* Responsividade para telas menores */
