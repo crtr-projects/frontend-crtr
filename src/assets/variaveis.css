@@ -31,6 +31,7 @@
     --borderRadiusBotaoAdicionar: 4px; /* Bordas arredondadas do botão adicionar */
     --borderRadiusModal: 4px; /* Bordas arredondadas do modal */
     --borderRadiusImagemProduto: 8px; /* Bordas arredondadas da imagem do produto */
+    --bordasArredondadasBotao: 10px;
 
     /* Box Shadow */
     --boxShadowEventos: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra dos eventos */
@@ -74,10 +75,11 @@
     --fontSizeH1: 2rem; /* Tamanho da fonte H1 */
     --fontSizeP: 1.2rem; /* Tamanho da fonte dos parágrafos */
     --fontSizeTituloEventos: 1.5rem; /* Tamanho da fonte do título dos eventos */
+    --sizeFontePrincipal: 16px;
     --fontePrincipal: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif; /* Fonte principal */
     --tamanhoFonteBotao: 16px; /* Tamanho da fonte do botão */
     --tamanhoFonteBotaoFechar: 18px; /* Tamanho da fonte do botão de fechar */
-    --tamanhoFonteNomeProduto: 16px; /* Tamanho da fonte do nome do produto */
+    --tamanhoFonteNomeProduto: 19px; /* Tamanho da fonte do nome do produto */
     --tamanhoFontePrecoProduto: 16px; /* Tamanho da fonte do preço do produto */
     --tamanhoFonteDescricaoProduto: 14px; /* Tamanho da fonte da descrição do produto */
     --tamanhoFonteTextoArticle: 1.2rem; /* Tamanho da fonte do texto do artigo */
@@ -118,6 +120,7 @@
     --marginNomeParceiro: 10px; /* Margem superior do nome do parceiro */
     --marginLateralWhatsApp: 20px; /* Margem lateral do logo do WhatsApp */
     --marginInferiorWhatsApp: 20px; /* Margem inferior do logo do WhatsApp */
+    --marginBottomBotao: 10px;
 
     /* Padding */
     --paddingAgenda: 20px; /* Padding da agenda */

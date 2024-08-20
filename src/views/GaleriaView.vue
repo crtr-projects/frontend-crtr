@@ -8,7 +8,7 @@
         <div v-for="(imagem, index) in imagens" :key="index" class="gallery-photo-card" @click="openImageModal(index)">
           <img :src="imagem.resolvedImage" :alt="imagem.title" class="gallery-photo" />
           <p class="gallery-photo-title">{{ imagem.title }}</p>
-          <p class="gallery-photo-description">{{ imagem.description }}</p>
+          <p class="gallery-photo-description">{{ imagem.truncatedDescription }}</p>
         </div>
       </div>
     </main>
@@ -45,26 +45,30 @@ export default {
     }
   },
   methods: {
-    resolveImages(imagens) {
-      return imagens.map(imagem => ({
-        ...imagem,
-        resolvedImage: new URL(`../assets/galeria/${imagem.image}`, import.meta.url).href
-      }));
-    },
-    openImageModal(index) {
-      this.currentIndex = index;
-      this.isModalOpen = true;
-    },
-    closeImageModal() {
-      this.isModalOpen = false;
-    },
-    prevImage() {
-      this.currentIndex = (this.currentIndex - 1 + this.imagens.length) % this.imagens.length;
-    },
-    nextImage() {
-      this.currentIndex = (this.currentIndex + 1) % this.imagens.length;
-    }
+  resolveImages(imagens) {
+    return imagens.map(imagem => ({
+      ...imagem,
+      resolvedImage: new URL(`../assets/galeria/${imagem.image}`, import.meta.url).href,
+      truncatedDescription: this.truncateDescription(imagem.description)
+    }));
+  },
+  truncateDescription(description) {
+    return description.length > 50 ? description.substring(0, 50) + '...' : description;
+  },
+  openImageModal(index) {
+    this.currentIndex = index;
+    this.isModalOpen = true;
+  },
+  closeImageModal() {
+    this.isModalOpen = false;
+  },
+  prevImage() {
+    this.currentIndex = (this.currentIndex - 1 + this.imagens.length) % this.imagens.length;
+  },
+  nextImage() {
+    this.currentIndex = (this.currentIndex + 1) % this.imagens.length;
   }
+}
 };
 </script>
 

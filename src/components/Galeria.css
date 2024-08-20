@@ -24,22 +24,21 @@
 
 /* Grid da galeria */
 .gallery-grid {
-  display: flex; /* Utiliza flexbox para organizar o layout */
-  flex-wrap: wrap; /* Permite quebra de linha */
-  justify-content: center; /* Centraliza os itens no contêiner */
-  gap: var(--gapEventos); /* Espaçamento entre os itens definido pela variável */
-  margin-top: var(--marginPadrao); /* Margem superior padrão */
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: var(--gapEventos);
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Item da galeria */
 .gallery-photo-card {
-  display: flex; /* Utiliza flexbox para o layout interno */
-  flex-direction: column; /* Organiza os itens em coluna */
-  align-items: center; /* Alinha os itens ao centro */
-  background-color: var(--backgroundBranco); /* Cor de fundo definida pela variável */
-  border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas definidas pela variável */
-  padding: var(--paddingEventos); /* Padding interno definido pela variável */
-  box-shadow: var(--boxShadowEventos); /* Sombra definida pela variável */
+  flex: 0 0 auto; /* Impede o redimensionamento das imagens */
+  width: 200px; /* Largura fixa para cada item */
+  margin-right: 10px; /* Espaçamento entre as imagens */
 }
 
 .gallery-photo {

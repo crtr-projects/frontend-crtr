@@ -22,7 +22,7 @@
 
 /* Botão para alternar visualização */
 .toggle-button {
-    background-color: var(--corFundoBotao); /* Cor de fundo do botão */
+    background-color: var(--backgroundDosBotoesStatic); /* Cor de fundo do botão */
     color: var(--corTextoBotao); /* Cor do texto do botão */
     border: none;
     padding: var(--paddingBotaoVertical) var(--paddingBotaoHorizontal); /* Espaçamento interno do botão */
@@ -100,7 +100,7 @@
     font-size: var(--tamanhoFontePrecoProduto); /* Tamanho da fonte do preço do produto */
     color: var(--corTextoPrecoProduto); /* Cor do texto do preço do produto */
     margin-top: var(--marginTopPrecoProduto); /* Margem superior */
-    align-self: flex-start; /* Garante que o preço fique alinhado ao início do container */
+    align-self: center; /* Garante que o preço fique alinhado ao meio do container */
 }
 
 /* Botão de adicionar à sacola */
@@ -111,8 +111,9 @@
     padding: var(--paddingBotaoVertical); /* Espaçamento interno do botão */
     border-radius: var(--bordasArredondadasBotao); /* Bordas arredondadas */
     cursor: pointer;
-    width: 100%;
+    width: 140px;
     margin-top: var(--marginTopBotao); /* Margem superior */
+    align-self: center;
 }
 
 /* Modo de visualização em lista */
@@ -155,7 +156,7 @@
 .list-view .product-list-item .product-description,
 .list-view .product-list-item .product-price,
 .list-view .product-list-item .add-to-cart-button {
-    width: auto; /* Deixa o tamanho automático */
+    /* width: auto; Deixa o tamanho automático */
 }
 
 /* Responsividade */
@@ -212,7 +213,7 @@
     padding: var(--paddingModal); /* Espaçamento interno do modal */
     border-radius: var(--bordasArredondadasModal); /* Bordas arredondadas do modal */
     max-width: var(--larguraMaximaModal); /* Largura máxima do modal */
-    width: 100%;
+    width: 20%;
     position: relative;
     box-shadow: var(--sombraModal); /* Sombra do modal */
 }
