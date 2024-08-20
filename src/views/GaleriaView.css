@@ -9,10 +9,15 @@
   margin-top: var(--marginTopGaleria); /* Margem superior ajustada com variável */
 }
 
-/* Estilo do título da galeria na view */
+/* Estilo do título da galeria */
 .gallery-title {
-  font-size: var(--tamanhoTituloGaleria); /* Tamanho da fonte ajustado com variável */
-  color: var(--corTituloGaleria); /* Cor do texto ajustada com variável */
+  font-size: var(--fontSizeH1); /* Tamanho da fonte definido pela variável */
+  color: var(--corDaFontePrincipalEscrita); /* Cor da fonte principal */
+  margin-top: 6%;
+}
+
+.highlight {
+  color: var(--backgroundDosBotoesStatic);
 }
 
 /* Grid da galeria */
@@ -21,8 +26,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px; /* Espaçamento fixo entre os itens */
-  margin-top: var(--marginTopGrid); /* Margem superior ajustada com variável */
-  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 /* Item da galeria */

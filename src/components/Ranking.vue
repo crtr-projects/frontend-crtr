@@ -47,18 +47,30 @@ export default {
     return {
       expandedYears: [],
       availableYears: ['2024', '2023'],
-      competidores2024: [
-        { nome: 'Competidor 1', pontuacao: '150' },
-        { nome: 'Competidor 2', pontuacao: '140' },
-        { nome: 'Competidor 3', pontuacao: '130' },
-        { nome: 'Competidor 4', pontuacao: '120' },
-        { nome: 'Competidor 5', pontuacao: '110' },
-        { nome: 'Competidor 6', pontuacao: '100' },
-      ],
-      competidores2023: [
-        { nome: 'Competidor A', pontuacao: '160' },
-        { nome: 'Competidor B', pontuacao: '130' },
-      ],
+competidores2024: [
+  { nome: 'Competidor 1', pontuacao: '150' },
+  { nome: 'Competidor 2', pontuacao: '140' },
+  { nome: 'Competidor 3', pontuacao: '135' },
+  { nome: 'Competidor 4', pontuacao: '130' },
+  { nome: 'Competidor 5', pontuacao: '125' },
+  { nome: 'Competidor 6', pontuacao: '120' },
+  { nome: 'Competidor 7', pontuacao: '115' },
+  { nome: 'Competidor 8', pontuacao: '110' },
+  { nome: 'Competidor 9', pontuacao: '105' },
+  { nome: 'Competidor 10', pontuacao: '100' },
+],
+competidores2023: [
+  { nome: 'Competidor A', pontuacao: '160' },
+  { nome: 'Competidor B', pontuacao: '150' },
+  { nome: 'Competidor C', pontuacao: '145' },
+  { nome: 'Competidor D', pontuacao: '140' },
+  { nome: 'Competidor E', pontuacao: '135' },
+  { nome: 'Competidor F', pontuacao: '130' },
+  { nome: 'Competidor G', pontuacao: '125' },
+  { nome: 'Competidor H', pontuacao: '120' },
+  { nome: 'Competidor I', pontuacao: '115' },
+  { nome: 'Competidor J', pontuacao: '110' },
+],
     };
   },
   methods: {
