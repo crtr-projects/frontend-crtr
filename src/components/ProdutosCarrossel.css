@@ -157,6 +157,36 @@
   border-color: #000000; /* Azul ainda mais escuro ao passar o mouse */
 }
 
+/* Botões de navegação */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  width: 25px;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.left-button {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.right-button {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+
 /* Ajustes para telas menores */
 @media (max-width: 768px) {
   .carrossel-title {

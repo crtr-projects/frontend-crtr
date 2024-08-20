@@ -23,10 +23,17 @@
     <div v-if="isModalOpen" class="modal-overlay" @click="closeProductModal">
       <div class="modal-content" @click.stop>
         <button class="close-button" @click="closeProductModal">X</button>
+
+        <!-- Botão Anterior -->
+        <button class="nav-button left-button" @click="prevProduct">‹</button>
+        
         <img :src="selectedProduct?.resolvedImage" alt="Produto" class="modal-image" />
         <h3>{{ selectedProduct?.name }}</h3>
         <p>{{ selectedProduct?.price }}</p>
         <button class="add-to-cart-button">Comprar Agora</button>
+        
+        <!-- Botão Próximo -->
+        <button class="nav-button right-button" @click="nextProduct">›</button>
       </div>
     </div>
   </div>
@@ -42,7 +49,8 @@ export default {
       produtos: this.resolveImages(produtosData),
       isScrolling: true, // Controle do scroll automático
       isModalOpen: false, // Controle de exibição do modal
-      selectedProduct: null // Produto selecionado para exibir no modal
+      selectedProduct: null, // Produto selecionado para exibir no modal
+      selectedIndex: 0, // Índice do produto selecionado
     };
   },
   methods: {
@@ -60,6 +68,7 @@ export default {
       this.isScrolling = true; // Retoma o scroll automático
     },
     openProductModal(product) {
+      this.selectedIndex = this.produtos.indexOf(product);
       this.selectedProduct = product;
       this.isModalOpen = true;
     },
@@ -69,6 +78,22 @@ export default {
     },
     goToLojaOficial() {
       this.$router.push('/loja'); // Redireciona para a rota da loja
+    },
+    prevProduct() {
+      if (this.selectedIndex > 0) {
+        this.selectedIndex--;
+      } else {
+        this.selectedIndex = this.produtos.length - 1;
+      }
+      this.selectedProduct = this.produtos[this.selectedIndex];
+    },
+    nextProduct() {
+      if (this.selectedIndex < this.produtos.length - 1) {
+        this.selectedIndex++;
+      } else {
+        this.selectedIndex = 0;
+      }
+      this.selectedProduct = this.produtos[this.selectedIndex];
     }
   }
 };
