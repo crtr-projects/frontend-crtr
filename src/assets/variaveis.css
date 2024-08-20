@@ -1,59 +1,126 @@
-/* VARIAVEIS
-
-sempre adicionar o caminho deste arquivo nas outras classes css para poder importar
-
-@import '../assets/variaveis.css';
-
-*/ 
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@font-face
-    {
-    font-family:'dotsfont';
-    src:url('dist/dotsfont.ttf')         format('truetype');
-    font-weight:normal;
+@font-face {
+    font-family: 'dotsfont';
+    src: url('dist/dotsfont.ttf') format('truetype');
     font-weight: 100;
-    font-weight: 200;
-    font-weight: 300;
-    font-weight: 400;
-    font-weight: 500;
-    font-weight: 600;
-    font-weight: 700;
-    font-weight: 800;
-    font-weight: 900;
-    font-weight: bold;
-    font-style:normal;
+    font-style: normal;
 }
 
-:root  {
-    --BackgroundPrincipal: linear-gradient(to right, #800D0D, #1A0303);
+:root {
     --backgroundBody: #FFFAFA;
     --backgroundBranco: #ffffff;
     --backgroundDosBotoesHover: #ff0000;
     --backgroundDosBotoesStatic: #800D0D;
     --backgroundSecundario: #7a7a7a;
+    --BackgroundPrincipal: linear-gradient(to right, #800D0D, #1A0303);
     --borderCorHover: var(--backgroundDosBotoesStatic);
     --borderCorPadrao: var(--backgroundDosBotoesStatic);
-    --borderPadraoFooter: 2px solid #800d0d38;
+    --borderPadraoFooter: 2px solid #ffffff;
+    --borderRadiusEventos: 8px;
     --borderRadiusMaior: 20px;
     --borderRadiusMedium: 10px;
     --borderRadiusPadrao: 6px;
+    --boxShadowEventos: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --boxShadowMenu: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --boxShadowMenuHover: 0 6px 12px rgba(0, 0, 0, 0.3);
+    --colorFonteEventos: #666;
     --corDaFontePrincipalEscrita: black;
-    --corFonteSegOpcao: var(--backgroundDosBotoesStatic);
     --corFonteDentroDosBotoesHover: #ffffff;
     --corFonteDentroDosBotoesStatic: var(--corFonteDentroDosBotoesHover);
     --corFonteLinkHover: #darkgoldenrod;
-    --fontePrincipal: "Google Sans",Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    --corFonteSegOpcao: var(--backgroundDosBotoesStatic);
+    --corFundoBotao: #ff6f61;
+    --corFundoCard: #fff;
+    --corFundoContainer: #f9f9f9;
+    --corFundoHeader: #ff6f61;
+    --corFundoModal: #fff;
+    --corFundoRodape: #333;
+    --corTextoBotao: #fff;
+    --corTextoDescricaoProduto: #666;
+    --corTextoNomeProduto: #333;
+    --corTextoPrecoProduto: #ff6f61;
+    --corTextoRodape: #fff;
+    --corTextoTextoArticle: #666;
+    --corTextoTituloArticle: #333;
+    --escalaHover: 1.02;
+    --estiloListaItem: none;
+    --estiloListaValores: none;
+    --fontSizeCorpoEventos: 1rem;
+    --fontSizeH1: 2rem;
+    --fontSizeP: 1.2rem;
+    --fontSizeTituloEventos: 1.5rem;
+    --fontePrincipal: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    --gapEventos: 20px;
+    --gapProdutos: 20px;
+    --gapInfoProdutoLista: 10px;
+    --gapLista: 20px;
     --heightBotoes: 35px;
     --heightPadraoCampos: 42px;
-    --marginPadrao: 6px;
+    --larguraMaximaContainer: 1200px;
+    --larguraMinimaColuna: 200px;
+    --larguraInfoProdutoLista: 59%;
+    --larguraImagemLista: 40%;
+    --marginBottomArticle: 30px;
+    --marginBottomImagem: 10px;
+    --marginBottomListaItem: 30px;
+    --marginBottomNomeProduto: 10px;
+    --marginBottomDescricaoProduto: 10px;
+    --marginTopAgenda: 80px;
+    --marginTopBotao: 10px;
+    --marginVerticalLista: 20px;
+    --marginP: 20px;
+    --marginH1: 10px;
+    --marginTopContainer: 5%;
+    --paddingAgenda: 20px;
+    --paddingBotaoHorizontal: 20px;
+    --paddingBotaoVertical: 10px;
+    --paddingCard: 10px;
+    --paddingContainer: 40px;
+    --paddingContainerMenor: 30px;
+    --paddingContainerMuitoMenor: 20px;
+    --paddingContainerMinimo: 15px;
+    --paddingContainerMinimoAbsoluto: 10px;
+    --paddingEventos: 15px;
+    --paddingModal: 20px;
     --paddingPadrao: 6px;
-    --sizeFonteBotoes: 24px;
-    --sizeFonteLow: 12px;
-    --sizeFontePrincipal: 16px;
-    --sizeFonteSecundaria: 14px;
-    --styleFonte: normal;
+    --paddingContent: 20px;
+    --paddingEsquerdaLista: 0px;
+    --paddingInferiorListaItem: 20px;
+    --paddingInferiorTituloArticle: 10px;
+    --radiusCard: 4px;
+    --radiusBotao: 4px;
+    --sombraContainer: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --sombraModal: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --tamanhoFonteBotao: 16px;
+    --tamanhoFonteBotaoFechar: 18px;
+    --tamanhoFonteNomeProduto: 16px;
+    --tamanhoFontePrecoProduto: 16px;
+    --tamanhoFonteDescricaoProduto: 14px;
+    --tamanhoFonteTextoArticle: 1.2rem;
+    --tamanhoFonteTituloArticle: 2rem;
+    --tamanhoFonteTituloArticleMenor: 1.8rem;
+    --tamanhoFonteTituloArticleMuitoMenor: 1.5rem;
+    --tamanhoFonteTituloArticleMinimo: 1.3rem;
+    --tamanhoFonteTituloArticleMinimoAbsoluto: 1.2rem;
+    --tamanhoFonteTextoArticleMenor: 1.1rem;
+    --tamanhoFonteTextoArticleMuitoMenor: 1rem;
+    --tamanhoFonteTextoArticleMinimo: 0.9rem;
+    --tamanhoFonteTextoArticleMinimoAbsoluto: 0.8rem;
+    --tamanhoFonteTituloHeader: 2.5rem;
+    --tamanhoFonteTituloHeaderMenor: 2.2rem;
+    --tamanhoFonteTituloHeaderMuitoMenor: 2rem;
+    --tamanhoFonteTituloHeaderMinimo: 1.8rem;
+    --tamanhoFonteTituloHeaderMinimoAbsoluto: 1.5rem;
+    --transicaoHover: 0.2s ease;
+    --topBotaoFechar: 10px;
+    --rightBotaoFechar: 10px;
+    --tela1200px: 1200px;
+    --tela1024px: 1024px;
+    --tela992px: 992px;
+    --tela768px: 768px;
+    --tela480px: 480px;
+    --tela360px: 360px;
     --weight100: 100;
     --weight200: 200;
     --weight300: 300;
@@ -64,4 +131,70 @@ sempre adicionar o caminho deste arquivo nas outras classes css para poder impor
     --weight800: 800;
     --weight900: 900;
     --weightBold: bold;
+
+    --corFundoParceiros: #f0f0f0; /* Cor de fundo dos parceiros */
+    --corTituloParceiros: #333; /* Cor do título */
+    --corTextoNomeParceiro: #333; /* Cor do nome do parceiro */
+    --corFundoLogoWhatsApp: #25D366; /* Cor de fundo do logo do WhatsApp */
+
+    --tamanhoFonteTitulo: 24px; /* Tamanho da fonte do título */
+    --tamanhoFonteNome: 14px; /* Tamanho da fonte do nome do parceiro */
+
+    --borderRadiusLogo: 10%; /* Bordas arredondadas das logos */
+    --tamanhoLogo: 100px; /* Tamanho da logo */
+    --maxWidthItem: 200px; /* Largura máxima dos itens */
+    --maxWidthNomeParceiro: 150px; /* Largura máxima do nome do parceiro */
+    --tamanhoFlexItem: 150px; /* Tamanho flexível dos itens */
+    --borderRadiusItem: 10px; /* Bordas dos itens */
+    --gapGridParceiros: 40px; /* Espaçamento entre itens da grid */
+    --paddingParceiros: 20px; /* Padding dos parceiros */
+    --marginTitulo: 40px; /* Margem inferior do título */
+    --marginNomeParceiro: 10px; /* Margem superior do nome do parceiro */
+    --marginLateralWhatsApp: 20px; /* Margem lateral do logo do WhatsApp */
+    --marginInferiorWhatsApp: 20px; /* Margem inferior do logo do WhatsApp */
+    --tamanhoLogoWhatsApp: 5vw; /* Tamanho do logo do WhatsApp */
+    --maxWidthLogoWhatsApp: 70px; /* Largura máxima do logo do WhatsApp */
+    --maxHeightLogoWhatsApp: 70px; /* Altura máxima do logo do WhatsApp */
+    --minWidthLogoWhatsApp: 40px; /* Largura mínima do logo do WhatsApp */
+    --minHeightLogoWhatsApp: 40px; /* Altura mínima do logo do WhatsApp */
+
+    --corFundoCarrossel: #ffffff; /* Cor de fundo do carrossel */
+    --corTituloCarrossel: #ff6f61; /* Cor do título do carrossel */
+    --corDescricaoCarrossel: #333; /* Cor da descrição do carrossel */
+    --corBotaoAdicionar: #ff6f61; /* Cor de fundo do botão adicionar */
+    --corTextoBotaoAdicionar: #fff; /* Cor do texto do botão adicionar */
+    --corTextoProduto: #333; /* Cor do texto do produto */
+    --corFundoModal: #fff; /* Cor de fundo do modal */
+
+    --tamanhoFonteTituloCarrossel: 2em; /* Tamanho da fonte do título do carrossel */
+    --tamanhoFonteDescricaoCarrossel: 1.2em; /* Tamanho da fonte da descrição do carrossel */
+    --tamanhoFonteBotaoAdicionar: 16px; /* Tamanho da fonte do botão adicionar */
+    --tamanhoFonteTituloCarrosselMobile: 1.5em; /* Tamanho da fonte do título do carrossel para dispositivos móveis */
+    --tamanhoFonteDescricaoCarrosselMobile: 1em; /* Tamanho da fonte da descrição do carrossel para dispositivos móveis */
+    --tamanhoFonteCloseButton: 18px; /* Tamanho da fonte do botão de fechar */
+
+    --borderRadiusImagemProduto: 8px; /* Bordas arredondadas da imagem do produto */
+    --borderRadiusBotaoAdicionar: 4px; /* Bordas arredondadas do botão adicionar */
+    --borderRadiusModal: 4px; /* Bordas arredondadas do modal */
+    --paddingCarrossel: 20px 0; /* Padding do carrossel */
+    --paddingProduto: 10px; /* Padding dos produtos */
+    --paddingBotaoAdicionar: 10px; /* Padding do botão adicionar */
+    --paddingModal: 20px; /* Padding do modal */
+    --tamanhoImagemProduto: 100px; /* Tamanho da imagem do produto */
+    --maxWidthCarrossel: 1000px; /* Largura máxima do carrossel */
+    --maxHeightCarrossel: 500px; /* Altura máxima do carrossel */
+    --marginTopCarrossel: 80px; /* Margem superior do carrossel */
+    --marginHeaderCarrossel: 20px; /* Margem inferior do cabeçalho do carrossel */
+    --marginBottomTituloCarrossel: 10px; /* Margem inferior do título do carrossel */
+    --maxWidthDescricaoCarrossel: 800px; /* Largura máxima da descrição do carrossel */
+    --gapItensCarrossel: 20px; /* Gap entre os itens do carrossel */
+    --duracaoAnimacaoCarrossel: 30s; /* Duração da animação do carrossel */
+    --topCloseButton: 10px; /* Posição superior do botão de fechar no modal */
+    --rightCloseButton: 10px; /* Posição à direita do botão de fechar no modal */
+    --marginImagemModal: 20px; /* Margem inferior da imagem no modal */
+    --larguraModal: 90%; /* Largura do modal */
+    --maxWidthModal: 500px; /* Largura máxima do modal */
+    --larguraModalMobile: 90%; /* Largura do modal para dispositivos móveis */
+    --tamanhoImagemProdutoMobile: 80px; /* Tamanho da imagem do produto para dispositivos móveis */
+
 }

@@ -2,19 +2,19 @@
 
 /* Estilo geral para o contêiner do vídeo */
 .video-preview {
-    margin-top: 20px;
-    padding: 0; /* Remove o padding para telas menores */
+    margin-top: var(--marginTopAgenda); /* Usando a variável para a margem superior */
+    padding: var(--paddingPadrao); /* Padding padrão */
     text-align: center; /* Centraliza o conteúdo */
 }
 
 /* Estilo para o player do YouTube */
 .video-preview iframe {
-    width: 50%; /* Ocupa 100% da largura do contêiner */
-    height: 500px; /* Altura padrão do preview */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o vídeo */
-    max-width: 100%; /* Garante que o iframe não ultrapasse a largura do contêiner */
+    border-radius: var(--borderRadiusMedium); /* Usando variável para bordas arredondadas */
     box-sizing: border-box; /* Inclui o padding e bordas na largura e altura totais */
+    box-shadow: var(--boxShadowMenu); /* Usando variável para a sombra */
+    height: 500px; /* Altura padrão do preview */
+    max-width: 100%; /* Garante que o iframe não ultrapasse a largura do contêiner */
+    width: 50%; /* Ocupa 50% da largura do contêiner */
 }
 
 /* Responsividade */

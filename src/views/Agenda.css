@@ -1,3 +1,4 @@
+/* Importação das variáveis de estilo */
 @import '../assets/variaveis.css';
 
 .agenda {
@@ -5,60 +6,62 @@
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 80px;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-  }
-  
-  p {
+    color: var(--corDaFontePrincipalEscrita); /* Usando a variável para a cor da fonte principal */
+}
+
+p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-  }
-  
-  .events-list {
+    color: var(--corDaFontePrincipalEscrita); /* Usando a variável para a cor da fonte principal */
+}
+
+.events-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  .event {
-    background-color: #f9f9f9;
-    border-radius: 8px;
+}
+
+.event {
+    background-color: var(--backgroundBranco); /* Usando a variável para a cor de fundo */
+    border-radius: var(--borderRadiusMedium); /* Usando a variável para o border-radius */
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
     display: flex;
     flex-direction: column;
-  }
-  
-  .event-image {
+}
+
+.event-image {
     width: 100%;
     height: auto;
     object-fit: cover;
-  }
-  
-  .event-details {
+}
+
+.event-details {
     padding: 15px;
-  }
-  
-  .event h2 {
+}
+
+.event h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-  }
-  
-  .event p {
+    color: var(--corDaFontePrincipalEscrita); /* Usando a variável para a cor da fonte principal */
+}
+
+.event p {
     font-size: 1rem;
-    color: #666;
-  }
-  
-  /* Estilos responsivos */
-  @media (max-width: 768px) {
+    color: #666; /* Mantido como cor secundária */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
     .event {
-      flex: 1 1 100%;
-      max-width: 100%;
+        flex: 1 1 100%;
+        max-width: 100%;
     }
-  }
-  
+}

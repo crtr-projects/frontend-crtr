@@ -3,84 +3,84 @@
 
 /* Estilo geral do componente Galeria */
 .gallery {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: transparent;
+  width: 100%; /* Largura total do contêiner */
+  max-width: var(--maxWidthAgenda); /* Largura máxima definida pela variável */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+  padding: var(--paddingAgenda); /* Padding padrão definido pela variável */
+  background-color: transparent; /* Fundo transparente */
 }
 
 /* Estilo do título da galeria */
 .gallery-title {
-  font-size: 28px;
-  color: #333;
+  font-size: var(--fontSizeH1); /* Tamanho da fonte definido pela variável */
+  color: var(--corDaFontePrincipalEscrita); /* Cor da fonte principal */
 }
 
 /* Destaque da palavra "Fotos" */
 .highlight {
-  color: red;
+  color: var(--backgroundDosBotoesStatic); /* Cor de destaque definida pela variável */
 }
 
 /* Grid da galeria */
 .gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  display: flex; /* Utiliza flexbox para organizar o layout */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  justify-content: center; /* Centraliza os itens no contêiner */
+  gap: var(--gapEventos); /* Espaçamento entre os itens definido pela variável */
+  margin-top: var(--marginPadrao); /* Margem superior padrão */
 }
 
 /* Item da galeria */
 .gallery-photo-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f9f9f9; /* Cor de fundo leve para o container de imagem */
-  border-radius: 8px; /* Bordas arredondadas para o container */
-  padding: 10px; /* Espaçamento interno ao redor da imagem */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+  display: flex; /* Utiliza flexbox para o layout interno */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Alinha os itens ao centro */
+  background-color: var(--backgroundBranco); /* Cor de fundo definida pela variável */
+  border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas definidas pela variável */
+  padding: var(--paddingEventos); /* Padding interno definido pela variável */
+  box-shadow: var(--boxShadowEventos); /* Sombra definida pela variável */
 }
 
 .gallery-photo {
   width: 200px; /* Largura fixa das imagens */
   height: 200px; /* Altura fixa das imagens */
   object-fit: cover; /* Ajusta a imagem para cobrir o container sem distorção */
-  border-radius: 8px; /* Bordas arredondadas para as imagens */
+  border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas definidas pela variável */
 }
 
 /* Botão de ver mais */
 .more-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: red;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
+  display: block; /* Faz com que o botão se comporte como um bloco */
+  margin: var(--marginPadrao) auto; /* Margem padrão vertical e centralização horizontal */
+  padding: var(--paddingPadrao) var(--paddingPadrao); /* Padding interno definido pela variável */
+  background-color: var(--backgroundDosBotoesStatic); /* Cor de fundo do botão definida pela variável */
+  color: var(--corFonteDentroDosBotoesHover); /* Cor da fonte dentro do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas definidas pela variável */
+  font-size: var(--sizeFontePrincipal); /* Tamanho da fonte definido pela variável */
+  cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .gallery-title {
-    font-size: 24px;
-    margin-right: 10%;
+    font-size: var(--sizeFonteSecundaria); /* Reduz o tamanho da fonte */
+    margin-right: 10%; /* Margem direita ajustada para telas menores */
   }
 
   .gallery-photo {
-    width: 260px; /* Ajusta a largura das imagens para ser maior em telas menores */
-    height: 260px; /* Ajusta a altura das imagens para ser maior em telas menores */
+    width: 260px; /* Ajusta a largura das imagens */
+    height: 260px; /* Ajusta a altura das imagens */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-title {
-    font-size: 20px;
+    font-size: var(--sizeFonteLow); /* Reduz ainda mais o tamanho da fonte */
   }
 
   .gallery-photo {
-    width: 240px; /* Ajusta a largura das imagens para ser maior em telas muito pequenas */
-    height: 240px; /* Ajusta a altura das imagens para ser maior em telas muito pequenas */
+    width: 240px; /* Ajusta a largura das imagens para telas muito pequenas */
+    height: 240px; /* Ajusta a altura das imagens para telas muito pequenas */
   }
 }

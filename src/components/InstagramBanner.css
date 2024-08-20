@@ -2,47 +2,47 @@
 
 /* Estilo geral do banner */
 .instagram-banner {
-    position: relative;
     background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); /* Gradiente de fundo vibrante */
-    color: #fff; /* Texto branco */
-    padding: 20px;
-    text-align: center;
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o banner */
-    overflow: hidden;
-    width: 100%; /* Ocupa toda a largura da viewport */
+    border-radius: var(--borderRadiusMedium); /* Bordas arredondadas usando variável */
     box-sizing: border-box; /* Inclui o padding e borda na largura total */
+    box-shadow: var(--boxShadowMenu); /* Sombra para destacar o banner usando variável */
+    color: #fff; /* Texto branco */
     margin: 0; /* Remove margens para ocupar toda a largura */
+    overflow: hidden;
+    padding: var(--paddingPadrao); /* Padding padrão */
+    position: relative;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura da viewport */
 }
 
 /* Animação do texto */
 .siga-nos {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
     animation: fadeInUp 2s ease-out; /* Animação de entrada */
+    font-size: 28px;
+    font-weight: var(--weightBold); /* Peso da fonte negrito usando variável */
+    margin-bottom: 10px;
 }
 
 /* Destaque no texto */
 .highlight {
-    color: #040402; /* Cor amarela para o destaque */
+    color: var(--corFontePrincipalEscrita); /* Cor de destaque usando variável */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para o texto */
 }
 
 /* Descrição adicional */
 .description {
-    font-size: 18px;
-    margin-bottom: 20px;
-    line-height: 1.5; /* Melhora a legibilidade */
     animation: fadeInUp 2s ease-out 0.5s; /* Animação com atraso */
+    font-size: 18px;
+    line-height: 1.5; /* Melhora a legibilidade */
+    margin-bottom: 20px;
 }
 
 /* Animação para o QR Code */
 .qr-code {
-    width: 120px;
-    height: 120px;
-    border-radius: 8px; /* Bordas arredondadas */
     animation: bounce 2s infinite; /* Animação de bounce */
+    border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas usando variável */
+    height: 120px;
+    width: 120px;
 }
 
 /* Animação de fade-in e subida */
@@ -85,8 +85,8 @@
     }
     
     .qr-code {
-        width: 100px;
         height: 100px;
+        width: 100px;
     }
 }
 
@@ -100,7 +100,7 @@
     }
     
     .qr-code {
-        width: 80px;
         height: 80px;
+        width: 80px;
     }
 }

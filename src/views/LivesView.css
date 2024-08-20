@@ -1,3 +1,5 @@
+@import '../assets/variaveis.css'; /* Importa variáveis CSS globais para uso no estilo */
+
 .lives-view{
     margin-top: 50px;
 }

@@ -3,16 +3,16 @@
 
 /* Estilo geral da view da galeria */
 .galeria-view {
-  padding: 20px;               /* Padding interno */
-  box-sizing: border-box;      /* Inclui o padding e bordas na largura e altura totais */
-  background-color: #ffffff;   /* Cor de fundo para a view */
-  margin-top: 80px;
+  padding: var(--paddingInterno); /* Padding interno */
+  box-sizing: border-box; /* Inclui o padding e bordas na largura e altura totais */
+  background-color: var(--corFundoGaleria); /* Cor de fundo para a view */
+  margin-top: var(--marginTopGaleria); /* Margem superior ajustada com variável */
 }
 
 /* Estilo do título da galeria na view */
 .gallery-title {
-  font-size: 28px;             /* Tamanho da fonte */
-  color: #333;                 /* Cor do texto */
+  font-size: var(--tamanhoTituloGaleria); /* Tamanho da fonte ajustado com variável */
+  color: var(--corTituloGaleria); /* Cor do texto ajustada com variável */
 }
 
 /* Grid da galeria */
@@ -20,8 +20,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  gap: var(--gapGaleria); /* Espaçamento entre os itens ajustado com variável */
+  margin-top: var(--marginTopGrid); /* Margem superior ajustada com variável */
 }
 
 /* Item da galeria */
@@ -29,57 +29,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f9f9f9; /* Cor de fundo leve para o container de imagem */
-  border-radius: 8px; /* Bordas arredondadas para o container */
-  padding: 10px; /* Espaçamento interno ao redor da imagem */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+  background-color: var(--corFundoCard); /* Cor de fundo leve para o container de imagem ajustada com variável */
+  border-radius: var(--bordasArredondadas); /* Bordas arredondadas para o container ajustadas com variável */
+  padding: var(--paddingCard); /* Espaçamento interno ao redor da imagem ajustado com variável */
+  box-shadow: var(--sombraCard); /* Sombra sutil para destaque ajustada com variável */
 }
 
 .gallery-photo {
-  width: 200px; /* Largura fixa das imagens */
-  height: 200px; /* Altura fixa das imagens */
+  width: var(--larguraImagem); /* Largura fixa das imagens ajustada com variável */
+  height: var(--alturaImagem); /* Altura fixa das imagens ajustada com variável */
   object-fit: cover; /* Ajusta a imagem para cobrir o container sem distorção */
-  border-radius: 8px; /* Bordas arredondadas para as imagens */
+  border-radius: var(--bordasArredondadas); /* Bordas arredondadas para as imagens ajustadas com variável */
 }
 
 .gallery-photo-title,
 .gallery-photo-description {
   text-align: center;
-  margin: 5px 0; /* Margens superior e inferior para os textos */
+  margin: var(--margemTexto); /* Margens superior e inferior para os textos ajustadas com variável */
 }
 
 .more-button {
   display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: red;
-  color: #fff;
+  margin: var(--marginBotao); /* Margem superior e inferior ajustada com variável */
+  padding: var(--paddingBotao); /* Padding ajustado com variável */
+  background-color: var(--corFundoBotao); /* Cor de fundo do botão ajustada com variável */
+  color: var(--corTextoBotao); /* Cor do texto do botão ajustada com variável */
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: var(--bordasArredondadasBotao); /* Bordas arredondadas para o botão ajustadas com variável */
+  font-size: var(--tamanhoFonteBotao); /* Tamanho da fonte do botão ajustado com variável */
   cursor: pointer;
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .gallery-title {
-    font-size: 24px;
-    margin-right: 10%;
+    font-size: var(--tamanhoTituloResponsivo); /* Tamanho da fonte ajustado com variável */
+    margin-right: var(--margemTituloResponsivo); /* Margem direita ajustada com variável */
   }
 
   .gallery-photo {
-    width: 150px; /* Reduz a largura das imagens em telas menores */
-    height: 150px; /* Reduz a altura das imagens em telas menores */
+    width: var(--larguraImagemResponsiva); /* Reduz a largura das imagens em telas menores ajustada com variável */
+    height: var(--alturaImagemResponsiva); /* Reduz a altura das imagens em telas menores ajustada com variável */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-title {
-    font-size: 20px;
+    font-size: var(--tamanhoTituloMuitoPequeno); /* Tamanho da fonte ajustado com variável */
   }
 
   .gallery-photo {
-    width: 120px; /* Reduz ainda mais a largura das imagens em telas muito pequenas */
-    height: 120px; /* Reduz ainda mais a altura das imagens em telas muito pequenas */
+    width: var(--larguraImagemMuitoPequena); /* Reduz ainda mais a largura das imagens em telas muito pequenas ajustada com variável */
+    height: var(--alturaImagemMuitoPequena); /* Reduz ainda mais a altura das imagens em telas muito pequenas ajustada com variável */
   }
 }

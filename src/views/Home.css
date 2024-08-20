@@ -1,3 +1,4 @@
+/* Importação das variáveis de estilo */
 @import '../assets/variaveis.css';
 
 /* Estilos gerais para a página Home */
@@ -22,6 +23,6 @@ div {
   }
 
   .carousel-btn {
-    font-size: 1.5em;
+    font-size: calc(var(--sizeFonteBotoes) * 0.625); /* Ajuste do tamanho da fonte para 1.5em */
   }
 }

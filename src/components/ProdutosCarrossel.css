@@ -1,47 +1,46 @@
 /* Estilo geral do carrossel */
 .carrossel-container {
   height: 100%; /* Ajuste a altura conforme necessário */
-  max-width: 1000px; /* Define a largura máxima do carrossel */
-  max-height: 500px; /* Define a largura máxima do carrossel */
-  margin: 0 auto; /* Centraliza o carrossel horizontalmente */
-  margin-top: 80px; /* Centraliza o carrossel horizontalmente */
+  max-width: var(--maxWidthCarrossel); /* Define a largura máxima do carrossel */
+  max-height: var(--maxHeightCarrossel); /* Define a altura máxima do carrossel */
+  margin: var(--marginTopCarrossel) auto 0 auto; /* Centraliza o carrossel horizontalmente */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Oculta a barra de scroll */
-  padding: 20px 0;
+  padding: var(--paddingCarrossel); /* Atualizado para variável de padding */
   position: relative;
 }
 
 /* Cabeçalho do carrossel */
 .carrossel-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--marginHeaderCarrossel); /* Atualizado para variável de margem */
 }
 
 .carrossel-title {
-  font-size: 2em;
+  font-size: var(--tamanhoFonteTituloCarrossel); /* Atualizado para variável de fonte */
   font-weight: bold;
-  color: #ff6f61; /* Cor chamativa */
-  margin-bottom: 10px;
+  color: var(--corTituloCarrossel); /* Atualizado para variável de cor */
+  margin-bottom: var(--marginBottomTituloCarrossel); /* Atualizado para variável de margem */
 }
 
 .carrossel-description {
-  font-size: 1.2em;
-  color: #333;
-  max-width: 800px;
+  font-size: var(--tamanhoFonteDescricaoCarrossel); /* Atualizado para variável de fonte */
+  color: var(--corDescricaoCarrossel); /* Atualizado para variável de cor */
+  max-width: var(--maxWidthDescricaoCarrossel); /* Atualizado para variável de largura máxima */
   margin: 0 auto;
 }
 
 /* Estilo do carrossel */
 .carrossel {
   display: flex; /* Exibe os itens em uma única linha */
-  gap: 20px; /* Espaçamento entre os itens */
+  gap: var(--gapItensCarrossel); /* Atualizado para variável de gap */
   justify-content: flex-start; /* Alinha os itens à esquerda */
   align-items: flex-start; /* Alinha os itens no topo */
   position: relative;
-  animation: scrollCarrossel 30s linear infinite; /* Scroll automático e infinito */
+  animation: scrollCarrossel var(--duracaoAnimacaoCarrossel) linear infinite; /* Scroll automático e infinito */
 }
 
 .carrossel:hover {
@@ -65,34 +64,34 @@
 .produto-frame {
   flex: 0 0 auto;
   box-sizing: border-box;
-  padding: 10px;
+  padding: var(--paddingProduto); /* Atualizado para variável de padding */
   height: 100%;
   cursor: pointer; /* Mostra que é clicável */
 }
 
 /* Imagem do produto */
 .produto-imagem {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
+  width: var(--tamanhoImagemProduto); /* Atualizado para variável de tamanho */
+  height: var(--tamanhoImagemProduto); /* Atualizado para variável de tamanho */
+  border-radius: var(--borderRadiusImagemProduto); /* Atualizado para variável de borda */
   object-fit: cover;
 }
 
 /* Informações do produto */
 .produto-info {
   text-align: center;
-  color: #333;
+  color: var(--corTextoProduto); /* Atualizado para variável de cor */
 }
 
 /* Botão de adicionar à sacola */
 .add-to-cart {
-  background-color: #ff6f61;
-  color: #fff;
+  background-color: var(--corBotaoAdicionar); /* Atualizado para variável de cor */
+  color: var(--corTextoBotaoAdicionar); /* Atualizado para variável de cor */
   border: none;
-  padding: 10px;
-  border-radius: 4px;
+  padding: var(--paddingBotaoAdicionar); /* Atualizado para variável de padding */
+  border-radius: var(--borderRadiusBotaoAdicionar); /* Atualizado para variável de borda */
   cursor: pointer;
-  font-size: 16px;
+  font-size: var(--tamanhoFonteBotaoAdicionar); /* Atualizado para variável de fonte */
   width: 100%;
 }
 
@@ -111,11 +110,11 @@
 }
 
 .modal-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 4px;
-  max-width: 500px;
-  width: 90%;
+  background: var(--corFundoModal); /* Atualizado para variável de cor */
+  padding: var(--paddingModal); /* Atualizado para variável de padding */
+  border-radius: var(--borderRadiusModal); /* Atualizado para variável de borda */
+  max-width: var(--maxWidthModal); /* Atualizado para variável de largura máxima */
+  width: var(--larguraModal); /* Atualizado para variável de largura */
   position: relative;
   text-align: center;
 }
@@ -123,35 +122,35 @@
 .modal-content img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: var(--marginImagemModal); /* Atualizado para variável de margem */
 }
 
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: var(--topCloseButton); /* Atualizado para variável de posição */
+  right: var(--rightCloseButton); /* Atualizado para variável de posição */
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: var(--tamanhoFonteCloseButton); /* Atualizado para variável de fonte */
   cursor: pointer;
 }
 
 /* Ajustes para telas menores */
 @media (max-width: 768px) {
   .carrossel-title {
-    font-size: 1.5em;
+    font-size: var(--tamanhoFonteTituloCarrosselMobile); /* Atualizado para variável de fonte */
   }
 
   .carrossel-description {
-    font-size: 1em;
+    font-size: var(--tamanhoFonteDescricaoCarrosselMobile); /* Atualizado para variável de fonte */
   }
 
   .produto-imagem {
-    width: 80px;
-    height: 80px;
+    width: var(--tamanhoImagemProdutoMobile); /* Atualizado para variável de tamanho */
+    height: var(--tamanhoImagemProdutoMobile); /* Atualizado para variável de tamanho */
   }
 
   .modal-content {
-    width: 90%;
+    width: var(--larguraModalMobile); /* Atualizado para variável de largura */
   }
 }

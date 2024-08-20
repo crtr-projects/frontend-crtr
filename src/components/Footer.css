@@ -2,22 +2,20 @@
 
 /* Estilos Gerais do Footer */
 .footer {
-  background-color: #000000;
-  color: white;
+  background-color: black; /* Cor de fundo do footer */
+  color: var(--corFonteDentroDosBotoesStatic); /* Cor do texto no footer */
   padding: 20px 0px;
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
-  font-size: 0.875rem;
+  font-size: var(--sizeFonteLow); /* Tamanho da fonte no footer */
   margin-top: auto; /* Remove qualquer margem que poderia empurrar o footer */
-
 }
-
 
 /* Seção Superior do Footer */
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--marginP); /* Margem inferior na seção superior do footer */
 }
 
 .footer-left, .footer-center, .footer-right {
@@ -28,13 +26,13 @@
 }
 
 .footer-link {
-  color: rgb(255, 255, 255);
+  color: var(--corFonteDentroDosBotoesStatic); /* Cor dos links no footer */
   margin: 0px 0px 15px 0px;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: var(--sizeFontePrincipal); /* Tamanho da fonte dos links */
 }
 
 .footer-icon {
@@ -46,7 +44,7 @@
 
 /* Ícones das Redes Sociais */
 .footer-social {
-  margin: 20px 0px;
+  margin: var(--marginP) 0px; /* Margem para a seção de redes sociais */
 }
 
 .footer-social-icon {
@@ -60,25 +58,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid #ffffff;
+  border-top: var(--borderPadraoFooter); /* Borda superior na seção inferior do footer */
   padding-top: 10px;
   flex-direction: column;
   flex-wrap: nowrap;
-  font-size: 16px;
+  font-size: var(--sizeFontePrincipal); /* Tamanho da fonte na seção inferior */
 }
 
 .footer-empresa {
-  font-size: 15px;
+  font-size: var(--sizeFonteSecundaria); /* Tamanho da fonte da empresa no footer */
 }
 
 .footer p {
-  margin: 20px;
+  margin: var(--marginP); /* Margem dos parágrafos no footer */
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: space-around;
   justify-content: center;
   align-items: center;
+  color: var(--corFonteDentroDosBotoesStatic);
 }
 
 /* Estilos Responsivos */
@@ -94,6 +93,6 @@
   }
 
   .footer-right {
-    margin-top: 20px;
+    margin-top: var(--marginP); /* Margem superior da seção direita no footer para mobile */
   }
 }

@@ -3,77 +3,77 @@
 
 .parceiros-oficiais {
     position: relative;
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: var(--corFundoParceiros); /* Atualizado para variável de cor */
+    padding: var(--paddingParceiros); /* Atualizado para variável de padding */
     text-align: center;    
 }
   
 /* Título centralizado */
 .titulo {
     text-align: center;
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 40px;
-  }
+    font-size: var(--tamanhoFonteTitulo); /* Atualizado para variável de fonte */
+    color: var(--corTituloParceiros); /* Atualizado para variável de cor */
+    margin-bottom: var(--marginTitulo); /* Atualizado para variável de margem */
+}
   
 /* Grid de logos dos parceiros */
 .parceiros-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
-  margin-bottom: 0px;
-  }
+  gap: var(--gapGridParceiros); /* Atualizado para variável de gap */
+  margin-bottom: 0;
+}
   
 /* Estilo individual dos itens de parceiros */
 .parceiro-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 1 150px; /* Permite que o item cresça e encolha com uma base mínima */
-    max-width: 200px; /* Tamanho máximo baseado no maior item */
-  }
+    flex: 1 1 var(--tamanhoFlexItem); /* Atualizado para variável de tamanho flexível */
+    max-width: var(--maxWidthItem); /* Atualizado para variável de largura máxima */
+}
   
 /* Estilo das logos dos parceiros */
 .parceiro-logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 10%;
+    width: var(--tamanhoLogo); /* Atualizado para variável de tamanho */
+    height: var(--tamanhoLogo); /* Atualizado para variável de tamanho */
+    border-radius: var(--borderRadiusLogo); /* Atualizado para variável de borda */
     object-fit: cover;
 }
   
 /* Estilo do nome do parceiro */
 .parceiro-nome {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
+    margin-top: var(--marginNomeParceiro); /* Atualizado para variável de margem */
+    font-size: var(--tamanhoFonteNome); /* Atualizado para variável de fonte */
+    color: var(--corTextoNomeParceiro); /* Atualizado para variável de cor */
     text-align: center; /* Centraliza o texto no item */
     word-wrap: break-word; /* Quebra a palavra para evitar transbordamento */
     width: 100%; /* Faz o texto ocupar toda a largura do item */
-    max-width: 150px; /* Limita a largura máxima do texto */
-  }
+    max-width: var(--maxWidthNomeParceiro); /* Atualizado para variável de largura máxima */
+}
   
 /* Logo do WhatsApp no canto direito inferior */
 .whatsapp-logo {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: var(--marginLateralWhatsApp); /* Atualizado para variável de margem lateral */
+    bottom: var(--marginInferiorWhatsApp); /* Atualizado para variável de margem inferior */
 }
 
-  .whatsapp-logo img {
-    width: 5vw; /* Tamanho responsivo baseado na largura da viewport */
-    height: 5vw; /* Altura responsiva baseada na largura da viewport */
-    max-width: 70px; /* Limite máximo de largura */
-    max-height: 70px; /* Limite máximo de altura */
-    min-width: 40px; /* Limite mínimo de largura */
-    min-height: 40px; /* Limite mínimo de altura */
-  }
+.whatsapp-logo img {
+    width: var(--tamanhoLogoWhatsApp); /* Atualizado para variável de tamanho */
+    height: var(--tamanhoLogoWhatsApp); /* Atualizado para variável de tamanho */
+    max-width: var(--maxWidthLogoWhatsApp); /* Atualizado para variável de largura máxima */
+    max-height: var(--maxHeightLogoWhatsApp); /* Atualizado para variável de altura máxima */
+    min-width: var(--minWidthLogoWhatsApp); /* Atualizado para variável de largura mínima */
+    min-height: var(--minHeightLogoWhatsApp); /* Atualizado para variável de altura mínima */
+}
 
 /* Responsividade do nome dos parceiros */
 .parceiro-nome {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
+  margin-top: var(--marginNomeParceiro); /* Atualizado para variável de margem */
+  font-size: var(--tamanhoFonteNome); /* Atualizado para variável de fonte */
+  color: var(--corTextoNomeParceiro); /* Atualizado para variável de cor */
   width: 80%; /* Define a largura como 80% do campo */
   text-align: center; /* Centraliza o texto */
   word-break: break-word; /* Quebra a palavra quando necessário para ajustar ao espaço disponível */

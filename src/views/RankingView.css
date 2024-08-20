@@ -2,43 +2,42 @@
 
 /* Contêiner da view do ranking */
 .ranking-view-container {
+  align-items: center;
+  background-color: var(--backgroundBranco);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--backgroundBranco);
-  margin-top: 80px;
+  margin-top: var(--marginTopAgenda);
+  padding: var(--paddingContainer);
 }
 
 /* Contêiner do acordeão */
 .ranking-accordion {
-  width: 100%;
-  max-width: 800px;
   margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
 }
 
 /* Estilo de cada item do acordeão */
 .accordion-item {
-  margin-bottom: var(--marginPadrao);
-  border-radius: var(--borderRadiusMedium);
-  overflow: hidden;
   border: 1px solid var(--borderCorPadrao);
+  border-radius: var(--borderRadiusMedium);
+  margin-bottom: var(--marginPadrao);
+  overflow: hidden;
 }
 
 /* Estilo do botão do acordeão */
 .accordion-button {
-  width: 100%;
-  padding: 15px;
-  font-size: var(--sizeFontePrincipal);
-  text-align: left;
   background-color: var(--backgroundDosBotoesStatic);
-  color: var(--corFonteDentroDosBotoesStatic);
   border: none;
+  color: var(--corFonteDentroDosBotoesStatic);
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
   display: flex;
+  font-size: var(--sizeFontePrincipal);
   justify-content: space-between;
-  align-items: center;
+  padding: 15px;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
 }
 
 /* Estilo para quando o botão está expandido */
@@ -59,18 +58,18 @@
 
 /* Estilo do conteúdo do acordeão */
 .accordion-content {
-  overflow: hidden;
-  transition: max-height 0.5s ease;
   background-color: var(--backgroundSecundario);
   color: var(--corDaFontePrincipalEscrita);
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
 /* Estilo da tabela */
 .ranking-table {
-  width: 100%;
   border-collapse: collapse;
-  margin: 0;
   font-size: var(--sizeFontePrincipal);
+  margin: 0;
+  width: 100%;
 }
 
 .ranking-table th,

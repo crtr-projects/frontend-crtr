@@ -1,90 +1,91 @@
-/* ranking.css */
+/* Importação das variáveis de estilo */
+@import '../assets/variaveis.css';
 
 /* Contêiner da view do ranking */
 .ranking-view-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #f8f9fa;
-  margin-top: 7%;
+  display: flex; /* Utiliza flexbox para organizar o layout */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Alinha os itens ao centro horizontalmente */
+  padding: var(--paddingPadrao); /* Padding padrão definido pela variável */
+  background-color: var(--backgroundBody); /* Cor de fundo definida pela variável */
+  margin-top: var(--marginTopAgenda); /* Margem superior definida pela variável */
 }
 
 /* Contêiner do acordeão */
 .ranking-accordion {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%; /* Largura total do contêiner */
+  max-width: 800px; /* Largura máxima do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
 }
 
 /* Estilo de cada item do acordeão */
 .accordion-item {
-  margin-bottom: 10px;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #ddd;
+  margin-bottom: var(--marginPadrao); /* Margem inferior padrão */
+  border-radius: var(--borderRadiusPadrao); /* Bordas arredondadas definidas pela variável */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa as bordas */
+  border: 1px solid var(--backgroundSecundario); /* Borda com cor secundária definida pela variável */
 }
 
 /* Estilo do botão do acordeão */
 .accordion-button {
-  width: 100%;
-  padding: 15px;
-  font-size: 1.1rem;
-  text-align: left;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%; /* Largura total do botão */
+  padding: var(--paddingPadrao); /* Padding interno definido pela variável */
+  font-size: var(--sizeFonteSecundaria); /* Tamanho da fonte definido pela variável */
+  text-align: left; /* Alinha o texto à esquerda */
+  background-color: var(--backgroundDosBotoesStatic); /* Cor de fundo do botão definida pela variável */
+  color: var(--corFonteDentroDosBotoesHover); /* Cor da fonte dentro do botão */
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave para as mudanças de cor */
+  display: flex; /* Utiliza flexbox para o layout interno */
+  justify-content: space-between; /* Espaça o conteúdo interno */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
 }
 
 /* Estilo para quando o botão está expandido */
 .accordion-button[aria-expanded="true"] {
-  background-color: #0056b3;
+  background-color: var(--borderCorHover); /* Cor de fundo ao expandir definida pela variável */
 }
 
 /* Ícone de seta do acordeão */
 .accordion-icon {
-  font-size: 1.2rem;
-  transition: transform 0.3s;
+  font-size: var(--sizeFonteSecundaria); /* Tamanho da fonte do ícone */
+  transition: transform 0.3s; /* Transição suave para a rotação do ícone */
 }
 
 .accordion-icon.open {
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* Rotaciona o ícone quando aberto */
 }
 
 /* Estilo do conteúdo do acordeão */
 .accordion-content {
-  overflow: hidden;
-  transition: max-height 0.5s ease;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa as bordas */
+  transition: max-height 0.5s ease; /* Transição suave para a altura máxima */
 }
 
 /* Estilo da tabela */
 .ranking-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0;
-  font-size: 1rem;
+  width: 100%; /* Largura total da tabela */
+  border-collapse: collapse; /* Remove espaços entre as bordas das células */
+  margin: 0; /* Remove margens externas */
+  font-size: var(--fontSizeCorpoEventos); /* Tamanho da fonte definido pela variável */
 }
 
 .ranking-table th,
 .ranking-table td {
-  padding: 10px;
-  text-align: center;
+  padding: var(--paddingPadrao); /* Padding interno das células definido pela variável */
+  text-align: center; /* Alinha o texto ao centro */
 }
 
 .ranking-table thead {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--backgroundDosBotoesStatic); /* Cor de fundo do cabeçalho da tabela definida pela variável */
+  color: var(--corFonteDentroDosBotoesHover); /* Cor da fonte do cabeçalho da tabela */
 }
 
 .black-row {
-  background-color: #f8f9fa;
+  background-color: var(--backgroundBody); /* Cor de fundo das linhas pretas definida pela variável */
 }
 
 .red-row {
-  background-color: #e9ecef;
+  background-color: var(--backgroundBranco); /* Cor de fundo das linhas vermelhas definida pela variável */
 }

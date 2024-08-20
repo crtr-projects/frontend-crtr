@@ -3,24 +3,23 @@
 /* Estilos para a página de erro 404 */
 .not-found {
     text-align: center;
-    margin-top: 50px; /* Espaçamento acima da página */
-    margin-top: 20%;
+    margin-top: var(--marginTopAgenda); /* Espaçamento superior definido pela variável */
 }
 
 /* Tamanho do título principal */
 .not-found h1 {
-    font-size: 100px; /* Tamanho do texto para telas grandes */
+    font-size: var(--fontSizeH1); /* Tamanho do texto definido pela variável */
     margin: 0; /* Remove a margem padrão */
 }
 
 /* Tamanho do texto do parágrafo */
 .not-found p {
-    font-size: 24px; /* Tamanho do texto para garantir boa legibilidade */
+    font-size: var(--fontSizeP); /* Tamanho do texto do parágrafo definido pela variável */
 }
 
 /* Estilo para os links */
 .not-found a {
-    color: #007bff; /* Cor padrão para links */
+    color: var(--corFonteLinkHover); /* Cor dos links definida pela variável */
     text-decoration: none; /* Remove o sublinhado dos links */
 }
 
@@ -56,10 +55,10 @@
 /* Para telas grandes (monitores) */
 @media (min-width: 769px) {
     .not-found h1 {
-        font-size: 100px; /* Mantém o tamanho do título para monitores grandes */
+        font-size: var(--fontSizeH1); /* Mantém o tamanho do título para monitores grandes */
     }
 
     .not-found p {
-        font-size: 24px; /* Mantém o tamanho do texto do parágrafo para monitores grandes */
+        font-size: var(--fontSizeP); /* Mantém o tamanho do texto do parágrafo para monitores grandes */
     }
 }

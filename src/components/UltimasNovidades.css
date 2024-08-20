@@ -1,4 +1,5 @@
-/* Estilo geral da seção de Últimas Notícias */
+@import '../assets/variaveis.css';/* Estilo geral da seção de Últimas Notícias */
+
 .ultimas-novidades {
   position: relative;
   max-width: 100%;

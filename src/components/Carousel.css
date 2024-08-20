@@ -1,84 +1,84 @@
 @import '../assets/variaveis.css'; /* Importa variáveis CSS globais para uso no estilo */
 
+/* Estilo do carrossel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Ajusta a altura conforme necessário */
+  width: 100%; /* Ajusta a largura do carrossel ao contêiner */
+  max-width: 1000px; /* Define a largura máxima do carrossel */
+  max-height: 500px; /* Define a altura máxima do carrossel */
+  margin: var(--marginTopAgenda) auto 0; /* Centraliza horizontalmente e adiciona margem superior */
+  z-index: 500;
+}
 
-  .carousel {
-    position: relative;
-    overflow: hidden;
-    height: 100%; /* Ajuste a altura conforme necessário */
-    width: 100%; /* Ajusta a largura do carrossel ao contêiner */
-    max-width: 1000px; /* Define a largura máxima do carrossel */
-    max-height: 500px; /* Define a largura máxima do carrossel */
-    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
-    margin-top: 80px; /* Centraliza o carrossel horizontalmente */
-    z-index: 500;
-  }
+.carousel-container {
+  display: flex; /* Alinha os slides em linha horizontalmente */
+  transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
+}
 
-  .carousel-container {
-    display: flex; /* Alinha os slides em linha horizontalmente */
-    transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
-  }
-  /* Estilo para cada slide do carrossel */
-  .carousel-slide {
-    min-width: 100%; /* Define a largura mínima de cada slide para preencher o contêiner */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
-  }
-  
-  /* Estilo para as imagens dos slides */
-  .carousel-slide img {
-    width: 100%; /* Garante que a imagem ocupe 100% da largura do slide */
-    height: auto; /* Mantém a proporção da imagem */
-  }
-  
-  /* Estilo para os botões de controle do carrossel */
-  .carousel-control {
-    position: absolute; /* Posiciona os botões relativamente ao carrossel */
-    top: 50%; /* Alinha os botões verticalmente no meio do carrossel */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
-    color: #fff; /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    padding: 10px; /* Adiciona padding aos botões */
-    cursor: pointer; /* Muda o cursor ao passar sobre os botões */
-    z-index: 10; /* Garante que os botões estejam acima dos slides */
-  }
-  
-  /* Estilo para o botão de controle anterior */
-  .carousel-control.prev {
-    left: 10px; /* Alinha o botão à esquerda */
-  }
-  
-  /* Estilo para o botão de controle próximo */
-  .carousel-control.next {
-    right: 10px; /* Alinha o botão à direita */
-  }
-  
+/* Estilo para cada slide do carrossel */
+.carousel-slide {
+  min-width: 100%; /* Define a largura mínima de cada slide para preencher o contêiner */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+}
+
+/* Estilo para as imagens dos slides */
+.carousel-slide img {
+  width: 100%; /* Garante que a imagem ocupe 100% da largura do slide */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilo para os botões de controle do carrossel */
+.carousel-control {
+  position: absolute; /* Posiciona os botões relativamente ao carrossel */
+  top: 50%; /* Alinha os botões verticalmente no meio do carrossel */
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+  color: var(--corFonteDentroDosBotoesHover); /* Cor do texto dos botões */
+  border: none; /* Remove a borda padrão */
+  padding: 10px; /* Adiciona padding aos botões */
+  cursor: pointer; /* Muda o cursor ao passar sobre os botões */
+  z-index: 10; /* Garante que os botões estejam acima dos slides */
+  font-size: var(--sizeFontePrincipal); /* Tamanho da fonte dos botões */
+}
+
+/* Estilo para o botão de controle anterior */
+.carousel-control.prev {
+  left: 10px; /* Alinha o botão à esquerda */
+}
+
+/* Estilo para o botão de controle próximo */
+.carousel-control.next {
+  right: 10px; /* Alinha o botão à direita */
+}
 
 /* Responsividade para diferentes tamanhos de tela */
 @media (max-width: 1200px) {
   .carousel-slide img {
-      width: 60%; /* Aumenta a largura da imagem em telas com largura máxima de 1200px */
+    width: 60%; /* Ajusta a largura da imagem em telas com largura máxima de 1200px */
   }
 }
 
 @media (max-width: 992px) {
   .carousel-slide img {
-      width: 70%; /* Aumenta a largura da imagem em telas com largura máxima de 992px */
+    width: 70%; /* Ajusta a largura da imagem em telas com largura máxima de 992px */
   }
 }
 
 @media (max-width: 768px) {
   .carousel-slide img {
-      width: 80%; /* Aumenta a largura da imagem em telas com largura máxima de 768px */
+    width: 80%; /* Ajusta a largura da imagem em telas com largura máxima de 768px */
   }
 }
 
 @media (max-width: 576px) {
   .carousel-slide img {
-      width: 90%; /* Aumenta a largura da imagem em telas com largura máxima de 576px */
+    width: 90%; /* Ajusta a largura da imagem em telas com largura máxima de 576px */
   }
 }
 
 @media (max-width: 360px) {
   .carousel-slide img {
-      width: 100%; /* As imagens ocupam toda a largura em telas muito pequenas (até 360px) */
+    width: 100%; /* As imagens ocupam toda a largura em telas muito pequenas (até 360px) */
   }
 }

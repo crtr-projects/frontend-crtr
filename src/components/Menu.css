@@ -1,3 +1,4 @@
+/* Importação das variáveis de estilo */
 @import '../assets/variaveis.css';
 
 /* Estilo geral do wrapper do menu */
@@ -6,7 +7,7 @@
   top: 0; /* Posiciona o menu no topo */
   left: 0; /* Alinha o menu ao lado esquerdo da página */
   width: 100%; /* Faz o menu ocupar a largura total da página */
-  background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo */
+  background: var(--BackgroundPrincipal); /* Usando a variável para o gradiente */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
   transition: padding 0.3s, box-shadow 0.3s; /* Transição suave para o tamanho do menu */
@@ -16,9 +17,9 @@
 .menu {
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo */
-  color: white;
-  padding: 10px 30px; /* Padding reduzido por padrão */
+  background: var(--BackgroundPrincipal); /* Usando a variável para o gradiente */
+  color: var(--backgroundBranco); /* Usando a variável para a cor do texto */
+  padding: var(--paddingPadrao) 30px; /* Usando a variável para padding */
   justify-content: space-between; /* Alinha logo e menu */
   position: relative; /* Para posicionar o botão de fechar corretamente */
 }
@@ -36,7 +37,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 10px;
+  padding: var(--paddingPadrao); /* Usando a variável para padding */
 }
 
 /* Estilo da logo */
@@ -64,8 +65,8 @@
   margin: 0;
   flex: 1; /* Permite que os itens ocupem o espaço restante */
   justify-content: center; /* Centraliza os itens no menu */
-  font-size: 20px;
-  font-weight: 400;
+  font-size: var(--sizeFontePrincipal); /* Usando a variável para o tamanho da fonte */
+  font-weight: var(--weight400); /* Usando a variável para o peso da fonte */
 }
 
 .menu li {
@@ -73,7 +74,7 @@
 }
 
 .menu a {
-  color: white;
+  color: var(--backgroundBranco); /* Usando a variável para a cor do link */
   text-decoration: none;
 }
 
@@ -96,7 +97,7 @@
     left: 0; /* Posiciona o menu no lado esquerdo */
     width: 180px; /* Largura reduzida do menu */
     height: 100vh; /* Altura completa da tela */
-    background: linear-gradient(to right, #800D0D, #1A0303); /* Gradiente de exemplo para a versão móvel */
+    background: var(--BackgroundPrincipal); /* Usando a variável para o gradiente na versão móvel */
     padding: 20px;
     transform: translateX(-100%); /* Oculta o menu inicialmente */
     transition: transform 0.5s ease;
@@ -109,11 +110,11 @@
 
   .menu-button {
     display: block;
-    color: #fff; /* Cor do texto do botão */
+    color: var(--backgroundBranco); /* Usando a variável para a cor do texto */
     border: none;
-    padding: 10px 10px; /* Aumenta o padding para um tamanho maior */
+    padding: var(--paddingPadrao) var(--paddingPadrao); /* Usando a variável para padding */
     font-size: 30px; /* Aumenta o tamanho da fonte do botão */
-    border-radius: 6px; /* Borda arredondada */
+    border-radius: var(--borderRadiusPadrao); /* Usando a variável para o border-radius */
     cursor: pointer; /* Indica que é clicável */
     max-width: 200px; /* Limita a largura máxima do botão */
   }
@@ -124,7 +125,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: white;
+    color: var(--backgroundBranco); /* Usando a variável para a cor do texto */
     position: absolute;
     top: 10px;
     right: 10px;
@@ -148,8 +149,8 @@
     align-items: center; /* Alinha os itens ao centro */
     margin: 0;
     padding: 0;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: var(--sizeFontePrincipal); /* Usando a variável para o tamanho da fonte */
+    font-weight: var(--weight600); /* Usando a variável para o peso da fonte */
   }
 
   .menu li {
@@ -160,6 +161,6 @@
 /* Exemplo de estilo para responsividade */
 @media (max-width: 768px) {
   .menu-wrapper {
-    padding: 10px; /* Ajuste o padding para telas menores */
+    padding: var(--paddingPadrao); /* Ajuste o padding para telas menores */
   }
 }
