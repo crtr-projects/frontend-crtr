@@ -89,3 +89,92 @@
     height: 100px; /* Reduz ainda mais a altura das imagens em telas muito pequenas */
   }
 }
+
+/* Estilos para o Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Elevada prioridade na pilha de z-index */
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: #fff; /* Cor de fundo do modal */
+  padding: 20px;
+  border-radius: var(--bordasArredondadas); /* Bordas arredondadas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra ao redor do modal */
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: var(--bordasArredondadas); /* Bordas arredondadas */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--corFundoBotaoFechar); /* Cor de fundo ajustada com variável */
+  border: none;
+  color: var(--corTextoBotaoFechar); /* Cor do texto ajustada com variável */
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001; /* Mantém o botão acima de todos os elementos */
+  color: red;
+}
+/* 
+.modal-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+} */
+
+/* Botões de navegação (Próximo e Anterior) */
+.navigation-button {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente com base na altura da imagem */
+  transform: translateY(-50%); /* Ajuste para centralizar exatamente */
+  background-color: var(--corFundoBotaoNavegacao); /* Cor de fundo ajustada com variável */
+  border: none;
+  color: var(--corTextoBotaoNavegacao); /* Cor do texto ajustada com variável */
+  font-size: 30px;
+  cursor: pointer;
+  height: 50%; /* Altura do botão ajustada para 50% da altura da imagem */
+  z-index: 1001; /* Mantém os botões acima da imagem */
+}
+
+/* Botão anterior (esquerda) */
+.prev-button {
+  left: -18px;
+}
+
+/* Botão próximo (direita) */
+.next-button {
+  right: -18px;
+}
+
+/* .modal-navigation button {
+  background: transparent;
+  border: none;
+  font-size: 36px;
+  color: var(--corFundoBotao);
+  cursor: pointer;
+  user-select: none;
+} */
