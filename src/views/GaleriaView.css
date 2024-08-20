@@ -20,8 +20,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--gapGaleria); /* Espaçamento entre os itens ajustado com variável */
+  gap: 10px; /* Espaçamento fixo entre os itens */
   margin-top: var(--marginTopGrid); /* Margem superior ajustada com variável */
+  margin-top: 5%;
 }
 
 /* Item da galeria */
@@ -35,9 +36,10 @@
   box-shadow: var(--sombraCard); /* Sombra sutil para destaque ajustada com variável */
 }
 
+/* Ajuste o tamanho fixo das imagens para 200x200 pixels */
 .gallery-photo {
-  width: var(--larguraImagem); /* Largura fixa das imagens ajustada com variável */
-  height: var(--alturaImagem); /* Altura fixa das imagens ajustada com variável */
+  width: 200px; /* Largura fixa das imagens */
+  height: 200px; /* Altura fixa das imagens */
   object-fit: cover; /* Ajusta a imagem para cobrir o container sem distorção */
   border-radius: var(--bordasArredondadas); /* Bordas arredondadas para as imagens ajustadas com variável */
 }
@@ -68,8 +70,8 @@
   }
 
   .gallery-photo {
-    width: var(--larguraImagemResponsiva); /* Reduz a largura das imagens em telas menores ajustada com variável */
-    height: var(--alturaImagemResponsiva); /* Reduz a altura das imagens em telas menores ajustada com variável */
+    width: 150px; /* Reduz a largura das imagens em telas menores */
+    height: 150px; /* Reduz a altura das imagens em telas menores */
   }
 }
 
@@ -79,7 +81,7 @@
   }
 
   .gallery-photo {
-    width: var(--larguraImagemMuitoPequena); /* Reduz ainda mais a largura das imagens em telas muito pequenas ajustada com variável */
-    height: var(--alturaImagemMuitoPequena); /* Reduz ainda mais a altura das imagens em telas muito pequenas ajustada com variável */
+    width: 100px; /* Reduz ainda mais a largura das imagens em telas muito pequenas */
+    height: 100px; /* Reduz ainda mais a altura das imagens em telas muito pequenas */
   }
 }
