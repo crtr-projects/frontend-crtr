@@ -59,6 +59,10 @@
   text-align: center;
 }
 
+.live-title {
+  color: var(--corFonteDentroDosBotoesHover);
+}
+
 .live-status {
   font-weight: bold;
   color: #ff0000; /* Texto AO VIVO em vermelho */
