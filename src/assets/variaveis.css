@@ -47,6 +47,7 @@
     --corFonteDentroDosBotoesStatic: var(--corFonteDentroDosBotoesHover); /* Cor da fonte dentro dos botões estáticos */
     --corFonteLinkHover: #darkgoldenrod; /* Cor da fonte dos links em hover */
     --corFonteSegOpcao: var(--backgroundDosBotoesStatic); /* Cor da fonte da segunda opção */
+    --corFonteLinkHover: blue;
     --corFundoBotao: #ff6f61; /* Cor de fundo do botão */
     --corFundoCard: #fff; /* Cor de fundo do card */
     --corFundoContainer: #f9f9f9; /* Cor de fundo do container */

@@ -3,12 +3,12 @@
 /* Estilos para a página de erro 404 */
 .not-found {
     text-align: center;
-    margin-top: var(--marginTopAgenda); /* Espaçamento superior definido pela variável */
+    margin-top: 200px; /* Espaçamento superior definido pela variável */
 }
 
 /* Tamanho do título principal */
 .not-found h1 {
-    font-size: var(--fontSizeH1); /* Tamanho do texto definido pela variável */
+    font-size: 100px! important; /* Tamanho do texto definido pela variável */
     margin: 0; /* Remove a margem padrão */
 }
 
