@@ -9,7 +9,7 @@
     <nav :class="{ 'open': isMenuOpen }" class="menu">
       <div class="logo-container">
         <router-link to="/">
-          <img src="../assets/logo-whatsapp.jpg" alt="Logo" class="logo" />
+          <img src="../assets/logo.png" alt="Logo" class="logo" />
         </router-link>
       </div>
       
